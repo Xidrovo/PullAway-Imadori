@@ -3,23 +3,42 @@ using System.Collections;
 
 public class DraggAndInput : MonoBehaviour {
 	
-	Touch touch;
-	int fingerCount=0;
-	private Ray pulsacion;
+	private Touch touch;
+	private Rigidbody2D Velocidad;
+	private Vector3 cambioV= new Vector3(), actual= new Vector3(), cambioH= new Vector3();
+
+	private bool bd = false;
+	private Vector3 Pos;
+	private GameObject player;
 	private RaycastHit colision;
-	Vector3 cambioV= new Vector3(), actual= new Vector3(), cambioH= new Vector3();
-	private GameObject player=null;
-	bool bd=false;
-	Vector3 Pos;
+
+	private Vector3 Temp;
+
 	// Use this for initialization
 	void Start () 
 	{
-		
 	}
 	
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		try
+		{
+			Dragging ();
+
+			Velocidad = player.GetComponent<Rigidbody2D> ();
+
+		}catch(System.NullReferenceException ex)
+		
+		{
+
+		}
+	}
+
+
+	public void Dragging()
+	{
 		
 		if (Input.touchCount > 0) 
 		{
@@ -33,9 +52,9 @@ public class DraggAndInput : MonoBehaviour {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
 					player = GameObject.Find (hit.collider.gameObject.name);
+					Velocidad.velocity = new Vector3(0,0,0);
 					
 				}
-				
 			}
 		}
 		
@@ -58,11 +77,11 @@ public class DraggAndInput : MonoBehaviour {
 		if (Pos.x < (Screen.width/2))
 			player.transform.position -= cambioH;
 		*/
-
+		
 		if (Input.touchCount > 0) 
 		{
 			//Movemos el objeto
-			if ((Input.GetTouch (0).phase == TouchPhase.Ended) && (bd)) {
+			if ((Input.GetTouch (0).phase == TouchPhase.Moved) && (bd)) {
 				cambioV.Set (0, Input.GetTouch (0).position.y / (Screen.height * 5f), 0);
 				cambioH.Set (Input.GetTouch (0).position.x / Screen.width, 0, 0);
 				bd = false;
@@ -70,15 +89,18 @@ public class DraggAndInput : MonoBehaviour {
 			// Los valores de 0.1 , 0.2 son para que se mueva adelante-atras-arriba 
 			//o abajo dependiendo de un {cuadrante jaja} 
 			if (Input.GetTouch (0).position.y / Screen.height > 0.2f)
-				player.transform.position += cambioV;
+				Velocidad.velocity = new Vector3(this.Velocidad.velocity.x, GetYAxisVelocity() * 2, 0);
+			
 			if (Input.GetTouch (0).position.y / Screen.height < 0.2f)
-				player.transform.position -= cambioV;
+				Velocidad.velocity = new Vector3(this.Velocidad.velocity.x, GetYAxisVelocity() * 2, 0);
+			
 			if (Input.GetTouch (0).position.x / Screen.width > 0.2f)
-				player.transform.position += cambioH;
+				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, this.Velocidad.velocity.y, 0);
+			
 			if (Input.GetTouch (0).position.x / Screen.width < 0.2f)
-				player.transform.position -= cambioH;		
+				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, this.Velocidad.velocity.y, 0);
+			
 		}
-		
 		//Esta parte activa y desactiva el objeto dependiendo de cuantos dedos tocan la pantalla
 		/*if (Input.touchCount > 2)
 		{
@@ -92,5 +114,34 @@ public class DraggAndInput : MonoBehaviour {
 
 		}*/
 	}
-	
+	public float GetYAxisVelocity()
+	{
+		if (Input.touchCount > 0) {
+			Invoke ("TemporalTouch", 0.001f);
+			return  Input.GetTouch (0).position.y - Temp.y;
+		} else 
+		{
+			Temp.y = 0;
+			return Velocidad.velocity.y;
+		}
+	}
+
+	public float GetXAxisVelocity()
+	{
+		if (Input.touchCount > 0) {
+			Invoke ("TemporalTouch", 0.001f);
+			return  Input.GetTouch (0).position.x - Temp.x;
+		} else
+		{
+			Temp.x = 0;
+			return Velocidad.velocity.x;
+		}
+	}
+
+	//Me regresara la posicion con 1 miliSegundo despues.
+	public void TemporalTouch()
+	{
+		if (Input.touchCount > 0)
+			Temp = Input.GetTouch (0).position;
+	}
 }

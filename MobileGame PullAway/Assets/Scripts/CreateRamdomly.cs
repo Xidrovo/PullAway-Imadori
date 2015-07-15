@@ -45,7 +45,6 @@ public class CreateRamdomly : MonoBehaviour {
 	{
 		Vector3 Vector = canva.transform.position;
 		Vector.z = Cont;
-
 		return Vector;
 	}
 	
