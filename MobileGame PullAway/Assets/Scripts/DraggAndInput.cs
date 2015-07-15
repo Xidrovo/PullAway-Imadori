@@ -9,7 +9,7 @@ public class DraggAndInput : MonoBehaviour {
 
 	private bool bd = false;
 	private Vector3 Pos;
-	private GameObject player;
+	private GameObject player, temp;
 	private RaycastHit colision;
 
 	private Vector3 Temp;
@@ -17,6 +17,7 @@ public class DraggAndInput : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		temp = GameObject.Find ("Temporito");
 	}
 	
 	
@@ -26,11 +27,9 @@ public class DraggAndInput : MonoBehaviour {
 		try
 		{
 			Dragging ();
-
 			Velocidad = player.GetComponent<Rigidbody2D> ();
 
-		}catch(System.NullReferenceException ex)
-		
+		}catch(System.NullReferenceException ex)		
 		{
 
 		}
@@ -52,67 +51,15 @@ public class DraggAndInput : MonoBehaviour {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
 					player = GameObject.Find (hit.collider.gameObject.name);
-					Velocidad.velocity = new Vector3(0,0,0);
-					
+					Velocidad.velocity = new Vector3(0,0,0);					
 				}
+				else
+					player = temp;
 			}
+			if (player.gameObject.name != "Temporito")
+				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, GetYAxisVelocity() * 2, 0);			
 		}
-		
-		//Esta es una alternativa de movimiento usando la posicion renderizada, aunque no me funciono mucho la dejo ahi
-		//por si les sirva de algo
-		/*Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-		if ((Input.GetTouch (0).phase == TouchPhase.Ended) && (bd)) 
-		{
 
-			cambioV.Set (Pos.y,0 , 0);
-			cambioH.Set (Pos.x, 0, 0);
-			bd=false;
-		}
-		if (Pos.y > (Screen.height/2))
-			player.transform.position += cambioV;
-		if (Pos.y < (Screen.height/2))
-			player.transform.position -= cambioV;
-		if (Pos.x > (Screen.width/2))
-			player.transform.position += cambioH;
-		if (Pos.x < (Screen.width/2))
-			player.transform.position -= cambioH;
-		*/
-		
-		if (Input.touchCount > 0) 
-		{
-			//Movemos el objeto
-			if ((Input.GetTouch (0).phase == TouchPhase.Moved) && (bd)) {
-				cambioV.Set (0, Input.GetTouch (0).position.y / (Screen.height * 5f), 0);
-				cambioH.Set (Input.GetTouch (0).position.x / Screen.width, 0, 0);
-				bd = false;
-			}
-			// Los valores de 0.1 , 0.2 son para que se mueva adelante-atras-arriba 
-			//o abajo dependiendo de un {cuadrante jaja} 
-			if (Input.GetTouch (0).position.y / Screen.height > 0.2f)
-				Velocidad.velocity = new Vector3(this.Velocidad.velocity.x, GetYAxisVelocity() * 2, 0);
-			
-			if (Input.GetTouch (0).position.y / Screen.height < 0.2f)
-				Velocidad.velocity = new Vector3(this.Velocidad.velocity.x, GetYAxisVelocity() * 2, 0);
-			
-			if (Input.GetTouch (0).position.x / Screen.width > 0.2f)
-				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, this.Velocidad.velocity.y, 0);
-			
-			if (Input.GetTouch (0).position.x / Screen.width < 0.2f)
-				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, this.Velocidad.velocity.y, 0);
-			
-		}
-		//Esta parte activa y desactiva el objeto dependiendo de cuantos dedos tocan la pantalla
-		/*if (Input.touchCount > 2)
-		{
-			player.transform.position= new Vector3( Input.GetTouch(0).position.x/ Screen.width ,Input.GetTouch(0).position.y/Screen.height , 0 );
-
-		}
-		if (Input.touchCount <= 2)
-		{
-			player.SetActive(false);
-
-
-		}*/
 	}
 	public float GetYAxisVelocity()
 	{
