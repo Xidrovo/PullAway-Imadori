@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CreateRamdomly.cs" />
+     <Compile Include="Assets\Scripts\DraggAndInput.cs" />
      <Compile Include="Assets\Scripts\InitialMovement.cs" />
      <Compile Include="Assets\Scripts\NameToucher.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
