@@ -35,6 +35,7 @@ public class CreateRamdomly : MonoBehaviour {
 		ZRotation = Rotation.eulerAngles.z;
 
 		//With this we initiate the object as a game object.
+		PreFab.name = "Roquita" + "" + (Cont + 1);
 		NormalTable = (GameObject) Instantiate (PreFab, PosEnElOrigen() , Rotation );
 	}
 
