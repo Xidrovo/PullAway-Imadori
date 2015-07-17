@@ -1,24 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreateRamdomly : MonoBehaviour {
+public class CreateRamdomly : MonoBehaviour  {
 	public GameObject PreFab;
 	public Canvas canva;
 	private GameObject NormalTable;
 	private int Max, Cont;
-	private float ZRotation;
+	private float ZRotation, angle;
 	private Quaternion Rotation;
 	
 	// Use this for initialization
 	void Start () {
-		Max = Random.Range (5, 10);
+		Max = Random.Range (5, 11);
 		Cont = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Cont <= Max)
+		if (Cont < Max)
 		{
 			CreateObject();
 			Cont++;
@@ -37,6 +37,7 @@ public class CreateRamdomly : MonoBehaviour {
 		//With this we initiate the object as a game object.
 		PreFab.name = "Roquita" + "" + (Cont + 1);
 		NormalTable = (GameObject) Instantiate (PreFab, PosEnElOrigen() , Rotation );
+
 	}
 
 	//This method will give me a random vector3... that means, a random position... buuuut!!...
@@ -44,7 +45,12 @@ public class CreateRamdomly : MonoBehaviour {
 	public Vector3 PosEnElOrigen()
 	{
 		Vector3 Vector = canva.transform.position;
-		Vector.z = Cont;
+		if (Cont != 0) 
+		{
+			angle=Cont* 2* Mathf.PI/(Max-1);
+			Vector+=new Vector3 (Mathf.Cos(angle),  Mathf.Sin(angle),0)*60;
+		}
+
 		return Vector;
 	}
 	
