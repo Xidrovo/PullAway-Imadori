@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Behaviour.cs" />
      <Compile Include="Assets\Scripts\CreateRamdomly.cs" />
      <Compile Include="Assets\Scripts\DraggAndInput.cs" />
      <Compile Include="Assets\Scripts\InitialMovement.cs" />

@@ -11,6 +11,7 @@ public class DraggAndInput : MonoBehaviour {
 	private Vector3 Pos;
 	private GameObject player, temp;
 	private RaycastHit colision;
+	private float DistanceY, DistanceX;
 
 	private Vector3 Temp;
 
@@ -31,7 +32,7 @@ public class DraggAndInput : MonoBehaviour {
 
 		}catch(System.NullReferenceException ex)		
 		{
-
+			player = temp;
 		}
 	}
 
@@ -50,22 +51,42 @@ public class DraggAndInput : MonoBehaviour {
 				if (hit != null && hit.collider != null) {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
-					player = GameObject.Find (hit.collider.gameObject.name);
-					Velocidad.velocity = new Vector3(0,0,0);					
+					player = GameObject.Find (hit.collider.gameObject.name);				
 				}
 				else
 					player = temp;
 			}
 			if (player.gameObject.name != "Temporito")
-				Velocidad.velocity = new Vector3(GetXAxisVelocity() * 2, GetYAxisVelocity() * 2, 0);			
+			{
+			//	Invoke ("TemporalTouch", 0.001f);
+				BorrarLuego();
+				Velocidad.velocity = new Vector3(DistanceX * 2 , DistanceY * 2 , 0);
+			}
 		}
 
+	}
+
+	public void BorrarLuego()
+	{
+		if (Input.touchCount > 0) 
+		{
+			if (Input.GetTouch (0).phase == TouchPhase.Began) 
+			{
+				Temp = Input.GetTouch (0).position;
+			}
+
+			foreach (Touch touch in Input.touches)
+			{
+				DistanceY = GetYAxisVelocity();
+				DistanceX = GetXAxisVelocity();
+				Temp = Input.GetTouch(0).position;
+			}
+		}
 	}
 	public float GetYAxisVelocity()
 	{
 		if (Input.touchCount > 0) {
-			Invoke ("TemporalTouch", 0.001f);
-			return  Input.GetTouch (0).position.y - Temp.y;
+			return  temp.transform.position.y - Temp.y;
 		} else 
 		{
 			Temp.y = 0;
@@ -76,19 +97,19 @@ public class DraggAndInput : MonoBehaviour {
 	public float GetXAxisVelocity()
 	{
 		if (Input.touchCount > 0) {
-			Invoke ("TemporalTouch", 0.001f);
-			return  Input.GetTouch (0).position.x - Temp.x;
+			return   temp.transform.position.x - Temp.x;
 		} else
 		{
 			Temp.x = 0;
 			return Velocidad.velocity.x;
 		}
 	}
-
+/*
 	//Me regresara la posicion con 1 miliSegundo despues.
 	public void TemporalTouch()
 	{
 		if (Input.touchCount > 0)
 			Temp = Input.GetTouch (0).position;
 	}
+	*/
 }
