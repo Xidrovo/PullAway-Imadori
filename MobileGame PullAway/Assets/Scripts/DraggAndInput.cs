@@ -60,7 +60,7 @@ public class DraggAndInput : MonoBehaviour {
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
 				BorrarLuego();
-				Velocidad.velocity = new Vector3(DistanceX * 2 , DistanceY * 2 , 0);
+					Velocidad.AddForce(new Vector2 (DistanceX * 5 , DistanceY * 5) );
 			}
 		}
 
@@ -86,7 +86,7 @@ public class DraggAndInput : MonoBehaviour {
 	public float GetYAxisVelocity()
 	{
 		if (Input.touchCount > 0) {
-			return  temp.transform.position.y - Temp.y;
+			return  Input.GetTouch(0).position.y - Temp.y;
 		} else 
 		{
 			Temp.y = 0;
@@ -97,7 +97,7 @@ public class DraggAndInput : MonoBehaviour {
 	public float GetXAxisVelocity()
 	{
 		if (Input.touchCount > 0) {
-			return   temp.transform.position.x - Temp.x;
+			return   Input.GetTouch(0).position.x - Temp.x;
 		} else
 		{
 			Temp.x = 0;
