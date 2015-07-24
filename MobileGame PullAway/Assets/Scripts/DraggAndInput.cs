@@ -7,7 +7,7 @@ public class DraggAndInput : MonoBehaviour {
 	private Rigidbody2D Velocidad;
 	private Vector3 cambioV= new Vector3(), actual= new Vector3(), cambioH= new Vector3();
 
-	private bool bd = false, bdT=false;
+	private bool bd = false;
 	private Vector3 Pos;
 	private GameObject player, temp;
 	private RaycastHit colision;
@@ -60,15 +60,7 @@ public class DraggAndInput : MonoBehaviour {
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
 				BorrarLuego();
-				if(bdT)
-				{
-					Velocidad.AddForce(new Vector2 (DistanceX * 2000 , DistanceY * 2000) );
-				}
-				else
-				{
-					player.transform.position=Input.GetTouch (0).position;
-				}
-
+					Velocidad.AddForce(new Vector2 (DistanceX * 5 , DistanceY * 5) );
 			}
 		}
 
@@ -81,21 +73,15 @@ public class DraggAndInput : MonoBehaviour {
 			if (Input.GetTouch (0).phase == TouchPhase.Began) 
 			{
 				Temp = Input.GetTouch (0).position;
-				bdT=false;
 			}
 
-			//foreach (Touch touch in Input.touches)
+			foreach (Touch touch in Input.touches)
 			{
 				DistanceY = GetYAxisVelocity();
 				DistanceX = GetXAxisVelocity();
 				Temp = Input.GetTouch(0).position;
 			}
-			if(Input.GetTouch (0).phase == TouchPhase.Ended)
-			{
-				bdT=true;
-			}
 		}
-
 	}
 	public float GetYAxisVelocity()
 	{
