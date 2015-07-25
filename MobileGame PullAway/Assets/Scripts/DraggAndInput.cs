@@ -59,14 +59,16 @@ public class DraggAndInput : MonoBehaviour {
 			if (player.gameObject.name != "Temporito")
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
+				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
 				BorrarLuego();
 				if(bdT)
 				{
-					Velocidad.AddForce(new Vector2 (DistanceX * 2000 , DistanceY * 2000) );
+					Velocidad.AddForce(new Vector2 (DistanceX * 1f , DistanceY * 1f) );
 				}
 				else
 				{
-					player.transform.position=Input.GetTouch (0).position;
+					Debug.Log (Input.GetTouch(0).position + ";" + Pos.x + " | " + Pos.y );
+					player.transform.position = new Vector2( Pos.x, Pos.y );
 				}
 
 			}
@@ -84,7 +86,7 @@ public class DraggAndInput : MonoBehaviour {
 				bdT=false;
 			}
 
-			//foreach (Touch touch in Input.touches)
+			foreach (Touch touch in Input.touches)
 			{
 				DistanceY = GetYAxisVelocity();
 				DistanceX = GetXAxisVelocity();
@@ -103,7 +105,7 @@ public class DraggAndInput : MonoBehaviour {
 			return  Input.GetTouch(0).position.y - Temp.y;
 		} else 
 		{
-			Temp.y = 0;
+			//Temp.y = 0;
 			return Velocidad.velocity.y;
 		}
 	}
@@ -114,7 +116,7 @@ public class DraggAndInput : MonoBehaviour {
 			return   Input.GetTouch(0).position.x - Temp.x;
 		} else
 		{
-			Temp.x = 0;
+			//Temp.x = 0;
 			return Velocidad.velocity.x;
 		}
 	}

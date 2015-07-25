@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CreateRamdomly : MonoBehaviour  {
 	public GameObject PreFab;
-	public Canvas canva;
+	public float Radio = 4f;
+//	public Canvas canva;
 	private GameObject NormalTable;
 	private int Max, Cont;
 	private float ZRotation, angle;
@@ -44,11 +45,12 @@ public class CreateRamdomly : MonoBehaviour  {
 	//This position will be random but according to the rotation of the object.
 	public Vector3 PosEnElOrigen()
 	{
-		Vector3 Vector = canva.transform.position;
+		Vector3 Vector = this.transform.position;
+		Vector.z = 0;
 		if (Cont != 0) 
 		{
 			angle=Cont* 2* Mathf.PI/(Max-1);
-			Vector+=new Vector3 (Mathf.Cos(angle),  Mathf.Sin(angle),0)*60;
+			Vector+=new Vector3 (Mathf.Cos(angle),  Mathf.Sin(angle),0)* Radio ;
 		}
 
 		return Vector;
