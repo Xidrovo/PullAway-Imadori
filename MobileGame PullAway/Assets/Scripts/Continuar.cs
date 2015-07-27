@@ -7,7 +7,8 @@ public class Continuar : MonoBehaviour {
 	// Use this for initialization
 	public void LoadLevel(string levelName) 
 	{
-		Application.LoadLevel ("MainGame");
+		Application.LoadLevel ("SurvivalMode");
+
 	
 	}
 	
