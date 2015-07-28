@@ -2,18 +2,27 @@
 using System.Collections;
 
 public class CreateRamdomly : MonoBehaviour  {
-	public GameObject PreFab;
-	public float Radio = 4f;
-//	public Canvas canva;
+	public GameObject PreFab,PreFab1,PreFab2,PreFab3,PreFab4,PreFab5,PreFab6,PreFab7,PreFab8 ;
+	private float Radio =2f;
+	//	public Canvas canva;
 	private GameObject NormalTable;
-	private int Max, Cont;
+	public ArrayList Aprefabs=new ArrayList();
+	private int Max, Cont, Tipo;
 	private float ZRotation, angle;
 	private Quaternion Rotation;
-	
 	// Use this for initialization
 	void Start () {
-		Max = Random.Range (5, 11);
+		Max = 50;//Random.Range (10, 50);
 		Cont = 0;
+		Aprefabs.Add(PreFab);
+		Aprefabs.Add(PreFab1);
+		Aprefabs.Add(PreFab2);
+		Aprefabs.Add(PreFab3);
+		Aprefabs.Add(PreFab4);
+		Aprefabs.Add(PreFab5);
+		Aprefabs.Add(PreFab6);
+		Aprefabs.Add(PreFab7);
+		Aprefabs.Add(PreFab8);
 	}
 	
 	// Update is called once per frame
@@ -21,14 +30,15 @@ public class CreateRamdomly : MonoBehaviour  {
 
 		if (Cont < Max)
 		{
-			CreateObject();
+			Tipo = Random.Range (0, 8);
+			CreateObject(Tipo);
 			Cont++;
 		}
 	
 	}
 
 	//This Method will create everything the object needs, it use a "Prefab" to have the scripts, sprites, etc.
-	public void CreateObject()
+	public void CreateObject(int tipo)
 	{
 		//With this I will get the "z" rotation of the object... this "z" rotation is the one that really
 		//rotate the object as we want to rotate.
@@ -36,23 +46,34 @@ public class CreateRamdomly : MonoBehaviour  {
 		ZRotation = Rotation.eulerAngles.z;
 
 		//With this we initiate the object as a game object.
-		PreFab.name = "Roquita" + "" + (Cont + 1);
-		NormalTable = (GameObject) Instantiate (PreFab, PosEnElOrigen() , Rotation );
+		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
+		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
 
 	}
 
 	//This method will give me a random vector3... that means, a random position... buuuut!!...
 	//This position will be random but according to the rotation of the object.
-	public Vector3 PosEnElOrigen()
+	public Vector3 PosEnElOrigen(int tipo)
 	{
+		float temp = Radio;
 		Vector3 Vector = this.transform.position;
 		Vector.z = 0;
 		if (Cont != 0) 
 		{
 			angle=Cont* 2* Mathf.PI/(Max-1);
+			Radio*=-1;
+			if(tipo<=5)
+			{
+				Radio+=0.25f;
+			}
+			else
+			{
+				Radio+=-0.75f;
+			}
 			Vector+=new Vector3 (Mathf.Cos(angle),  Mathf.Sin(angle),0)* Radio ;
 		}
-
+		//Radio = temp;
+		//Radio += 0.05f;
 		return Vector;
 	}
 	
