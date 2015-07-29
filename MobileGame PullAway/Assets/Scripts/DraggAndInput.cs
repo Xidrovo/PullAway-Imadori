@@ -30,6 +30,7 @@ public class DraggAndInput : MonoBehaviour {
 			Dragging ();
 			Velocidad = player.GetComponent<Rigidbody2D> ();
 
+
 		}catch(System.NullReferenceException ex)		
 		{
 			player = temp;

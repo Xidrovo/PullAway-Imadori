@@ -29,10 +29,12 @@ public class Pause : MonoBehaviour {
 		if (State) {
 			PauseMenu.SetActive (true);
 			Time.timeScale = 0;
+			Static.Estatico = true;
 		} else 
 		{
 			PauseMenu.SetActive(false);
 			Time.timeScale = 1;
+			Static.Estatico = false;
 		}
 	}
 }
