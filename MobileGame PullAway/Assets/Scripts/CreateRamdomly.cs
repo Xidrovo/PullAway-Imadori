@@ -10,13 +10,9 @@ public class CreateRamdomly : MonoBehaviour  {
 	private int Max, Cont, Tipo;
 	private float ZRotation, angle;
 	private Quaternion Rotation;
-	private SpriteRenderer TempRenderer;
-	private BoxCollider2D TempBoxCollider2D;
-
 	// Use this for initialization
 	void Start () {
-
-		Max = 50;//Random.Range (10, 50);
+		Max = 200;//Random.Range (10, 50);
 		Cont = 0;
 		Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
@@ -37,7 +33,6 @@ public class CreateRamdomly : MonoBehaviour  {
 			Tipo = Random.Range (0, 8);
 			CreateObject(Tipo);
 			Cont++;
-
 		}
 	
 	}
@@ -54,20 +49,14 @@ public class CreateRamdomly : MonoBehaviour  {
 		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
 
-		TempRenderer = NormalTable.GetComponent<SpriteRenderer>();
-		TempRenderer.sortingOrder = Cont;
-
-		TempBoxCollider2D = NormalTable.GetComponent<BoxCollider2D> ();
-//		TempBoxCollider2D.enabled = false;
 	}
 
 	//This method will give me a random vector3... that means, a random position... buuuut!!...
 	//This position will be random but according to the rotation of the object.
 	public Vector3 PosEnElOrigen(int tipo)
 	{
-		float temp = Radio;
-		Vector3 Vector = this.transform.position;
-		Vector.z = 0;
+		Vector3 Vector = new Vector3(Random.Range (-3.1f, 3.1f),Random.Range (-2.4f, 2.4f),0);
+		/*float temp = Radio;
 		if (Cont != 0) 
 		{
 			angle=Cont* 2* Mathf.PI/(Max-1);
@@ -81,9 +70,7 @@ public class CreateRamdomly : MonoBehaviour  {
 				Radio+=-0.75f;
 			}
 			Vector+=new Vector3 (Mathf.Cos(angle),  Mathf.Sin(angle),0)* Radio ;
-		}
-		//Radio = temp;
-		//Radio += 0.05f;
+		}*/
 		return Vector;
 	}
 	
