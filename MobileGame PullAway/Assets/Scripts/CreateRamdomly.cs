@@ -12,7 +12,7 @@ public class CreateRamdomly : MonoBehaviour  {
 	private Quaternion Rotation;
 	// Use this for initialization
 	void Start () {
-		Max = 200;//Random.Range (10, 50);
+		Max = 90;//Random.Range (10, 50);
 		Cont = 0;
 		Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
@@ -55,7 +55,7 @@ public class CreateRamdomly : MonoBehaviour  {
 	//This position will be random but according to the rotation of the object.
 	public Vector3 PosEnElOrigen(int tipo)
 	{
-		Vector3 Vector = new Vector3(Random.Range (-3.1f, 3.1f),Random.Range (-2.4f, 2.4f),0);
+		Vector3 Vector = new Vector3(Random.Range (-2.1f, 2.1f),Random.Range (-1.4f, 1.4f),0);
 		/*float temp = Radio;
 		if (Cont != 0) 
 		{

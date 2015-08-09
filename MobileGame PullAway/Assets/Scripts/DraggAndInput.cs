@@ -6,7 +6,7 @@ public class DraggAndInput : MonoBehaviour {
 	private Touch touch;
 	private Rigidbody2D Velocidad;
 	private Vector3 cambioV= new Vector3(), actual= new Vector3(), cambioH= new Vector3();
-
+	private string nombre;
 	private bool bd = false, bdT=false;
 	private Vector3 Pos;
 	private GameObject player, temp;
@@ -65,12 +65,22 @@ public class DraggAndInput : MonoBehaviour {
 				if(bdT)
 				{
 					Velocidad.AddForce(new Vector2 (DistanceX * 1f , DistanceY * 1f) );
+					if((Velocidad.gameObject.transform.position.y>=16f)||(Velocidad.gameObject.transform.position.y<=-16f))
+					{
+						Destroy(Velocidad.gameObject);
+					}
+					if((Velocidad.gameObject.transform.position.x<=-25f)||(Velocidad.gameObject.transform.position.x>=25f))
+					{
+						Destroy(Velocidad.gameObject);
+					}
+
 				}
 				else
 				{
 					Debug.Log (Input.GetTouch(0).position + ";" + Pos.x + " | " + Pos.y );
 					player.transform.position = new Vector2( Pos.x, Pos.y );
 				}
+
 
 			}
 		}
