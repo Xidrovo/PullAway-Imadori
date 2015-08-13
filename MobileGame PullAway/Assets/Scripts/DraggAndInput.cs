@@ -10,6 +10,7 @@ public class DraggAndInput : MonoBehaviour {
 	private bool bd = false, bdT=false;
 	private Vector3 Pos;
 	private GameObject player, temp;
+	private SpriteRenderer spriteRenderer;
 	private RaycastHit colision;
 	private float DistanceY, DistanceX;
 
@@ -29,6 +30,7 @@ public class DraggAndInput : MonoBehaviour {
 		{
 			Dragging ();
 			Velocidad = player.GetComponent<Rigidbody2D> ();
+			spriteRenderer = player.GetComponent<SpriteRenderer>();
 
 
 		}catch(System.NullReferenceException ex)		
@@ -64,21 +66,16 @@ public class DraggAndInput : MonoBehaviour {
 				BorrarLuego();
 				if(bdT)
 				{
+
 					Velocidad.AddForce(new Vector2 (DistanceX * 1f , DistanceY * 1f) );
-					if((Velocidad.gameObject.transform.position.y>=16f)||(Velocidad.gameObject.transform.position.y<=-16f))
-					{
-						Destroy(Velocidad.gameObject);
-					}
-					if((Velocidad.gameObject.transform.position.x<=-25f)||(Velocidad.gameObject.transform.position.x>=25f))
-					{
-						Destroy(Velocidad.gameObject);
-					}
+
 
 				}
 				else
 				{
-					Debug.Log (Input.GetTouch(0).position + ";" + Pos.x + " | " + Pos.y );
+
 					player.transform.position = new Vector2( Pos.x, Pos.y );
+
 				}
 
 

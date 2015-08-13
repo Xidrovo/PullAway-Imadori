@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DraggAndInput.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\ESPOL\Seed\Shark-Plane\Shark-Plane\Assets\Scripts\KeyboardControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\DraggAndInput.cs" Line="73" Column="7" />
-      <File FileName="..\..\..\..\..\Public\Documents\Unity Projects\MobileGame PullAway\Assets\Scripts\CreateRamdomly.cs" Line="88" Column="1" />
-      <File FileName="..\..\..\..\..\Public\Documents\Unity Projects\MobileGame PullAway\Assets\Scripts\Pause.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\..\Public\Documents\Unity Projects\MobileGame PullAway\Assets\Scripts\Continuar.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\ESPOL\Seed\Shark-Plane\Shark-Plane\Assets\Scripts\KeyboardControl.cs" Line="16" Column="64" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

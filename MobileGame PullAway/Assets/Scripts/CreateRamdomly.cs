@@ -7,12 +7,14 @@ public class CreateRamdomly : MonoBehaviour  {
 	//	public Canvas canva;
 	private GameObject NormalTable;
 	public ArrayList Aprefabs=new ArrayList();
-	private int Max, Cont, Tipo;
+	public static int Max;
+	private int Cont, Tipo;
 	private float ZRotation, angle;
 	private Quaternion Rotation;
+	private SpriteRenderer spriteRenderer;
 	// Use this for initialization
 	void Start () {
-		Max = 90;//Random.Range (10, 50);
+		Max = 30;//Random.Range (10, 50);
 		Cont = 0;
 		Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
@@ -48,6 +50,8 @@ public class CreateRamdomly : MonoBehaviour  {
 		//With this we initiate the object as a game object.
 		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
+		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
+		spriteRenderer.sortingOrder = Cont + 1;
 
 	}
 
