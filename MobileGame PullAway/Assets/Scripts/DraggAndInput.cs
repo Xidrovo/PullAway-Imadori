@@ -15,7 +15,7 @@ public class DraggAndInput : MonoBehaviour {
 	private float DistanceY, DistanceX;
 	private AtribRocks atb;
 	private Vector3 Temp;
-	private int contV=0;
+	private static int contV=0;
 
 	// Use this for initialization
 	void Start () 
@@ -74,7 +74,7 @@ public class DraggAndInput : MonoBehaviour {
 					player = temp;
 				}
 			}
-			if ((player.gameObject.name != "Temporito")||(atb.life<=0))
+			if ((player.gameObject.name != "Temporito")&&(atb.life<=0))
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
 				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
@@ -107,7 +107,8 @@ public class DraggAndInput : MonoBehaviour {
 	{
 		if (cont == 1) 
 		{
-			atb.life--;
+			atb.life-=1;
+			cont=5;
 		}
 	}
 
