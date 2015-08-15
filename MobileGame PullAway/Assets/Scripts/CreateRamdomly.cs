@@ -87,5 +87,5 @@ public class CreateRamdomly : MonoBehaviour  {
 		Quaternion Rot = Quaternion.Euler(x,y,z);
 
 		return Rot;
-	}	
+	}
 }
