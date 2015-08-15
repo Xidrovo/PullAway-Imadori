@@ -6,6 +6,7 @@ public class Eliminar : MonoBehaviour {
 	public CreateRamdomly  random;
 	private AtribRocks atb;
 	private int Tipo;
+	public static bool Duty = false;
 
 	// Use this for initialization
 	void Start () 
@@ -24,6 +25,7 @@ public class Eliminar : MonoBehaviour {
 
 				Destroy(this.gameObject);
 				//Incrementar el Layer a toooodas las rocas
+				Duty = true;
 				Tipo = Random.Range (0, 8);
 				random.CreateObject(Tipo);
 			}
