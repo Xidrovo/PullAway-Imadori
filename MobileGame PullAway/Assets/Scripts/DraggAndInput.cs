@@ -13,7 +13,7 @@ public class DraggAndInput : MonoBehaviour {
 	private SpriteRenderer spriteRenderer;
 	private RaycastHit colision;
 	private float DistanceY, DistanceX;
-
+	private AtribRocks atb;
 	private Vector3 Temp;
 
 	// Use this for initialization
@@ -53,7 +53,8 @@ public class DraggAndInput : MonoBehaviour {
 		
 		if (Input.touchCount > 0) 
 		{
-			if (Input.GetTouch (0).phase == TouchPhase.Began) {
+			if (Input.GetTouch (0).phase == TouchPhase.Began) 
+			{
 				//Cambia la posicion del touch por la posicion en la pantalla, es como un render
 				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
 				//Usamos un raycast 2d para hallar el collider
@@ -62,12 +63,16 @@ public class DraggAndInput : MonoBehaviour {
 				if (hit != null && hit.collider != null) {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
-					player = GameObject.Find (hit.collider.gameObject.name);				
+					player = GameObject.Find (hit.collider.gameObject.name);		
+					atb=player.GetComponent<AtribRocks>();
+					atb.life--;
 				}
 				else
+				{
 					player = temp;
+				}
 			}
-			if (player.gameObject.name != "Temporito")
+			if ((player.gameObject.name != "Temporito")||(atb.life<=0))
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
 				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
@@ -76,7 +81,6 @@ public class DraggAndInput : MonoBehaviour {
 				{
 
 					Velocidad.AddForce(new Vector2 (DistanceX * 1f , DistanceY * 1f) );
-
 
 				}
 				else
