@@ -15,6 +15,7 @@ public class DraggAndInput : MonoBehaviour {
 	private float DistanceY, DistanceX;
 	private AtribRocks atb;
 	private Vector3 Temp;
+	private int contV=0;
 
 	// Use this for initialization
 	void Start () 
@@ -65,7 +66,8 @@ public class DraggAndInput : MonoBehaviour {
 					//designamos el objeto a mover dependiendo del collider tocado
 					player = GameObject.Find (hit.collider.gameObject.name);		
 					atb=player.GetComponent<AtribRocks>();
-					atb.life--;
+					contV++;
+					perderVidas(contV);
 				}
 				else
 				{
@@ -92,8 +94,21 @@ public class DraggAndInput : MonoBehaviour {
 
 
 			}
+			if (Input.GetTouch (0).phase == TouchPhase.Ended) 
+			{
+				contV=0;
+			}
+
 		}
 
+	}
+
+	public void perderVidas(int cont)
+	{
+		if (cont == 1) 
+		{
+			atb.life--;
+		}
 	}
 
 	public void BorrarLuego()
