@@ -37,6 +37,14 @@ public class DraggAndInput : MonoBehaviour {
 		{
 			player = temp;
 		}
+		catch (System.MissingFieldException ex)
+		{
+			Debug.Log ("-:D-");
+		}
+		catch (System.Exception e)
+		{
+			Debug.Log ("D:!");
+		}
 	}
 
 
