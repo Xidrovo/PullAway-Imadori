@@ -5,21 +5,34 @@ using UnityEngine.UI;
 public class Bida : MonoBehaviour {
 
 	private static Image imagen;
-	public static float Reduction = 0.003f;
-	public static float Regeneration = 0.005f;
+	private int Interval = 1;
+	private float nextTime = 0;
+	
 	// Use this for initialization
 	void Start () {
 		imagen = this.GetComponent<Image> ();	
+		InvokeRepeating("Damaging", 0f, 0.08f );
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		imagen.fillAmount = imagen.fillAmount - Reduction;
-	
+		
 	}
-
+	
+	public void Damaging()
+	{
+		if (GeneralAttrib.Life >= 0) 
+		{
+			GeneralAttrib.Life = GeneralAttrib.Life - GeneralAttrib.Damage;
+			Debug.Log (GeneralAttrib.Life);
+			imagen.fillAmount = (float)GeneralAttrib.Life / 100;
+		}
+	}
 	public static void LifeUp()
 	{
-		imagen.fillAmount = imagen.fillAmount + Regeneration;
+		
+		GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
+		imagen.fillAmount = (float) GeneralAttrib.Life / 100;
+		
 	}
 }
