@@ -18,7 +18,10 @@ public class AtribRocks : MonoBehaviour {
 		{
 			this.layer++;
 			Sr.sortingOrder = this.layer;
+<<<<<<< HEAD
 			Debug.Log("vine aqui" + " " + this.layer);
+=======
+>>>>>>> origin/master
 			Eliminar.Duty = false;
 		}
 	}

@@ -22,7 +22,7 @@ public class Eliminar : MonoBehaviour {
 			if((this.transform.position.y>=16f)||(this.transform.position.y<=-16f))
 			{
 
-
+				Duty = true;
 				Destroy(this.gameObject);
 				//Incrementar el Layer a toooodas las rocas
 				Duty = true;
@@ -31,9 +31,11 @@ public class Eliminar : MonoBehaviour {
 			}
 			if((this.transform.position.x<=-25f)||(this.transform.position.x>=25f))
 			{
+				Duty = true;
 				Destroy(this.gameObject);
 				//Incrementar el Layer a toooodas las rocas
-				random.CreateObject(1);
+				Tipo = Random.Range (0, 8);
+				random.CreateObject(Tipo);
 			}
 
 		}
