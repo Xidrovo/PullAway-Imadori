@@ -24,7 +24,6 @@ public class Bida : MonoBehaviour {
 		if (GeneralAttrib.Life >= 0) 
 		{
 			GeneralAttrib.Life = GeneralAttrib.Life - GeneralAttrib.Damage;
-			Debug.Log (GeneralAttrib.Life);
 			imagen.fillAmount = (float)GeneralAttrib.Life / 100;
 		}
 	}

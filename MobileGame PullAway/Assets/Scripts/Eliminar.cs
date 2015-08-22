@@ -7,11 +7,13 @@ public class Eliminar : MonoBehaviour {
 	private AtribRocks atb;
 	private int Tipo;
 	public static bool Duty = false;
+	public static int ReloadLayout;
 
 	// Use this for initialization
 	void Start () 
 	{
-		atb=this.GetComponent<AtribRocks>();
+		atb = this.GetComponent<AtribRocks>();
+		ReloadLayout = random.Max;
 	}
 	
 	// Update is called once per frame
@@ -21,21 +23,14 @@ public class Eliminar : MonoBehaviour {
 		{
 			if((this.transform.position.y>=16f)||(this.transform.position.y<=-16f))
 			{
-
 				Duty = true;
+				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Destroy(this.gameObject);
-				//Incrementar el Layer a toooodas las rocas
-				Duty = true;
-				Tipo = Random.Range (0, 8);
-				random.CreateObject(Tipo);
 			}
 			if((this.transform.position.x<=-25f)||(this.transform.position.x>=25f))
 			{
 				Duty = true;
 				Destroy(this.gameObject);
-				//Incrementar el Layer a toooodas las rocas
-				Tipo = Random.Range (0, 8);
-				random.CreateObject(Tipo);
 			}
 
 		}

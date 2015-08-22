@@ -6,15 +6,17 @@ public class CreateRamdomly : MonoBehaviour  {
 	private float Radio =2f;
 	//	public Canvas canva;
 	private GameObject NormalTable;
-	public ArrayList Aprefabs=new ArrayList();
-	public static int Max;
-	private int Cont, Tipo;
+	public ArrayList Aprefabs = new ArrayList();
+
+	public static ArrayList AllRocks = new ArrayList();
+
+	private int Cont, Tipo, OneCont;
 	private float ZRotation, angle;
 	private Quaternion Rotation;
 	private SpriteRenderer spriteRenderer;
+	public int Max = 30;
 	// Use this for initialization
 	void Start () {
-		Max = 30;//Random.Range (10, 50);
 		Cont = 0;
 		Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
@@ -25,6 +27,7 @@ public class CreateRamdomly : MonoBehaviour  {
 		Aprefabs.Add(PreFab6);
 		Aprefabs.Add(PreFab7);
 		Aprefabs.Add(PreFab8);
+		Eliminar.ReloadLayout = Max - 1;
 	}
 	
 	// Update is called once per frame
@@ -36,7 +39,38 @@ public class CreateRamdomly : MonoBehaviour  {
 			CreateObject(Tipo);
 			Cont++;
 		}
+		if (Eliminar.Duty == true) 
+		{
+			Tipo = Random.Range (0, 8);
+			CreateObjectOnRunTime(Tipo);
+			Eliminar.Duty = false;
+		}
 	
+	}
+
+	public void CreateObjectOnRunTime(int tipo)
+	{
+		//With this I will get the "z" rotation of the object... this "z" rotation is the one that really
+		//rotate the object as we want to rotate.
+		Rotation = RotAleatoria ();
+		ZRotation = Rotation.eulerAngles.z;
+		
+		//With this we initiate the object as a game object.
+		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (0);
+		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(0) , Rotation );
+		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
+		spriteRenderer.sortingOrder = 1;
+		AllRocks.Add (NormalTable);
+		foreach (GameObject x in CreateRamdomly.AllRocks)
+		{
+//			Debug.Log("jejei");
+			try
+			{
+				x.GetComponent<AtribRocks>().SortingUp();
+			}catch(System.Exception)
+			{
+			}
+		}
 	}
 
 	//This Method will create everything the object needs, it use a "Prefab" to have the scripts, sprites, etc.
@@ -52,7 +86,7 @@ public class CreateRamdomly : MonoBehaviour  {
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
 		spriteRenderer.sortingOrder = Cont + 1;
-
+		AllRocks.Add (NormalTable);
 	}
 
 	//This method will give me a random vector3... that means, a random position... buuuut!!...
@@ -77,7 +111,8 @@ public class CreateRamdomly : MonoBehaviour  {
 		}*/
 		return Vector;
 	}
-	
+
+
 	public Quaternion RotAleatoria()
 	{
 		int x = 0;

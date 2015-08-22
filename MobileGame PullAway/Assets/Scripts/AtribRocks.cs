@@ -9,21 +9,24 @@ public class AtribRocks : MonoBehaviour {
 
 	void Start () {
 		Sr = this.GetComponent<SpriteRenderer> ();
+		this.layer = Sr.sortingOrder; 
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Eliminar.Duty) 
-		{
-			this.layer++;
-			Sr.sortingOrder = this.layer;
-<<<<<<< HEAD
-			Debug.Log("vine aqui" + " " + this.layer);
-=======
->>>>>>> origin/master
-			Eliminar.Duty = false;
-		}
+
 	}
 
+	public void SortingUp()
+	{
+		try{
+			Sr.sortingOrder = Sr.sortingOrder + 1;
+			this.layer = Sr.sortingOrder;
+			this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
+		}
+		catch(System.Exception e)
+		{
+		}
+	}
 }

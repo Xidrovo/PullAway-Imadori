@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\CreateRamdomly.cs" />
      <Compile Include="Assets\Scripts\DraggAndInput.cs" />
      <Compile Include="Assets\Scripts\Eliminar.cs" />
-     <Compile Include="Assets\Scripts\InitialMovement.cs" />
      <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
      <Compile Include="Assets\Scripts\NameToucher.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />

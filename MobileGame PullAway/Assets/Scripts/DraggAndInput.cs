@@ -40,11 +40,11 @@ public class DraggAndInput : MonoBehaviour {
 		}
 		catch (System.MissingFieldException ex)
 		{
-			Debug.Log ("-:D-");
+
 		}
 		catch (System.Exception e)
 		{
-			Debug.Log ("D:!");
+
 		}
 	}
 
