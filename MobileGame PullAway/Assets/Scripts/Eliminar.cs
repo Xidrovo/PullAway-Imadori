@@ -25,11 +25,14 @@ public class Eliminar : MonoBehaviour {
 			{
 				Duty = true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
+				Bida.LifeUp();
 				Destroy(this.gameObject);
 			}
 			if((this.transform.position.x<=-25f)||(this.transform.position.x>=25f))
 			{
 				Duty = true;
+				CreateRamdomly.AllRocks.Remove(this.gameObject);
+				Bida.LifeUp();
 				Destroy(this.gameObject);
 			}
 

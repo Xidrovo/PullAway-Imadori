@@ -14,7 +14,16 @@ public class Pause : MonoBehaviour {
 		PauseMenu.SetActive (false);
 		State = false;
 	}
-	
+
+	void Update()
+	{
+		if (Bida.imagen.fillAmount <= 0.03f) 
+		{
+			Debug.Log ("Pos me mato");
+			State = true;
+			StartSelection();
+		}
+	}
 	// Update is called once per frame
 	void OnEnable() {
 		Pausa.onClick.AddListener(StartSelection);
@@ -24,7 +33,10 @@ public class Pause : MonoBehaviour {
 
 	public void StartSelection()
 	{
-		State = !State;
+		if (Bida.imagen.fillAmount >= 0.01f) 
+		{
+			State = !State;
+		}
 
 		if (State) {
 			PauseMenu.SetActive (true);

@@ -9,7 +9,6 @@ public class Continuar : MonoBehaviour {
 	{
 		Application.LoadLevel ("SurvivalMode");
 
-	
 	}
 	
 	// Update is called once per frame
@@ -17,5 +16,10 @@ public class Continuar : MonoBehaviour {
 	{
 		Application.Quit ();
 	
+	}
+
+	public void Retry()
+	{
+		Application.LoadLevel ("SurvivalMode");
 	}
 }

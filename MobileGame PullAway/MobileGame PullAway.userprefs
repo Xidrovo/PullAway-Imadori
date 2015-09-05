@@ -1,13 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CreateRamdomly.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\muerte.cs">
     <Files>
-      <File FileName="Assets\Scripts\CreateRamdomly.cs" Line="67" Column="7" />
-      <File FileName="Assets\Scripts\AtribRocks.cs" Line="26" Column="59" />
-      <File FileName="Assets\Scripts\Camera\Camareta.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Eliminar.cs" Line="27" Column="53" />
-      <File FileName="Assets\Scripts\DraggAndInput.cs" Line="168" Column="4" />
-      <File FileName="Assets\Scripts\Bida.cs" Line="38" Column="1" />
+      <File FileName="Assets\Scripts\Main Character\GeneralAttrib.cs" Line="15" Column="3" />
+      <File FileName="Assets\Scripts\Eliminar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AtribRocks.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bida.cs" Line="28" Column="4" />
+      <File FileName="Assets\Scripts\CreateRamdomly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Pause.cs" Line="36" Column="37" />
+      <File FileName="Assets\Scripts\Continuar.cs" Line="23" Column="42" />
+      <File FileName="Assets\Scripts\muerte.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

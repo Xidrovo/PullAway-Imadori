@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Bida : MonoBehaviour {
 
-	private static Image imagen;
+	public static Image imagen;
 	private int Interval = 1;
 	private float nextTime = 0;
 	
@@ -21,7 +21,7 @@ public class Bida : MonoBehaviour {
 	
 	public void Damaging()
 	{
-		if (GeneralAttrib.Life >= 0) 
+		if (GeneralAttrib.Life >= 0.5) 
 		{
 			GeneralAttrib.Life = GeneralAttrib.Life - GeneralAttrib.Damage;
 			imagen.fillAmount = (float)GeneralAttrib.Life / 100;
@@ -29,7 +29,6 @@ public class Bida : MonoBehaviour {
 	}
 	public static void LifeUp()
 	{
-		
 		GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
 		imagen.fillAmount = (float) GeneralAttrib.Life / 100;
 		
