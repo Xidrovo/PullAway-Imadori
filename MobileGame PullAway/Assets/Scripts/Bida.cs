@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -16,7 +16,7 @@ public class Bida : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	
 	public void Damaging()
@@ -29,8 +29,11 @@ public class Bida : MonoBehaviour {
 	}
 	public static void LifeUp()
 	{
-		GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
-		imagen.fillAmount = (float) GeneralAttrib.Life / 100;
-		
+		if(GeneralAttrib.Life<100)
+		{
+			GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
+			imagen.fillAmount = (float) GeneralAttrib.Life / 100;
+		}
+
 	}
 }

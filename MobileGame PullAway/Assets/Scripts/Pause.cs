@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -15,38 +15,30 @@ public class Pause : MonoBehaviour {
 		State = false;
 	}
 
-	void Update()
+	void Update () 
 	{
-		if (Bida.imagen.fillAmount <= 0.03f) 
+		if (Bida.imagen.fillAmount <= 0.004f || GeneralAttrib.Life <=0.004f) 
 		{
-			Debug.Log ("Pos me mato");
-			State = true;
-			StartSelection();
+			GeneralAttrib.Life=100;
+			Application.LoadLevel("GameOver");
+
 		}
 	}
+
 	// Update is called once per frame
-	void OnEnable() {
-		Pausa.onClick.AddListener(StartSelection);
-		Resume.onClick.AddListener (StartSelection);
 	
-	}
-
-	public void StartSelection()
+	public void Resumir()
 	{
-		if (Bida.imagen.fillAmount >= 0.01f) 
-		{
-			State = !State;
-		}
 
-		if (State) {
-			PauseMenu.SetActive (true);
-			Time.timeScale = 0;
-			Static.Estatico = true;
-		} else 
-		{
-			PauseMenu.SetActive(false);
-			Time.timeScale = 1;
-			Static.Estatico = false;
-		}
+		PauseMenu.SetActive(false);
+		Time.timeScale = 1;
+		Static.Estatico = false;
+	}
+	public void Pausar()
+	{
+		PauseMenu.SetActive(true);
+		Time.timeScale = 0;
+		Static.Estatico = true;
+
 	}
 }

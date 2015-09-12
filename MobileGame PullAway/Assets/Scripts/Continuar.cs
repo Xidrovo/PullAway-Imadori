@@ -5,7 +5,7 @@ using System.Collections;
 public class Continuar : MonoBehaviour {
 
 	// Use this for initialization
-	public void LoadLevel(string levelName) 
+	public void LoadLevel() 
 	{
 		Application.LoadLevel ("SurvivalMode");
 
