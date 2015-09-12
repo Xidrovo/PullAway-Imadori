@@ -36,8 +36,8 @@ public class AtribRocks : MonoBehaviour {
 			Sr.sortingOrder = Sr.sortingOrder + 1;
 			this.layer = Sr.sortingOrder;
 			this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
-            Resultado = ((float)(30 - this.layer) / 100);
-            Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
+			Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
+			Resultado = ((float)(30 - this.layer) / 100);
         }
 		catch(System.Exception e)
 		{

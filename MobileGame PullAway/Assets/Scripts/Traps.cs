@@ -8,30 +8,48 @@ public class Traps : MonoBehaviour {
 	private int probT1,probT2;
 	private GameObject nuevo;
 	private Quaternion rotacion= Quaternion.Euler(0,0,0);
+	private bool die=false;
+	public int timeofD=0;
 
 	void Start () 
 	{
-		
+		InvokeRepeating ("CrearT",2f,3f);
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		probT1 = Random.Range (1,100);
-		probT2 = Random.Range (1,100);
-//		if (probT1 < (Map (metros, 300, 100)*5) +25) 
+		if (die) 
 		{
-			nuevo=(GameObject)Instantiate(prefabT1,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
+			timeofD++;
 		}
-//		if ((Map (metros, 300, 100)<3)&&(probT2 < (Map (metros, 300, 100)*5) +25)) 
+		if (timeofD > 500) 
 		{
-			nuevo=(GameObject)Instantiate(prefabT2,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
-		}
-//		if ((Map (metros, 300, 100)>3)&&(probT2 < (Map (metros, 300, 100)*5) +15)) 
-		{
-			nuevo=(GameObject)Instantiate(prefabT2,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
+			GeneralAttrib.Life=0;
 		}
 		
+	}
+
+	public void CrearT()
+	{
+		probT1 = Random.Range (1,100);
+		probT2 = Random.Range (1,100);
+		if (probT1 < (Map (GeneralAttrib.metros, 300, 100)*5) +25) 
+		{
+			nuevo=(GameObject)Instantiate(prefabT1,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
+			die = true;
+		}
+		else if ((Map (GeneralAttrib.metros, 300, 100)<3)&&(probT2 < (Map (GeneralAttrib.metros, 300, 100)*5) +25)) 
+		{
+			nuevo=(GameObject)Instantiate(prefabT2,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
+			die = true;
+		}
+		else if ((Map (GeneralAttrib.metros, 300, 100)>3)&&(probT2 < (Map (GeneralAttrib.metros, 300, 100)*5) +15)) 
+		{
+			nuevo=(GameObject)Instantiate(prefabT2,new Vector3(Camera.main.transform.position.x,Camera.main.transform.position.y,0),rotacion);
+			die = true;
+		}
 	}
 
 	public int Map(double numIni, double oldMax, double oldMin)
