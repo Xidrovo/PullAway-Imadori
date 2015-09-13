@@ -26,6 +26,8 @@ public class Eliminar : MonoBehaviour {
 				Duty = true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
+                GeneralAttrib.metros++;
+                GeneralAttrib.Damage += 0.05f;
 				Destroy(this.gameObject);
 			}
 			if((this.transform.position.x<=-25f)||(this.transform.position.x>=25f))
@@ -33,8 +35,14 @@ public class Eliminar : MonoBehaviour {
 				Duty = true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
+                GeneralAttrib.metros++;
+                GeneralAttrib.Damage += 0.05f;
 				Destroy(this.gameObject);
 			}
+            if (GeneralAttrib.metros !=0 && GeneralAttrib.metros % 100 == 0)
+            {
+                GeneralAttrib.Damage *= 2f;
+            }
 
 		}
 		catch (System.NullReferenceException e)

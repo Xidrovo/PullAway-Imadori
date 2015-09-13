@@ -15,6 +15,7 @@ public class DraggAndInput : MonoBehaviour {
 	private float DistanceY, DistanceX;
 	private AtribRocks atb;
 	private Vector3 Temp;
+    private TrapsAtt att;
 	private static int contV=0;
 
 	// Use this for initialization
@@ -64,36 +65,49 @@ public class DraggAndInput : MonoBehaviour {
 				if (hit != null && hit.collider != null) {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
-					player = GameObject.Find (hit.collider.gameObject.name);		
-					atb=player.GetComponent<AtribRocks>();
-					contV++;
-					perderVidas(contV);
+					player = GameObject.Find (hit.collider.gameObject.name);
+                    if (player.tag.CompareTo("Trampa") == 0)
+                    {
+                        att = player.GetComponent<TrapsAtt>();
+                        contV++;
+                        perderVidas2(contV);
+                    }
+                    else 
+                    {
+                        atb = player.GetComponent<AtribRocks>();
+                        contV++;
+                        perderVidas(contV);
+                    }
+					
 				}
 				else
 				{
 					player = temp;
 				}
 			}
-			if ((player.gameObject.name != "Temporito")&&(atb.life<=0))
-			{
-			//	Invoke ("TemporalTouch", 0.001f);
-				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
-				BorrarLuego();
-				if(bdT)
-				{
+            if (player.tag.CompareTo("Trampa") != 0)
+            {
+                if ((player.gameObject.name != "Temporito") && (atb.life <= 0))
+                {
+                    Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                    BorrarLuego();
+                    if (bdT)
+                    {
 
-					Velocidad.AddForce(new Vector2 (DistanceX * 1f , DistanceY * 1f) );
+                        Velocidad.AddForce(new Vector2(DistanceX * 1f, DistanceY * 1f));
 
-				}
-				else
-				{
+                    }
+                    else
+                    {
 
-					player.transform.position = new Vector2( Pos.x, Pos.y );
+                        player.transform.position = new Vector2(Pos.x, Pos.y);
 
-				}
+                    }
 
 
-			}
+                }
+            }
+			
 			if (Input.GetTouch (0).phase == TouchPhase.Ended) 
 			{
 				contV=0;
@@ -111,6 +125,18 @@ public class DraggAndInput : MonoBehaviour {
 			cont=5;
 		}
 	}
+    public void perderVidas2(int cont)
+    {
+        if (cont == 1)
+        {
+            att.life -= 1;
+            cont = 5;
+        }
+        if (att.life <= 0)
+        {
+            Destroy(player);
+        }
+    }
 
 	public void BorrarLuego()
 	{
