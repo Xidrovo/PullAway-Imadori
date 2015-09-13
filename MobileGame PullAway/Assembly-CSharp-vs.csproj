@@ -61,7 +61,7 @@
      <Compile Include="Assets\Scripts\Scaler.cs" />
      <Compile Include="Assets\Scripts\Static.cs" />
      <Compile Include="Assets\Scripts\Traps.cs" />
-     <Compile Include="Assets\Scripts\TrapsAtt.cs" />
+     <Compile Include="Assets\Scripts\muerte.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

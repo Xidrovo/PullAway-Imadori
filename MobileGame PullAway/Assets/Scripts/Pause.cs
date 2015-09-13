@@ -17,7 +17,7 @@ public class Pause : MonoBehaviour {
 
 	void Update () 
 	{
-		if (Bida.imagen.fillAmount <= 0.005f || GeneralAttrib.Life <=0.005f) 
+		if (Bida.imagen.fillAmount <= 0.004f || GeneralAttrib.Life <=0.004f) 
 		{
 			GeneralAttrib.Life=100;
 			Application.LoadLevel("GameOver");

@@ -14,7 +14,6 @@ public class DraggAndInput : MonoBehaviour {
 	private RaycastHit colision;
 	private float DistanceY, DistanceX;
 	private AtribRocks atb;
-	private TrapsAtt att2;
 	private Vector3 Temp;
 	private static int contV=0;
 
@@ -66,19 +65,9 @@ public class DraggAndInput : MonoBehaviour {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
 					player = GameObject.Find (hit.collider.gameObject.name);		
-					if(player.GetComponent<AtribRocks>()!=null)
-					{
-						atb=player.GetComponent<AtribRocks>();
-						contV++;
-						perderVidas(contV);
-					}
-					else
-					{
-						att2=player.GetComponent<TrapsAtt>();
-						contV++;
-						perderVidas(contV);
-
-					}
+					atb=player.GetComponent<AtribRocks>();
+					contV++;
+					perderVidas(contV);
 				}
 				else
 				{
@@ -120,19 +109,6 @@ public class DraggAndInput : MonoBehaviour {
 		{
 			atb.life-=1;
 			cont=5;
-		}
-	}
-
-	public void perderVidas2(int cont)
-	{
-		if (cont == 1) 
-		{
-			att2.life-=1;
-			cont=5;
-		}
-		if (att2.life <= 0) 
-		{
-			Destroy(player);
 		}
 	}
 

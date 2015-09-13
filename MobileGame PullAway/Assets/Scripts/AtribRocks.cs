@@ -25,8 +25,13 @@ public class AtribRocks : MonoBehaviour {
 			this.layer = Sr.sortingOrder;
 			this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
 			Resultado = ((float)(30 - this.layer) / 100);
+=======
+            Resultado = ((float)(30 - this.layer) / 100);
+            Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
+>>>>>>> parent of dc75d8c... okidoki_
         }
 =======
 		}
