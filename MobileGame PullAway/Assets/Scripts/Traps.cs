@@ -7,6 +7,7 @@ public class Traps : MonoBehaviour {
 	public GameObject prefabT1, prefabT2;
 	private int probT1,probT2;
 	private GameObject nuevo;
+    public static int death = 0;
 	private Quaternion rotacion= Quaternion.Euler(0,0,0);
 
 	void Start () 
@@ -23,7 +24,7 @@ public class Traps : MonoBehaviour {
     public void prob()
     {
         float proba = Random.Range(1, 100);
-        if (proba < 30)
+        if (proba <= death)
         {
             crearT();
         }
