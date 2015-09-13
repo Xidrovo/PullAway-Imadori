@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -11,17 +11,17 @@ public class Bida : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		imagen = this.GetComponent<Image> ();	
-		InvokeRepeating("Damaging", 0f, 0.08f );
+		InvokeRepeating("Damaging", 1.3f, 0.08f );
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 	
 	public void Damaging()
 	{
-		if (GeneralAttrib.Life >= 0.5) 
+		if (GeneralAttrib.Life >= 0.3) 
 		{
 			GeneralAttrib.Life = GeneralAttrib.Life - GeneralAttrib.Damage;
 			imagen.fillAmount = (float)GeneralAttrib.Life / 100;
@@ -29,11 +29,12 @@ public class Bida : MonoBehaviour {
 	}
 	public static void LifeUp()
 	{
-		if(GeneralAttrib.Life<100)
-		{
-			GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
-			imagen.fillAmount = (float) GeneralAttrib.Life / 100;
-		}
-
+        if (GeneralAttrib.Life < 100f)
+        {
+            GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
+            imagen.fillAmount = (float)GeneralAttrib.Life / 100;
+        }
+		
+		
 	}
 }

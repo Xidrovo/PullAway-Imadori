@@ -15,6 +15,15 @@ public class AtribRocks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+        if (this.layer == 30)
+        {
+            Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, Sr.color.a + 0.05f);
+            this.GetComponent<Collider2D>().enabled = true;
+        }
+        else
+        {
+            this.GetComponent<Collider2D>().enabled = false;
+        }
 
 	}
 
@@ -24,18 +33,8 @@ public class AtribRocks : MonoBehaviour {
 			Sr.sortingOrder = Sr.sortingOrder + 1;
 			this.layer = Sr.sortingOrder;
 			this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
-<<<<<<< HEAD
-<<<<<<< HEAD
-			Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
-			Resultado = ((float)(30 - this.layer) / 100);
-=======
-            Resultado = ((float)(30 - this.layer) / 100);
-            Sr.color = new Color(Temp.color.r - Resultado, Temp.color.g - Resultado, Temp.color.b - Resultado, Temp.color.a - Resultado);
->>>>>>> parent of dc75d8c... okidoki_
-        }
-=======
+			
 		}
->>>>>>> parent of 83c16de... :dancers:
 		catch(System.Exception e)
 		{
 		}

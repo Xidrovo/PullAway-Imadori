@@ -17,7 +17,16 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of dc75d8c... okidoki_
+=======
+																																																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of 83c16de... :dancers:
+=======
+																																																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of 4e6090c... fire
 =======
 																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master

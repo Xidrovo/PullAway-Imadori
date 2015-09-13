@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Static : MonoBehaviour {
 
-	public static bool Estatico;
+	public static bool Estatico = false;
+	public static double points = 0;
+
 
 	// Use this for initialization
 	void Start () {

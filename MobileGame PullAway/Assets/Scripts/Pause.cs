@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -15,30 +15,34 @@ public class Pause : MonoBehaviour {
 		State = false;
 	}
 
-	void Update () 
+	void Update()
 	{
-		if (Bida.imagen.fillAmount <= 0.004f || GeneralAttrib.Life <=0.004f) 
+		if (Bida.imagen.fillAmount <= 0.04f) 
 		{
-			GeneralAttrib.Life=100;
-			Application.LoadLevel("GameOver");
-
+            Application.LoadLevel("GameOver");
 		}
 	}
 
-	// Update is called once per frame
-	
-	public void Resumir()
-	{
-
-		PauseMenu.SetActive(false);
-		Time.timeScale = 1;
-		Static.Estatico = false;
-	}
 	public void Pausar()
 	{
-		PauseMenu.SetActive(true);
+		PauseMenu.SetActive (true);
 		Time.timeScale = 0;
-		Static.Estatico = true;
+	    Static.Estatico = true;
+		
+	}
 
+    public void Retry()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
+        Static.Estatico = false;
+        GeneralAttrib.Life = 100;
+        Application.LoadLevel("SurvivalMode");
+    }
+    public void Resumir()
+    {
+			PauseMenu.SetActive(false);
+			Time.timeScale = 1;
+			Static.Estatico = false;
 	}
 }

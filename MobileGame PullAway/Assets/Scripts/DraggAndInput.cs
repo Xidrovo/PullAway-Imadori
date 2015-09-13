@@ -74,7 +74,7 @@ public class DraggAndInput : MonoBehaviour {
 					player = temp;
 				}
 			}
-			if ((player.gameObject.name != "Temporito")&&(atb.life<=0)&& (atb.layer==30))
+			if ((player.gameObject.name != "Temporito")&&(atb.life<=0))
 			{
 			//	Invoke ("TemporalTouch", 0.001f);
 				Pos = Camera.main.ScreenToWorldPoint (Input.GetTouch (0).position);
