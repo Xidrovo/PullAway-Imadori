@@ -5,6 +5,7 @@ public class Eliminar : MonoBehaviour {
 
 	public CreateRamdomly  random;
 	private AtribRocks atb;
+    private AudioSource fxSound;
 	private int Tipo;
 	public static bool Duty = false;
 	public static int ReloadLayout;
@@ -14,6 +15,7 @@ public class Eliminar : MonoBehaviour {
 	{
 		atb = this.GetComponent<AtribRocks>();
 		ReloadLayout = random.Max;
+        fxSound=this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +35,7 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
+                fxSound.Play();
 				Destroy(this.gameObject);
                 
 			}
@@ -48,6 +51,7 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
+                fxSound.Play();
 				Destroy(this.gameObject);
                 
 			}

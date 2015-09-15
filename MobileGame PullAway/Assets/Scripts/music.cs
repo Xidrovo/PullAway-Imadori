@@ -5,7 +5,6 @@ public class music : MonoBehaviour {
 
 	// Use this for initialization
     AudioSource fxSound; // Emitir sons
-    public AudioClip backMusic; // Som de fundo
     // Use this for initialization
     void Start()
     {

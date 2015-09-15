@@ -15,7 +15,7 @@ public class AtribRocks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        if (this.layer == 30)
+        if (this.layer >= 30 && Static.Estatico == false)
         {
             Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, Sr.color.a + 0.05f);
             this.GetComponent<Collider2D>().enabled = true;
