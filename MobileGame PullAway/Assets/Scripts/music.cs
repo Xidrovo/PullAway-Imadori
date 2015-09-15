@@ -16,6 +16,11 @@ public class music : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(!fxSound.isPlaying)
+        {
+            fxSound.Play();
+        }
 	
 	}
 }
