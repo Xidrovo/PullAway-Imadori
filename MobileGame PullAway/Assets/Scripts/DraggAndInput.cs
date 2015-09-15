@@ -9,7 +9,7 @@ public class DraggAndInput : MonoBehaviour {
 	private string nombre;
 	private bool bd = false, bdT=false;
 	private Vector3 Pos;
-	private GameObject player, temp;
+	private GameObject player, temp, enemy;
 	private SpriteRenderer spriteRenderer;
 	private RaycastHit colision;
 	private float DistanceY, DistanceX;
@@ -49,7 +49,14 @@ public class DraggAndInput : MonoBehaviour {
 		}
 	}
 
-
+    public void Shacking()
+    {
+        if (Input.acceleration.x > 1 || Input.acceleration.y > 1 || Input.acceleration.z > 1)
+        {
+            enemy=GameObject.FindGameObjectWithTag("Trampa2");
+            enemy.GetComponent<TrapsAtt>().life=0;
+        }
+    }
 	public void Dragging()
 	{
 		
@@ -66,11 +73,12 @@ public class DraggAndInput : MonoBehaviour {
 					bd = true;
 					//designamos el objeto a mover dependiendo del collider tocado
 					player = GameObject.Find (hit.collider.gameObject.name);
-                    if (player.tag.CompareTo("Trampa") == 0)
+                    if (player.tag.CompareTo("Trampa1") == 0 || player.tag.CompareTo("Trampa2") == 0)
                     {
                         att = player.GetComponent<TrapsAtt>();
                         contV++;
                         perderVidas2(contV);
+
                     }
                     else 
                     {
@@ -85,7 +93,7 @@ public class DraggAndInput : MonoBehaviour {
 					player = temp;
 				}
 			}
-            if (player.tag.CompareTo("Trampa") != 0)
+            if (player.tag.CompareTo("roca") == 0)
             {
                 if ((player.gameObject.name != "Temporito") && (atb.life <= 0))
                 {

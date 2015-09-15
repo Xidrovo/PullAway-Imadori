@@ -21,7 +21,7 @@ public class Eliminar : MonoBehaviour {
 
 		try
 		{
-			if((this.transform.position.y>=16f)||(this.transform.position.y<=-16f))
+			if((this.transform.position.y>=5f)||(this.transform.position.y<=-5f))
 			{
 				Duty = true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
@@ -29,17 +29,25 @@ public class Eliminar : MonoBehaviour {
                 GeneralAttrib.metros++;
                 GeneralAttrib.Damage += 0.005f;
                 Traps.death++;
+                if (GeneralAttrib.metros != 0 && GeneralAttrib.metros % 100 == 0)
+                {
+                    GeneralAttrib.Damage *= 1.4f;
+                }
 				Destroy(this.gameObject);
                 
 			}
-			if((this.transform.position.x<=-25f)||(this.transform.position.x>=25f))
+			if((this.transform.position.x<=-14f)||(this.transform.position.x>=14f))
 			{
 				Duty = true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
                 GeneralAttrib.metros++;
-                GeneralAttrib.Damage += 0.005f;
+                GeneralAttrib.Damage += 0.0005f;
                 Traps.death++;
+                if (GeneralAttrib.metros != 0 && GeneralAttrib.metros % 100 == 0)
+                {
+                    GeneralAttrib.Damage *= 1.4f;
+                }
 				Destroy(this.gameObject);
                 
 			}
@@ -47,10 +55,7 @@ public class Eliminar : MonoBehaviour {
             {
                 Traps.death = 0;
             }
-            if (GeneralAttrib.metros !=0 && GeneralAttrib.metros % 100 == 0)
-            {
-                GeneralAttrib.Damage *= 2f;
-            }
+            
 
 		}
 		catch (System.NullReferenceException e)

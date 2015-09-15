@@ -63,6 +63,10 @@
      <Compile Include="Assets\Scripts\TrapsAtt.cs" />
      <Compile Include="Assets\Scripts\Tributes.cs" />
      <Compile Include="Assets\Scripts\muerte.cs" />
+     <Compile Include="Assets\Scripts\music.cs" />
+     <Compile Include="Assets\Scripts\score.cs" />
+     <Compile Include="Assets\Scripts\scoreGO.cs" />
+     <Compile Include="Assets\Scripts\tipoG.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

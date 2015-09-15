@@ -8,7 +8,7 @@ public class Continuar : MonoBehaviour {
 	// Use this for initialization
 	public void LoadLevel() 
 	{
-		Application.LoadLevel ("SurvivalMode");
+		Application.LoadLevel ("Modes");
 
 	}
 	
@@ -25,6 +25,7 @@ public class Continuar : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
+        Traps.death = 0;
         GeneralAttrib.Life = 100;
 		Application.LoadLevel ("SurvivalMode");
 	}

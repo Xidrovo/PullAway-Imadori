@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TrapsAtt : MonoBehaviour {
 
-    public int life, type;
+    public int life;
     public float timeofD;
 	// Use this for initialization
 	void Start () {
