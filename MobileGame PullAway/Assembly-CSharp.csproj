@@ -45,28 +45,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AtribRocks.cs" />
-     <Compile Include="Assets\Scripts\Bida.cs" />
      <Compile Include="Assets\Scripts\Camera\Camareta.cs" />
-     <Compile Include="Assets\Scripts\Continuar.cs" />
-     <Compile Include="Assets\Scripts\CreateRamdomly.cs" />
      <Compile Include="Assets\Scripts\DraggAndInput.cs" />
-     <Compile Include="Assets\Scripts\Eliminar.cs" />
+     <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
      <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
-     <Compile Include="Assets\Scripts\NameToucher.cs" />
-     <Compile Include="Assets\Scripts\Pause.cs" />
-     <Compile Include="Assets\Scripts\ReScaling.cs" />
-     <Compile Include="Assets\Scripts\Restarto.cs" />
-     <Compile Include="Assets\Scripts\Scaler.cs" />
+     <Compile Include="Assets\Scripts\Rocks\AtribRocks.cs" />
+     <Compile Include="Assets\Scripts\Rocks\CreateRamdomly.cs" />
+     <Compile Include="Assets\Scripts\Rocks\Eliminar.cs" />
      <Compile Include="Assets\Scripts\Static.cs" />
-     <Compile Include="Assets\Scripts\Traps.cs" />
-     <Compile Include="Assets\Scripts\TrapsAtt.cs" />
-     <Compile Include="Assets\Scripts\Tributes.cs" />
-     <Compile Include="Assets\Scripts\muerte.cs" />
+     <Compile Include="Assets\Scripts\achivements.cs" />
      <Compile Include="Assets\Scripts\music.cs" />
-     <Compile Include="Assets\Scripts\score.cs" />
-     <Compile Include="Assets\Scripts\scoreGO.cs" />
-     <Compile Include="Assets\Scripts\tipoG.cs" />
+     <Compile Include="Assets\Scripts\por eliminar\NameToucher.cs" />
+     <Compile Include="Assets\Scripts\por eliminar\ReScaling.cs" />
+     <Compile Include="Assets\Scripts\por eliminar\Scaler.cs" />
+     <Compile Include="Assets\Scripts\por eliminar\Tributes.cs" />
+     <Compile Include="Assets\Scripts\por eliminar\muerte.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\Continuar.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\Pause.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\tipoG.cs" />
+     <Compile Include="Assets\Scripts\scores\score.cs" />
+     <Compile Include="Assets\Scripts\scores\scoreGO.cs" />
+     <Compile Include="Assets\Scripts\trampas\Traps.cs" />
+     <Compile Include="Assets\Scripts\trampas\TrapsAtt.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
