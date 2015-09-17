@@ -16,6 +16,7 @@ public class Eliminar : MonoBehaviour {
 		atb = this.GetComponent<AtribRocks>();
 		ReloadLayout = random.Max;
         fxSound=this.GetComponent<AudioSource>();
+        fxSound.enabled = true;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +24,6 @@ public class Eliminar : MonoBehaviour {
 
 		try
 		{
-            int rnd = Random.Range(1,4);
 			if((this.transform.position.y>=5f)||(this.transform.position.y<=-5f))
 			{
                 fxSound.Play();
@@ -37,30 +37,10 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
-				Destroy(this.gameObject);
-                if (GeneralAttrib.metros != 0 )
-                {
-                    if (GeneralAttrib.metros == 20)
-                    {
-                        
-                        achivements.Generar();
-                    }
-                    if (GeneralAttrib.metros % 50 == 0)
-                    {
-                        
-                        achivements.Generar(rnd);
-                    }
-                    else if (GeneralAttrib.metros % 75 == 0)
-                    {
-                        
-                        achivements.Generar(rnd);
-                    }
-                    else if (GeneralAttrib.metros % 100 == 0)
-                    {
-                     
-                        achivements.Generar(rnd);
-                    }
-                }
+                GeneralAttrib.rapidez++;
+                Debug.Log(GeneralAttrib.rapidez +"ho");
+                Destroy(this.gameObject);
+                
 			}
 			if((this.transform.position.x<=-14f)||(this.transform.position.x>=14f))
 			{
@@ -75,33 +55,15 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
+                GeneralAttrib.rapidez++;
+                Debug.Log(GeneralAttrib.rapidez + "ver");
 				Destroy(this.gameObject);
-                if (GeneralAttrib.metros != 0)
-                {
-                    if (GeneralAttrib.metros == 20)
-                    {
-                        achivements.Generar();
-                    }
-                    if (GeneralAttrib.metros % 50 == 0)
-                    {
-                        achivements.Generar(rnd);
-                    }
-                    else if (GeneralAttrib.metros % 75 == 0)
-                    {
-                        achivements.Generar(rnd);
-                    }
-                    else if (GeneralAttrib.metros % 100 == 0)
-                    {
-                        achivements.Generar(rnd);
-                    }
-                }
-                
+               
 			}
             if (GeneralAttrib.metros % 75==0)
             {
                 Traps.death = 0;
             }
-            
 
 		}
 		catch (System.NullReferenceException e)
@@ -111,3 +73,24 @@ public class Eliminar : MonoBehaviour {
 	
 	}
 }
+
+/*
+ *  if (GeneralAttrib.metros != 0 )
+                {
+                    if (GeneralAttrib.metros % 50 == 0)
+                    {
+                        destroyer = true;
+                        achivements.Generar();
+                    }
+                    else if (GeneralAttrib.metros % 75 == 0)
+                    {
+                        destroyer = true;
+                        achivements.Generar();
+                    }
+                    else if (GeneralAttrib.metros % 100 == 0)
+                    {
+                        destroyer = true;
+                        achivements.Generar();
+                    }
+                }
+ */

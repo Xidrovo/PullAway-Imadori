@@ -93,7 +93,7 @@ public class CreateRamdomly : MonoBehaviour  {
 	//This position will be random but according to the rotation of the object.
 	public Vector3 PosEnElOrigen(int tipo)
 	{
-		Vector3 Vector = new Vector3(Random.Range (-2.1f, 2.1f),Random.Range (-1.4f, 1.4f),0);
+		Vector3 Vector = new Vector3(Random.Range (-2.1f, 2.1f),Random.Range (-2.1f, 0.7f),0);
 		/*float temp = Radio;
 		if (Cont != 0) 
 		{

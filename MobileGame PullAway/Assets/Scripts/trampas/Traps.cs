@@ -12,7 +12,7 @@ public class Traps : MonoBehaviour {
 
 	void Start () 
 	{
-        InvokeRepeating("prob", 0f, 1f);
+        InvokeRepeating("prob", 0f, 4f);
 	}
 	
 	// Update is called once per frame

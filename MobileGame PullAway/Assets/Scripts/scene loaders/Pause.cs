@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour {
 	void Start () {
 		PauseMenu.SetActive (false);
 		State = false;
+
 	}
 
 	void Update()
