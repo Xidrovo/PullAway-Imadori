@@ -5,19 +5,27 @@ using System.Collections;
 public class MessageController : MonoBehaviour {
     private int Cont = 0;
     private Text texto;
-    public GameObject Arrow, Arrow2, rock1, rock2;
+    private Animator Anim;
+    public GameObject Arrow, Arrow2, rock1, rock2, Dodes, Life, whiteArrow, MobileRock, spideyes;
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 0;
         texto = this.GetComponent<Text>();
+        Anim = rock1.GetComponent<Animator>();
         Arrow.SetActive(false);
         Arrow2.SetActive(false);
         rock1.SetActive(false);
         rock2.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {	
+        Dodes.SetActive(false);
+        whiteArrow.SetActive(false);
+        MobileRock.SetActive(false);
+        spideyes.SetActive(false);
+        Life.GetComponent<Animator>().enabled = false;
+
+    }
+
+    // Update is called once per frame
+    void Update () {	
         switch (Cont)
         {
             case 1:
@@ -70,9 +78,70 @@ public class MessageController : MonoBehaviour {
                 texto.text = "how?";
                 break;
             case 14:
+                rock1.SetActive(true);
+                Anim.SetBool("Activate", true);
+                Dodes.SetActive(true);
+                whiteArrow.SetActive(true);
                 texto.text = "like this!";
                 //finger animation
                 break;
+            case 15:
+                try
+                {
+                    texto.text = "Now try it!";
+                    rock1.SetActive(false);
+                    Dodes.SetActive(false);
+                    whiteArrow.SetActive(false);
+                    MobileRock.SetActive(true);
+                    Time.timeScale = 1;
+                    GeneralAttrib.Life = 100;
+                }
+                catch (System.Exception e)
+                {
+                    Time.timeScale = 0;
+                    Cont = 17;
+                }
+                break;
+            case 16:
+                Cont = 15;
+                break;
+            case 17:
+                texto.text = "GREAT!!!";
+                break;
+            case 18:
+                texto.text = "each time you destroy one rock";
+                break;
+            case 19:
+                Life.GetComponent<Animator>().enabled = true;
+                Anim = Life.GetComponent<Animator>();
+                Anim.SetBool("LifeAnim", true);
+                Arrow.SetActive(true);
+                texto.text = "You'll be healed!!";
+                break;
+            case 20:
+                Life.GetComponent<Animator>().enabled = false;
+                Anim.SetBool("LifeAnim", false);
+                Arrow.SetActive(false);
+                texto.text = "what if we talk about the enemies?";
+                break;
+            case 21:
+                texto.text = "'cuz it exist here!!!";
+                break;
+            case 22:
+                texto.text = "Like this one";
+                spideyes.SetActive(true);
+                Arrow2.SetActive(true);
+                break;
+            case 23:
+                texto.text = "How to kill it?";
+                break;
+            case 24:
+                Dodes.SetActive(true);
+                Anim = Dodes.GetComponent<Animator>();
+                Anim.SetInteger("State", 1);
+                texto.text = "Like this!!!";
+                break;
+
             default:
                 break;
         }
