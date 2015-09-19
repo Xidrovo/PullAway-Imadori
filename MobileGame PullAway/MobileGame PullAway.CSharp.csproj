@@ -51,17 +51,11 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -76,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\Camareta.cs" />
     <Compile Include="Assets\Scripts\DraggAndInput.cs" />
+    <Compile Include="Assets\Scripts\Lerp.cs" />
     <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
     <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
     <Compile Include="Assets\Scripts\Rocks\AtribRocks.cs" />
@@ -83,7 +78,8 @@
     <Compile Include="Assets\Scripts\Rocks\Eliminar.cs" />
     <Compile Include="Assets\Scripts\Static.cs" />
     <Compile Include="Assets\Scripts\Tutorial\MessageController.cs" />
-    <Compile Include="Assets\Scripts\achivements.cs" />
+    <Compile Include="Assets\Scripts\logros\achivements.cs" />
+    <Compile Include="Assets\Scripts\logros\moveTowards.cs" />
     <Compile Include="Assets\Scripts\music.cs" />
     <Compile Include="Assets\Scripts\por eliminar\NameToucher.cs" />
     <Compile Include="Assets\Scripts\por eliminar\ReScaling.cs" />
