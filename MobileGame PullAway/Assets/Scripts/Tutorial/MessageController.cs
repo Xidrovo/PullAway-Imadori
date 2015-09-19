@@ -4,10 +4,11 @@ using System.Collections;
 
 public class MessageController : MonoBehaviour {
     private int Cont = 0;
+    private bool Finich = false;
     private Text texto;
     private Animator Anim;
     public GameObject Arrow, Arrow2, rock1, rock2, Dodes, Life, whiteArrow, MobileRock, spideyes;
-    private Vector3 Pos;
+
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 0;
@@ -22,11 +23,21 @@ public class MessageController : MonoBehaviour {
         MobileRock.SetActive(false);
         spideyes.SetActive(false);
         Life.GetComponent<Animator>().enabled = false;
-        Pos = Dodes.transform.position;
     }
 
     // Update is called once per frame
-    void Update () {	
+    void Update () {
+        try
+        {
+            if (Input.touchCount > 0)
+            {
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                    Cont++;
+            }
+        }
+        catch
+        {
+        }	
         switch (Cont)
         {
             case 1:
@@ -96,6 +107,7 @@ public class MessageController : MonoBehaviour {
                     Dodes.GetComponent<Animator>().SetInteger("State", 0);
                     whiteArrow.SetActive(false);
                     MobileRock.SetActive(true);
+                    MobileRock.GetComponent<AtribRocks>().layer = 30;
                     Time.timeScale = 1;
                     GeneralAttrib.Life = 100;
                 }
@@ -142,7 +154,6 @@ public class MessageController : MonoBehaviour {
                 Dodes.SetActive(true);
                 Anim = Dodes.GetComponent<Animator>();
                 Anim.SetInteger("State", 0);
-                Dodes.transform.position = Pos;
                 Anim.SetInteger("State", 2);
                 texto.text = "Like this!!!";
                 break;
@@ -150,6 +161,7 @@ public class MessageController : MonoBehaviour {
                 texto.text = "...";
                 break;
             default:
+                Application.LoadLevel("SurvivalMode");
                 break;
         }
 	}
