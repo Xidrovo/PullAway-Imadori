@@ -59,9 +59,9 @@ public class CreateRamdomly : MonoBehaviour  {
 		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (0);
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(0) , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
-		spriteRenderer.sortingOrder = 1;
-		AllRocks.Add (NormalTable);
-		foreach (GameObject x in CreateRamdomly.AllRocks)
+		//spriteRenderer.sortingOrder = 1;
+		AllRocks.Insert (0,NormalTable);
+		/*foreach (GameObject x in CreateRamdomly.AllRocks)
 		{
 //			Debug.Log("jejei");
 			try
@@ -70,7 +70,8 @@ public class CreateRamdomly : MonoBehaviour  {
 			}catch(System.Exception)
 			{
 			}
-		}
+		}*/
+        
 	}
 
 	//This Method will create everything the object needs, it use a "Prefab" to have the scripts, sprites, etc.

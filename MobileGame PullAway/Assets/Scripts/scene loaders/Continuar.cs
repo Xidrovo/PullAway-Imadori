@@ -7,10 +7,10 @@ public class Continuar : MonoBehaviour {
 
     public void LoadLogros()
     {
-        Application.LoadLevel("Logros");
+        Application.LoadLevel("Tuto");
 
     }
-	public void LoadLevel() 
+	public void LoadLevel()
 	{
 		Application.LoadLevel ("Modes");
 

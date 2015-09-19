@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: d4d246e1c7aed1a45bd621866cb11927
+timeCreated: 1442681646
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 456_0
+    21300002: 456_1
+    21300004: 456_2
+    21300006: 456_3
+    21300008: 456_4
+    21300010: 456_6
+    21300012: 456_9
+    21300014: 456_14
+    21300016: 456_19
+    21300018: 456_23
+    21300020: 456_5
+    21300022: 456_7
+    21300024: 456_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 456_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1113
+        width: 554
+        height: 519
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_1
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1454
+        width: 177
+        height: 183
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_2
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1243
+        width: 413
+        height: 131
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_3
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1243
+        width: 414
+        height: 131
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_4
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1073
+        width: 413
+        height: 131
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_6
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 905
+        width: 412
+        height: 130
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_9
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 746
+        width: 593
+        height: 116
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_14
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 472
+        width: 776
+        height: 154
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_19
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 268
+        width: 777
+        height: 154
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_23
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 44
+        width: 803
+        height: 179
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 216
+        width: 145
+        height: 848
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_7
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 332
+        width: 276
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 456_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 42
+        width: 254
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

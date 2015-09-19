@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileGame PullAway.CSharp", "MobileGame PullAway.CSharp.csproj", "{097D82BB-9D95-1D32-39F4-838385B3F121}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A6765AF6-5582-872B-BC8E-07904935E216}") = "MobileGame PullAway", "Assembly-CSharp.csproj", "{0D43C6BF-E4FE-FC64-4CB8-136E76A9BBC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,16 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{097D82BB-9D95-1D32-39F4-838385B3F121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{097D82BB-9D95-1D32-39F4-838385B3F121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{097D82BB-9D95-1D32-39F4-838385B3F121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{097D82BB-9D95-1D32-39F4-838385B3F121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D43C6BF-E4FE-FC64-4CB8-136E76A9BBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D43C6BF-E4FE-FC64-4CB8-136E76A9BBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D43C6BF-E4FE-FC64-4CB8-136E76A9BBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D43C6BF-E4FE-FC64-4CB8-136E76A9BBC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-																																																																																																																																																																																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																																																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of dc75d8c... okidoki_
@@ -56,6 +55,4 @@ Global
 		$3.scope = text/plain
 	EndGlobalSection
 
-=======
->>>>>>> 21f099ed66f571391061b6e1f8a7f06a9b9725ec
 EndGlobal

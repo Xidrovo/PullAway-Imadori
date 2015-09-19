@@ -9,7 +9,8 @@ public class AtribRocks : MonoBehaviour {
 
 	void Start () {
 		Sr = this.GetComponent<SpriteRenderer> ();
-		this.layer = Sr.sortingOrder; 
+		//this.layer = Sr.sortingOrder; 
+        this.layer = CreateRamdomly.AllRocks.IndexOf(this);
 	}
 	
 	// Update is called once per frame
@@ -24,10 +25,10 @@ public class AtribRocks : MonoBehaviour {
         {
             this.GetComponent<Collider2D>().enabled = false;
         }
-
+        this.GetComponent<SpriteRenderer>().sortingOrder = CreateRamdomly.AllRocks.IndexOf(this);
 	}
 
-	public void SortingUp()
+	/*public void SortingUp()
 	{
 		try{
 			Sr.sortingOrder = Sr.sortingOrder + 1;
@@ -38,5 +39,5 @@ public class AtribRocks : MonoBehaviour {
 		catch(System.Exception e)
 		{
 		}
-	}
+	}*/
 }
