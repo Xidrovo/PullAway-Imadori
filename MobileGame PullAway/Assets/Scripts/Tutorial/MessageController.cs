@@ -7,6 +7,7 @@ public class MessageController : MonoBehaviour {
     private Text texto;
     private Animator Anim;
     public GameObject Arrow, Arrow2, rock1, rock2, Dodes, Life, whiteArrow, MobileRock, spideyes;
+    private Vector3 Pos;
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 0;
@@ -21,7 +22,7 @@ public class MessageController : MonoBehaviour {
         MobileRock.SetActive(false);
         spideyes.SetActive(false);
         Life.GetComponent<Animator>().enabled = false;
-
+        Pos = Dodes.transform.position;
     }
 
     // Update is called once per frame
@@ -80,6 +81,7 @@ public class MessageController : MonoBehaviour {
             case 14:
                 rock1.SetActive(true);
                 Anim.SetBool("Activate", true);
+                Dodes.GetComponent<Animator>().SetInteger("State", 1);
                 Dodes.SetActive(true);
                 whiteArrow.SetActive(true);
                 texto.text = "like this!";
@@ -91,6 +93,7 @@ public class MessageController : MonoBehaviour {
                     texto.text = "Now try it!";
                     rock1.SetActive(false);
                     Dodes.SetActive(false);
+                    Dodes.GetComponent<Animator>().SetInteger("State", 0);
                     whiteArrow.SetActive(false);
                     MobileRock.SetActive(true);
                     Time.timeScale = 1;
@@ -138,10 +141,14 @@ public class MessageController : MonoBehaviour {
             case 24:
                 Dodes.SetActive(true);
                 Anim = Dodes.GetComponent<Animator>();
-                Anim.SetInteger("State", 1);
+                Anim.SetInteger("State", 0);
+                Dodes.transform.position = Pos;
+                Anim.SetInteger("State", 2);
                 texto.text = "Like this!!!";
                 break;
-
+            case 25:
+                texto.text = "...";
+                break;
             default:
                 break;
         }
