@@ -14,6 +14,7 @@ public class DraggAndInput : MonoBehaviour {
 	private RaycastHit colision;
 	private float DistanceY, DistanceX;
 	private AtribRocks atb;
+    private powerupsAtt powA;
 	private Vector3 Temp;
     private TrapsAtt att;
 	private static int contV=0;
@@ -49,14 +50,6 @@ public class DraggAndInput : MonoBehaviour {
 		}
 	}
 
-    public void Shacking()
-    {
-        if (Input.acceleration.x > 1 || Input.acceleration.y > 1 || Input.acceleration.z > 1)
-        {
-            enemy=GameObject.FindGameObjectWithTag("Trampa2");
-            enemy.GetComponent<TrapsAtt>().life=0;
-        }
-    }
 	public void Dragging()
 	{
 		
@@ -77,8 +70,14 @@ public class DraggAndInput : MonoBehaviour {
                     {
                         att = player.GetComponent<TrapsAtt>();
                         contV++;
-                        perderVidas2(contV);
+                        perderVidas(contV,att);
 
+                    }
+                    else if (player.tag.CompareTo("Power") == 0)
+                    {
+                        powA = player.GetComponent<powerupsAtt>();
+                        contV++;
+                        perderVidas(contV,powA);
                     }
                     else 
                     {
@@ -133,16 +132,24 @@ public class DraggAndInput : MonoBehaviour {
 			cont=5;
 		}
 	}
-    public void perderVidas2(int cont)
+    public void perderVidas(int cont, TrapsAtt at)
     {
         if (cont == 1)
         {
-            att.life -= 1;
+            at.life -= 1;
             cont = 5;
         }
-        if (att.life <= 0)
+        if (at.life <= 0)
         {
             Destroy(player);
+        }
+    }
+    public void perderVidas(int cont, powerupsAtt at)
+    {
+        if (cont == 1)
+        {
+            at.powerVida -= 1;
+            cont = 5;
         }
     }
 

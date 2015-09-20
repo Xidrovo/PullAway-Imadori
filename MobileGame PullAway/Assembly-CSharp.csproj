@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\Lerp.cs" />
      <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
      <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
+     <Compile Include="Assets\Scripts\PowerUp\powerups.cs" />
+     <Compile Include="Assets\Scripts\PowerUp\powerupsAtt.cs" />
      <Compile Include="Assets\Scripts\Rocks\AtribRocks.cs" />
      <Compile Include="Assets\Scripts\Rocks\CreateRamdomly.cs" />
      <Compile Include="Assets\Scripts\Rocks\Eliminar.cs" />
@@ -62,7 +64,6 @@
      <Compile Include="Assets\Scripts\por eliminar\ReScaling.cs" />
      <Compile Include="Assets\Scripts\por eliminar\Scaler.cs" />
      <Compile Include="Assets\Scripts\por eliminar\Tributes.cs" />
-     <Compile Include="Assets\Scripts\por eliminar\muerte.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Continuar.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Pause.cs" />
      <Compile Include="Assets\Scripts\scene loaders\tipoG.cs" />

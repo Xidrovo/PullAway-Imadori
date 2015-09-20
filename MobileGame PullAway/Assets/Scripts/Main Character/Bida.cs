@@ -21,17 +21,19 @@ public class Bida : MonoBehaviour {
 	
 	public void Damaging()
 	{
-		if (GeneralAttrib.Life >= 0.3) 
-		{
 			GeneralAttrib.Life = GeneralAttrib.Life - GeneralAttrib.Damage;
 			imagen.fillAmount = (float)GeneralAttrib.Life / 100;
-		}
 	}
 	public static void LifeUp()
 	{
-        if (GeneralAttrib.Life < 100f)
+        if ((GeneralAttrib.Life + GeneralAttrib.Regeneration) < 100f)
         {
             GeneralAttrib.Life = GeneralAttrib.Life + GeneralAttrib.Regeneration;
+            imagen.fillAmount = (float)GeneralAttrib.Life / 100;
+        }
+        else 
+        {
+            GeneralAttrib.Life = 100;
             imagen.fillAmount = (float)GeneralAttrib.Life / 100;
         }
 		

@@ -12,7 +12,7 @@ public class Traps : MonoBehaviour {
 
 	void Start () 
 	{
-        InvokeRepeating("prob", 0f, 4f);
+        InvokeRepeating("prob", 0f, 2f);
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class Traps : MonoBehaviour {
     public void prob()
     {
         float proba = Random.Range(1, 100);
-        if (proba <= death)
+        if (proba <= death && (GameObject.FindGameObjectWithTag("Trampa2") == null || GameObject.FindGameObjectWithTag("Trampa1") == null))
         {
             crearT();
         }

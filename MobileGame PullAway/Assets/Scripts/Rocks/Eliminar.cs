@@ -16,7 +16,7 @@ public class Eliminar : MonoBehaviour {
 		atb = this.GetComponent<AtribRocks>();
 		ReloadLayout = random.Max;
         fxSound=this.GetComponent<AudioSource>();
-        fxSound.enabled = true;
+        fxSound.enabled=true;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +28,7 @@ public class Eliminar : MonoBehaviour {
 			{
                 fxSound.Play();
 				Duty = true;
+                GeneralAttrib.Debo=true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
                 GeneralAttrib.metros++;
@@ -38,15 +39,15 @@ public class Eliminar : MonoBehaviour {
                     GeneralAttrib.Damage *= 1.4f;
                 }
                 GeneralAttrib.rapidez++;
-                Debug.Log(GeneralAttrib.rapidez +"ho");
                 Destroy(this.gameObject);
                 
 			}
-			if((this.transform.position.x<=-14f)||(this.transform.position.x>=14f))
+			if((this.transform.position.x<=-12f)||(this.transform.position.x>=12f))
 			{
                 fxSound.Play();
 				Duty = true;
-				CreateRamdomly.AllRocks.Remove(this.gameObject);
+                GeneralAttrib.Debo = true;
+                CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
                 GeneralAttrib.metros++;
                 GeneralAttrib.Damage += 0.0005f;
@@ -56,11 +57,10 @@ public class Eliminar : MonoBehaviour {
                     GeneralAttrib.Damage *= 1.4f;
                 }
                 GeneralAttrib.rapidez++;
-                Debug.Log(GeneralAttrib.rapidez + "ver");
 				Destroy(this.gameObject);
                
 			}
-            if (GeneralAttrib.metros % 75==0)
+            if (GeneralAttrib.metros % 80==0)
             {
                 Traps.death = 0;
             }

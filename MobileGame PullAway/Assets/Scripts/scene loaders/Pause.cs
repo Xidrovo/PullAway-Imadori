@@ -6,7 +6,8 @@ public class Pause : MonoBehaviour {
 
 	public GameObject PauseMenu;
 	public Button Pausa, Resume;
-
+    public float vida;
+    public float damage;
 	private bool State;
 
 	// Use this for initialization
@@ -18,7 +19,9 @@ public class Pause : MonoBehaviour {
 
 	void Update()
 	{
-		if (Bida.imagen.fillAmount <= 0.04f) 
+        vida = GeneralAttrib.Life;
+        damage = GeneralAttrib.Damage;
+		if (GeneralAttrib.Life <= 0.005f) 
 		{
             Application.LoadLevel("GameOver");
 		}
@@ -40,6 +43,7 @@ public class Pause : MonoBehaviour {
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
+     //   CreateRamdomly.AllRocks.Clear();
         GeneralAttrib.Life = 100;
         Application.LoadLevel("SurvivalMode");
     }

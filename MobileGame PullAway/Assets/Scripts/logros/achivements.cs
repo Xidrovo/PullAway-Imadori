@@ -46,11 +46,9 @@ public class achivements : MonoBehaviour {
 
     public void chequeo()
     {
-        Debug.Log("fuera");
-        if (GeneralAttrib.rapidez >=5 )
+        if (GeneralAttrib.rapidez >=10 )
         {
             Generar();
-            Debug.Log("entre");
             GeneralAttrib.destroyer = true;
         }
         GeneralAttrib.rapidez = 0;

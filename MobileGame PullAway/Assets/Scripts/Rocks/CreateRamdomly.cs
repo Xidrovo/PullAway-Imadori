@@ -56,14 +56,14 @@ public class CreateRamdomly : MonoBehaviour  {
 		ZRotation = Rotation.eulerAngles.z;
 		
 		//With this we initiate the object as a game object.
-		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (0);
+		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (1);
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(0) , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
-		//spriteRenderer.sortingOrder = 1;
+		spriteRenderer.sortingOrder = 1;
 		AllRocks.Insert (0,NormalTable);
-		/*foreach (GameObject x in CreateRamdomly.AllRocks)
+        /*AllRocks.Add(NormalTable);
+		foreach (GameObject x in CreateRamdomly.AllRocks)
 		{
-//			Debug.Log("jejei");
 			try
 			{
 				x.GetComponent<AtribRocks>().SortingUp();
