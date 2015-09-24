@@ -11,7 +11,7 @@ public class tipoG : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Levels");
     }
 
     public void Arcade()

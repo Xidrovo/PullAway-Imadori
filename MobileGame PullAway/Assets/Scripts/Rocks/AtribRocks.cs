@@ -4,13 +4,39 @@ using System.Collections;
 public class AtribRocks : MonoBehaviour {
 
 	// Use this for initialization
-	public int life, layer, score;
+	public int life, layer, score, tipo;
 	private SpriteRenderer Sr;
 
 	void Start () {
         this.GetComponent<Collider2D>().enabled = false;
 		Sr = this.GetComponent<SpriteRenderer> ();
-		this.layer = Sr.sortingOrder; 
+		this.layer = Sr.sortingOrder;
+        if (Application.loadedLevelName.CompareTo("Hardcore")==0)
+        {
+            if (this.tipo == 3)
+            {
+                this.life = 3;
+            }
+            else if (this.tipo == 2)
+            {
+                this.life = 2;
+            }
+            else 
+            {
+                this.life = 1;
+            }
+        }
+        else if (Application.loadedLevelName.CompareTo("Juvenil") == 0)
+        {
+            if (this.tipo == 3)
+            {
+                this.life = 2;
+            }
+            else if (this.tipo == 2)
+            {
+                this.life = 1;
+            }
+        }
 	}
 	
 	// Update is called once per frame

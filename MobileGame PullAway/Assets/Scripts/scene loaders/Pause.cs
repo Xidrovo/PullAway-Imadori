@@ -45,12 +45,23 @@ public class Pause : MonoBehaviour {
         Traps.death = 0;
      //   CreateRamdomly.AllRocks.Clear();
         GeneralAttrib.Life = 100;
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel(Application.loadedLevelName);
     }
     public void Resumir()
     {
-			PauseMenu.SetActive(false);
-			Time.timeScale = 1;
-			Static.Estatico = false;
+		PauseMenu.SetActive(false);
+		Time.timeScale = 1;
+		Static.Estatico = false;
 	}
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        PauseMenu.SetActive(false);
+        Static.Estatico = false;
+        GeneralAttrib.Life = 100;
+        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.metros = 0f;
+        Application.LoadLevel("Start");
+    }
 }

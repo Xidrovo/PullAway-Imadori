@@ -23,6 +23,16 @@ public class Continuar : MonoBehaviour {
 	
 	}
 
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        Static.Estatico = false;
+        GeneralAttrib.Life = 100;
+        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.metros = 0f;
+        Application.LoadLevel("Start");
+    }
+
 	public void Retry()
 	{
         Time.timeScale = 1;
@@ -31,6 +41,6 @@ public class Continuar : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-		Application.LoadLevel ("SurvivalMode");
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 }

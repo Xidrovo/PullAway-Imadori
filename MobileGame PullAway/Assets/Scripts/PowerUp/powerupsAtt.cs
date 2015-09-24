@@ -35,7 +35,7 @@ public class powerupsAtt : MonoBehaviour {
                 GeneralAttrib.Regeneration++;
                 bd = 1;
             }
-            Sr.color = new Color(0, 0, 0);
+            Sr.color = new Color(Sr.color.a + 30, Sr.color.b + 39, Sr.color.g+ 64);
         }
 	
 	}

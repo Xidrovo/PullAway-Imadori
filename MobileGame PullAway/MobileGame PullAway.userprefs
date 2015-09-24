@@ -1,7 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Rocks\Eliminar.cs">
     <Files>
+      <File FileName="MobileGame PullAway.sln" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Main Character\GeneralAttrib.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Rocks\Eliminar.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\trampas\Traps.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DraggAndInput.cs" Line="1" Column="1" />
