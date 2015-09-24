@@ -29,7 +29,9 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-        Application.LoadLevel("Juvenil");
+        GeneralAttrib.nivel = 3;
+        Application.LoadLevel("SurvivalMode");
+        //Application.LoadLevel("Juvenil");
     }
 
     public void HardCore()
@@ -40,6 +42,9 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-        Application.LoadLevel("Hardcore");
+        //Application.LoadLevel("Hardcore");
+        GeneralAttrib.nivel = 3;
+        Application.LoadLevel("SurvivalMode");
+        
     }
 }

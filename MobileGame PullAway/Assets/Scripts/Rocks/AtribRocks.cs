@@ -11,7 +11,7 @@ public class AtribRocks : MonoBehaviour {
         this.GetComponent<Collider2D>().enabled = false;
 		Sr = this.GetComponent<SpriteRenderer> ();
 		this.layer = Sr.sortingOrder;
-        if (Application.loadedLevelName.CompareTo("Hardcore")==0)
+        if (GeneralAttrib.nivel == 3)//(Application.loadedLevelName.CompareTo("Hardcore")==0)
         {
             if (this.tipo == 3)
             {
@@ -26,7 +26,7 @@ public class AtribRocks : MonoBehaviour {
                 this.life = 1;
             }
         }
-        else if (Application.loadedLevelName.CompareTo("Juvenil") == 0)
+        else if (GeneralAttrib.nivel==2)//(Application.loadedLevelName.CompareTo("Juvenil") == 0)
         {
             if (this.tipo == 3)
             {
