@@ -6,13 +6,14 @@ public class powerupsAtt : MonoBehaviour {
     public int powerVida=1;
     public int tipo=0;
     public int tiempo, lifetime;
-    private float dam = 0;
+    public float dam = 0;
+    private int bd = 0;
     private SpriteRenderer Sr;
 	// Use this for initialization
 	void Start () {
 	    Sr= this.GetComponent<SpriteRenderer>();
-        tiempo = 0;
         InvokeRepeating("fin",0f,1f);
+        bd = 0;
         InvokeRepeating("muerte",0f,1f);
 	}
 	
@@ -21,17 +22,19 @@ public class powerupsAtt : MonoBehaviour {
     {
         if (powerVida == 0)
         {
-            if (tipo == 1)
+            if (tipo == 1 && bd ==0)
             {
+                this.GetComponent<Collider2D>().enabled = false;
                 dam = GeneralAttrib.Damage;
                 GeneralAttrib.Damage = 0;
+                bd=1;
             }
-            else 
+            else if(tipo==2 && bd ==0)
             {
+                this.GetComponent<Collider2D>().enabled = false;
                 GeneralAttrib.Regeneration++;
+                bd = 1;
             }
-            this.GetComponent<Collider2D>().enabled = false;
-            
             Sr.color = new Color(0, 0, 0);
         }
 	
@@ -39,23 +42,35 @@ public class powerupsAtt : MonoBehaviour {
 
     public void fin()
     {
-        if(this.powerVida==0)
+        if (this.tipo == 1)
         {
-            tiempo--;
+            if (this.powerVida == 0)
+            {
+                tiempo--;
+            }
+            if (tiempo == 0)
+            {
+                GeneralAttrib.Damage = dam;
+                Destroy(this.gameObject);
+            }
         }
-        if(tiempo==0)
+        else
         {
-            GeneralAttrib.Damage = dam;
-            Destroy(this);
+            if (this.powerVida == 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
- 
     }
     public void muerte()
     {
-        this.lifetime--;
-        if (this.lifetime == 0)
+        if (this.powerVida != 0)
         {
-            Destroy(this);
+            this.lifetime--;
+            if (this.lifetime == 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

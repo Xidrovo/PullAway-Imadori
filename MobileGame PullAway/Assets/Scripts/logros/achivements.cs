@@ -46,7 +46,7 @@ public class achivements : MonoBehaviour {
 
     public void chequeo()
     {
-        if (GeneralAttrib.rapidez >=10 )
+        if (GeneralAttrib.rapidez >=8 )
         {
             Generar();
             GeneralAttrib.destroyer = true;

@@ -33,17 +33,18 @@ public class Traps : MonoBehaviour {
     {
         probT1 = Random.Range(1, 100);
         probT2 = Random.Range(1, 100);
+        Vector3 origen=new Vector3(Random.Range(-2,2), Random.Range(-4,4), 0);
         if (probT1 < (Map(GeneralAttrib.metros, 300, 100) * 5) + 25)
         {
-            nuevo = (GameObject)Instantiate(prefabT1, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0), rotacion);
+            nuevo = (GameObject)Instantiate(prefabT1, origen, rotacion);
         }
-        if ((Map(GeneralAttrib.metros, 300, 100) < 3) && (probT2 < (Map(GeneralAttrib.metros, 300, 100) * 5) + 25))
+        else if ((Map(GeneralAttrib.metros, 300, 100) < 3) && (probT2 < (Map(GeneralAttrib.metros, 300, 100) * 5) + 25))
         {
-            nuevo = (GameObject)Instantiate(prefabT2, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0), rotacion);
+            nuevo = (GameObject)Instantiate(prefabT2,origen, rotacion);
         }
-        if ((Map(GeneralAttrib.metros, 300, 100) > 3) && (probT2 < (Map(GeneralAttrib.metros, 300, 100) * 5) + 15))
+        else if ((Map(GeneralAttrib.metros, 300, 100) > 3) && (probT2 < (Map(GeneralAttrib.metros, 300, 100) * 5) + 15))
         {
-            nuevo = (GameObject)Instantiate(prefabT2, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0), rotacion);
+            nuevo = (GameObject)Instantiate(prefabT2, origen, rotacion);
         }
     }
 

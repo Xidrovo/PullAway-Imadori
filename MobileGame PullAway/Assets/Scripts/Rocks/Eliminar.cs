@@ -15,8 +15,7 @@ public class Eliminar : MonoBehaviour {
 	{
 		atb = this.GetComponent<AtribRocks>();
 		ReloadLayout = random.Max;
-        fxSound=this.GetComponent<AudioSource>();
-        fxSound.enabled=true;
+
 	}
 	
 	// Update is called once per frame
@@ -26,7 +25,7 @@ public class Eliminar : MonoBehaviour {
 		{
 			if((this.transform.position.y>=5f)||(this.transform.position.y<=-5f))
 			{
-                fxSound.Play();
+                Camera.main.GetComponent<AudioSource>().Play();
 				Duty = true;
                 GeneralAttrib.Debo=true;
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
@@ -42,9 +41,9 @@ public class Eliminar : MonoBehaviour {
                 Destroy(this.gameObject);
                 
 			}
-			if((this.transform.position.x<=-12f)||(this.transform.position.x>=12f))
+			if((this.transform.position.x<=-7f)||(this.transform.position.x>=7f))
 			{
-                fxSound.Play();
+                Camera.main.GetComponent<AudioSource>().Play();
 				Duty = true;
                 GeneralAttrib.Debo = true;
                 CreateRamdomly.AllRocks.Remove(this.gameObject);
