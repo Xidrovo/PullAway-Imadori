@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\scene loaders\tipoG.cs" />
      <Compile Include="Assets\Scripts\scores\score.cs" />
      <Compile Include="Assets\Scripts\scores\scoreGO.cs" />
+     <Compile Include="Assets\Scripts\trampas\Lanzamiento.cs" />
      <Compile Include="Assets\Scripts\trampas\Traps.cs" />
      <Compile Include="Assets\Scripts\trampas\TrapsAtt.cs" />
  <Reference Include="UnityEngine.UI">

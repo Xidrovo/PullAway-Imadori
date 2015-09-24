@@ -28,6 +28,7 @@ public class Continuar : MonoBehaviour {
         Time.timeScale = 1;
         Static.Estatico = false;
         GeneralAttrib.Life = 100;
+        GeneralAttrib.nivel = 0;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
         Application.LoadLevel("Start");
@@ -41,6 +42,7 @@ public class Continuar : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-		Application.LoadLevel (Application.loadedLevelName);
+
+		Application.LoadLevel (GeneralAttrib.level);
 	}
 }

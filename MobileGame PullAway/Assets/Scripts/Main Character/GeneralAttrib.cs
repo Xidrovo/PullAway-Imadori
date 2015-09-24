@@ -9,6 +9,7 @@ public class GeneralAttrib : MonoBehaviour {
     public static int rapidez=0;
     public static bool Debo = false;
     public static int nivel = 0;
+    public static string level;
     public static bool destroyer = false;
 	
 	// Use this for initialization

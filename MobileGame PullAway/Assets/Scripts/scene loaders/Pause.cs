@@ -45,7 +45,7 @@ public class Pause : MonoBehaviour {
         Traps.death = 0;
      //   CreateRamdomly.AllRocks.Clear();
         GeneralAttrib.Life = 100;
-        Application.LoadLevel(Application.loadedLevelName);
+        Application.LoadLevel("SurvivalMode");
     }
     public void Resumir()
     {
@@ -62,6 +62,7 @@ public class Pause : MonoBehaviour {
         GeneralAttrib.Life = 100;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
+        GeneralAttrib.nivel = 0;
         Application.LoadLevel("Start");
     }
 }
