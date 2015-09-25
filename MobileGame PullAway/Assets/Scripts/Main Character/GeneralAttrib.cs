@@ -11,6 +11,7 @@ public class GeneralAttrib : MonoBehaviour {
     public static int nivel = 0;
     public static string level;
     public static bool destroyer = false;
+    public static int malcriadito=0;
 	
 	// Use this for initialization
 	void Start () {
