@@ -10,17 +10,23 @@ public class Lanzamiento : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SePuede = true;
+        InvokeRepeating("probabilidad",4f,5f);
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        prob = Random.Range(0,100);
-        if (prob < deseo)
+        
+	}
+
+    public void probabilidad()
+    {
+        prob = Random.Range(1, 100);
+        if (prob <= deseo)
         {
             Crear();
         }
-	}
+    }
 
     public void Crear()
     {

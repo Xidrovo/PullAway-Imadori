@@ -37,9 +37,9 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
-                if ((GeneralAttrib.malcriadito == 4 && this.transform.position.y >= 5f) || (GeneralAttrib.malcriadito == 3 && this.transform.position.y <= -5f))
+                if ((GeneralAttrib.malcriadito == 4 && this.transform.position.y <= 5f) || (GeneralAttrib.malcriadito == 3 && this.transform.position.y >= -5f) || GeneralAttrib.malcriadito == 1 || GeneralAttrib.malcriadito == 2)
                 {
-                    GeneralAttrib.Life -= (GeneralAttrib.Regeneration*2f);
+                    GeneralAttrib.Life -= (GeneralAttrib.Regeneration*1.2f);
                 }
                 GeneralAttrib.rapidez++;
                 Destroy(this.gameObject);
@@ -59,9 +59,9 @@ public class Eliminar : MonoBehaviour {
                 {
                     GeneralAttrib.Damage *= 1.4f;
                 }
-                if if ((GeneralAttrib.malcriadito == 1 && this.transform.position.x <= -5f) || (GeneralAttrib.malcriadito == 2 && this.transform.position.y >= 5f))
+                if ((GeneralAttrib.malcriadito == 1 && this.transform.position.x >= -5f) || (GeneralAttrib.malcriadito == 2 && this.transform.position.y <= 5f) || GeneralAttrib.malcriadito == 3 || GeneralAttrib.malcriadito == 4)
                 {
-                    GeneralAttrib.Life -= (GeneralAttrib.Regeneration * 2f);
+                    GeneralAttrib.Life -= (GeneralAttrib.Regeneration * 1.2f);
                 }
                 GeneralAttrib.rapidez++;
 				Destroy(this.gameObject);

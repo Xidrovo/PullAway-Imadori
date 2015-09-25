@@ -34,8 +34,9 @@ public class powerupsAtt : MonoBehaviour {
                 this.GetComponent<Collider2D>().enabled = false;
                 GeneralAttrib.Regeneration++;
                 bd = 1;
+                Destroy(this.gameObject);
             }
-            Sr.color = new Color(Sr.color.a + 30, Sr.color.b + 39, Sr.color.g+ 64);
+            Sr.color = new Color(30, 39, 64);
         }
 	
 	}

@@ -5,7 +5,7 @@ public class LanzaAtt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("Vachagnon", Random.Range(5,8));
+        Invoke("Vachagnon", Random.Range(5,10));
 	}
 	
 	// Update is called once per frame
