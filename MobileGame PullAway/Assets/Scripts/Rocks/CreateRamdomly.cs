@@ -33,21 +33,37 @@ public class CreateRamdomly : MonoBehaviour  {
 	// Update is called once per frame
 	void Update () {
 
-		if (Max < GeneralAttrib.maxi) {
-			if (Cont < Max) {
-				Tipo = Random.Range (0, 8);
-				CreateObject (Tipo);
-				Cont++;
-			}
-		} 
-		else 
-		{
-			if (Cont < GeneralAttrib.maxi) {
-				Tipo = Random.Range (0, 8);
-				CreateObject (Tipo);
-				Cont++;
-			}
-		}
+        if (GeneralAttrib.arcade)
+        {
+            if (Max < GeneralAttrib.maxi)
+            {
+                if (Cont < Max)
+                {
+                    Tipo = Random.Range(0, 8);
+                    CreateObject(Tipo);
+                    Cont++;
+                }
+            }
+            else
+            {
+                if (Cont < GeneralAttrib.maxi)
+                {
+                    Tipo = Random.Range(0, 8);
+                    CreateObject(Tipo);
+                    Cont++;
+                }
+            }
+        }
+        else 
+        {
+            if (Cont < Max)
+            {
+                Tipo = Random.Range(0, 8);
+                CreateObject(Tipo);
+                Cont++;
+            }
+        }
+       
 		if (Eliminar.Duty == true && !GeneralAttrib.arcade) 
 		{
 			Tipo = Random.Range (0, 8);
