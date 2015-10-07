@@ -4,13 +4,21 @@ using System.Collections;
 public class AtribRocks : MonoBehaviour {
 
 	// Use this for initialization
-	public int life, layer, score, tipo;
+	public int life, layer, score, tipo, top;
 	private SpriteRenderer Sr;
 
 	void Start () {
         this.GetComponent<Collider2D>().enabled = false;
 		Sr = this.GetComponent<SpriteRenderer> ();
 		this.layer = Sr.sortingOrder;
+        if (GeneralAttrib.maxi < Camera.main.GetComponent<CreateRamdomly>().Max)
+        {
+            top = GeneralAttrib.maxi;
+        }
+        else
+        {
+            top = Camera.main.GetComponent<CreateRamdomly>().Max;
+        }
         if (GeneralAttrib.nivel == 3)//(Application.loadedLevelName.CompareTo("Hardcore")==0)
         {
             if (this.tipo == 3)
@@ -42,13 +50,13 @@ public class AtribRocks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        if (GeneralAttrib.Debo && Sr.sortingOrder<=29)
+        if (GeneralAttrib.Debo && Sr.sortingOrder<=(top-1))
         {
             Sr.sortingOrder++;
             this.layer++;
             this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
         }
-        if (this.layer == 30 && Static.Estatico == false)
+        if (this.layer == top && Static.Estatico == false)
         {
             Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, Sr.color.a + 0.05f);
             this.GetComponent<Collider2D>().enabled = true;

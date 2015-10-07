@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GeneralAttrib : MonoBehaviour {
@@ -10,7 +10,8 @@ public class GeneralAttrib : MonoBehaviour {
     public static bool Debo = false;
     public static int nivel = 0;
     public static string level;
-    public static bool destroyer = false;
+	public static int maxi=0;
+    public static bool destroyer = false, arcade=false;
     public static int malcriadito=0;
 	
 	// Use this for initialization

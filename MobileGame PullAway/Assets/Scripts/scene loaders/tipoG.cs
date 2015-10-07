@@ -24,8 +24,8 @@ public class tipoG : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-        GeneralAttrib.level = "Arcade";
-        Application.LoadLevel("Arcade");
-        
+		GeneralAttrib.level = "Choossing";
+        GeneralAttrib.arcade = true;
+        Application.LoadLevel("Choossing");
     }
 }

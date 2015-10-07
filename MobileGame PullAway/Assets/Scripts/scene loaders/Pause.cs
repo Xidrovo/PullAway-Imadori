@@ -25,6 +25,12 @@ public class Pause : MonoBehaviour {
 		{
             Application.LoadLevel("GameOver");
 		}
+        if(GameObject.FindGameObjectWithTag("roca")==null && GeneralAttrib.metros>0)
+        {
+            Quaternion rotacion=Quaternion.EulerAngles(0,0,0);
+            GameObject premio = (GameObject)Instantiate(GameObject.Find("GameObject").GetComponent<powerups>().prefab1, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), rotacion);
+            premio.GetComponent<SpriteRenderer>().color = new Color(0, 45, 0);
+        }
 	}
 
 	public void Pausar()

@@ -5,7 +5,7 @@ public class powerups : MonoBehaviour {
 
     private Quaternion rotacion = Quaternion.Euler(0, 0, 0);
     private GameObject nuevo;
-    public int PVentaja;
+    public static int PVentaja;
     public GameObject prefab1, prefab2;
 
 	// Use this for initialization

@@ -36,7 +36,7 @@ public class powerupsAtt : MonoBehaviour {
                 bd = 1;
                 Destroy(this.gameObject);
             }
-            Sr.color = new Color(30, 39, 64);
+            Sr.color = new Color(0, 0, 0);
         }
 	
 	}
@@ -45,15 +45,16 @@ public class powerupsAtt : MonoBehaviour {
     {
         if (this.tipo == 1)
         {
-            if (this.powerVida == 0)
-            {
-                tiempo--;
-            }
-            if (tiempo == 0)
-            {
-                GeneralAttrib.Damage = dam;
-                Destroy(this.gameObject);
-            }
+                if (this.powerVida == 0)
+                {
+                    tiempo--;
+                }
+                if (tiempo == 0)
+                {
+                    GeneralAttrib.Damage = dam;
+                    Destroy(this.gameObject);
+                }
+            
         }
         else
         {
