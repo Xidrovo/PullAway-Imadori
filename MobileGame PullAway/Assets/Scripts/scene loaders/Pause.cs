@@ -29,9 +29,9 @@ public class Pause : MonoBehaviour {
 		}
         if (GeneralAttrib.arcade)
         {
-            if (GameObject.FindGameObjectWithTag("roca") == null && GeneralAttrib.metros > 0)
+            if (GameObject.FindGameObjectWithTag("roca") == null && GeneralAttrib.metros > 1)
             {
-                Time.timeScale = 0;
+                GeneralAttrib.Damage = 0;
                 Quaternion rotacion = Quaternion.EulerAngles(0, 0, 0);
                 GameObject premio = (GameObject)Instantiate(Prefab, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), rotacion);
                 Invoke("EndedWin",2);
@@ -42,6 +42,52 @@ public class Pause : MonoBehaviour {
 
     public void EndedWin()
     {
+        switch (GeneralAttrib.lvlArcade)
+        {
+            case 1:
+                {
+                    if (GeneralAttrib.lvlM == 1)
+                    {
+
+                        GeneralAttrib.lvlM++;
+                    }
+                    break;
+                }
+            case 2:
+                {
+                    if (GeneralAttrib.lvlM == 2)
+                    {
+                        GeneralAttrib.lvlM++;
+                    }
+                    break;
+                }
+            case 3:
+                {
+                    if (GeneralAttrib.lvlM == 3)
+                    {
+                        GeneralAttrib.lvlM++;
+                    }
+                    break;
+                }
+            case 4:
+                {
+                    if (GeneralAttrib.lvlM == 4)
+                    {
+                        GeneralAttrib.lvlM++;
+                    }
+                    break;
+                }
+            case 5:
+                {
+                    if (GeneralAttrib.lvlM == 5)
+                    {
+                        GeneralAttrib.lvlM++;
+                    }
+                    break;
+                }
+
+
+        }
         Application.LoadLevel("Choossing");
     }
 

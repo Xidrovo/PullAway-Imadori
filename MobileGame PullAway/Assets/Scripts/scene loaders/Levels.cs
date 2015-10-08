@@ -34,7 +34,7 @@ public class Levels : MonoBehaviour {
     {
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.Damage = 1.6f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
@@ -47,7 +47,7 @@ public class Levels : MonoBehaviour {
     {
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.Damage = 1.7f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;

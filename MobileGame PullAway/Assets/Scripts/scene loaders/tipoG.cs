@@ -7,9 +7,10 @@ public class tipoG : MonoBehaviour {
     {
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.Damage = 1.3f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
+        GeneralAttrib.nivel = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.level = "SurvivalMode";
         Application.LoadLevel("Levels");
@@ -20,7 +21,7 @@ public class tipoG : MonoBehaviour {
     {
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.1f;
+        GeneralAttrib.Damage = 1.3f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;

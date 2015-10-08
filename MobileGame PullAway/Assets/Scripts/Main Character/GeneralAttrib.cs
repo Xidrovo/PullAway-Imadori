@@ -4,11 +4,12 @@ using System.Collections;
 public class GeneralAttrib : MonoBehaviour {
 
 	public static long Score;
+    public static int lvlM = 1;
 	public static float Life = 100f, metros;
 	public static float Damage = 1.5f,Regeneration = 15.0f;
     public static int rapidez=0;
     public static bool Debo = false;
-    public static int nivel = 0;
+    public static int nivel = 0, lvlArcade=0;
     public static string level;
 	public static int maxi=0;
     public static bool destroyer = false, arcade=false;
