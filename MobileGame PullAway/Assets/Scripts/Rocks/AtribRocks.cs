@@ -11,14 +11,7 @@ public class AtribRocks : MonoBehaviour {
         this.GetComponent<Collider2D>().enabled = false;
 		Sr = this.GetComponent<SpriteRenderer> ();
 		this.layer = Sr.sortingOrder;
-        if (GeneralAttrib.maxi < Camera.main.GetComponent<CreateRamdomly>().Max && GeneralAttrib.arcade)
-        {
-            top = GeneralAttrib.maxi;
-        }
-        else
-        {
-            top = Camera.main.GetComponent<CreateRamdomly>().Max;
-        }
+        top = GeneralAttrib.maxi;
         if (GeneralAttrib.nivel == 3)//(Application.loadedLevelName.CompareTo("Hardcore")==0)
         {
             if (this.tipo == 3)

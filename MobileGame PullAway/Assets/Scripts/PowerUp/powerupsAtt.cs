@@ -49,7 +49,7 @@ public class powerupsAtt : MonoBehaviour {
                 {
                     tiempo--;
                 }
-                if (tiempo == 0)
+                if (tiempo <= 0)
                 {
                     GeneralAttrib.Damage = dam;
                     Destroy(this.gameObject);

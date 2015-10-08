@@ -14,7 +14,6 @@ public class CreateRamdomly : MonoBehaviour  {
 	private float ZRotation, angle;
 	private Quaternion Rotation;
 	private SpriteRenderer spriteRenderer;
-	public int Max = 30;
 	// Use this for initialization
 	void Start () {
 		Cont = 0;
@@ -27,44 +26,20 @@ public class CreateRamdomly : MonoBehaviour  {
 		Aprefabs.Add(PreFab6);
 		Aprefabs.Add(PreFab7);
 		Aprefabs.Add(PreFab8);
-		Eliminar.ReloadLayout = Max - 1;
+		Eliminar.ReloadLayout = GeneralAttrib.maxi - 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (GeneralAttrib.arcade)
+        if (Cont < GeneralAttrib.maxi)
         {
-            if (Max < GeneralAttrib.maxi)
-            {
-                if (Cont < Max)
-                {
-                    Tipo = Random.Range(0, 8);
-                    CreateObject(Tipo);
-                    Cont++;
-                }
-            }
-            else
-            {
-                if (Cont < GeneralAttrib.maxi)
-                {
-                    Tipo = Random.Range(0, 8);
-                    CreateObject(Tipo);
-                    Cont++;
-                }
-            }
-        }
-        else 
-        {
-            if (Cont < Max)
-            {
-                Tipo = Random.Range(0, 8);
-                CreateObject(Tipo);
-                Cont++;
-            }
+            Tipo = Random.Range(0, 8);
+            CreateObject(Tipo);
+            Cont++;
         }
        
-		if (Eliminar.Duty == true && !GeneralAttrib.arcade) 
+		if (Eliminar.Duty == true && (GeneralAttrib.arcade==false)) 
 		{
 			Tipo = Random.Range (0, 8);
 			CreateObjectOnRunTime(Tipo);

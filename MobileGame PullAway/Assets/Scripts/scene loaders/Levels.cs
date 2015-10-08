@@ -4,11 +4,20 @@ using System.Collections;
 public class Levels : MonoBehaviour {
 
 	// Use this for initialization
-	
+    void Start()
+    {
+        GeneralAttrib.maxi = 30;
+    }
+
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+    public void ModesMenu()
+    {
+        Application.LoadLevel("Modes");
+    }
 
     public void Infantil()
     {

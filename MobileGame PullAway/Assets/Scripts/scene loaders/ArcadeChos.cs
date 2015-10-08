@@ -3,20 +3,29 @@ using System.Collections;
 
 public class ArcadeChos : MonoBehaviour {
 
-	public void Nvl1()
+
+    public void ModesMenu()
+    {
+        Application.LoadLevel("Modes");
+    }
+
+    public void Nvl1()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 15;
         GeneralAttrib.nivel = 1;
 		Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl2()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 30;
         GeneralAttrib.nivel = 1;
 		Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl3()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 30;
 		GeneralAttrib.Damage = 1.5f;
         GeneralAttrib.nivel = 2;
@@ -24,6 +33,7 @@ public class ArcadeChos : MonoBehaviour {
 	}
 	public void Nvl4()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 30;
 		GeneralAttrib.Damage = 1.5f;
 		Traps.death = 25;
@@ -32,6 +42,7 @@ public class ArcadeChos : MonoBehaviour {
 	}
 	public void Nvl5()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 45;
 		GeneralAttrib.Damage = 1.5f;
 		Traps.death = 25;
@@ -41,6 +52,7 @@ public class ArcadeChos : MonoBehaviour {
 	}
 	public void Nvl6()
 	{
+        GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 40;
 		GeneralAttrib.Damage = 1.5f;
 		Traps.death = 35;
