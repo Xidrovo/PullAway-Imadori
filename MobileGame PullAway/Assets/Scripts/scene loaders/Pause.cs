@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour {
 
 	public GameObject PauseMenu;
+    public GameObject Prefab;
 	public Button Pausa, Resume;
     public float vida;
     public float damage;
@@ -32,8 +33,7 @@ public class Pause : MonoBehaviour {
             {
                 Time.timeScale = 0;
                 Quaternion rotacion = Quaternion.EulerAngles(0, 0, 0);
-                GameObject premio = (GameObject)Instantiate(GameObject.Find("GameObject").GetComponent<powerups>().prefab1, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), rotacion);
-                premio.GetComponent<SpriteRenderer>().color = new Color(45, 45, 0);
+                GameObject premio = (GameObject)Instantiate(Prefab, new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y), rotacion);
                 Invoke("EndedWin",2);
             }
         }
