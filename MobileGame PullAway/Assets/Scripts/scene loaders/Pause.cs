@@ -88,6 +88,8 @@ public class Pause : MonoBehaviour {
 
 
         }
+        PlayerPrefs.SetInt("Nivel", GeneralAttrib.lvlM);
+        PlayerPrefs.Save();
         Application.LoadLevel("Choossing");
     }
 

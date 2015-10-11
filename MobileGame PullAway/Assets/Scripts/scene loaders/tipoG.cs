@@ -19,6 +19,15 @@ public class tipoG : MonoBehaviour {
 
     public void Arcade()
     {
+        if (PlayerPrefs.HasKey("Nivel"))
+        {
+            GeneralAttrib.lvlM= PlayerPrefs.GetInt("Nivel");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Nivel", GeneralAttrib.lvlM);
+            PlayerPrefs.Save();
+        }
         Time.timeScale = 1;
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.3f;
