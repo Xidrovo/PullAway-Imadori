@@ -27,6 +27,7 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
+        GeneralAttrib.nivel = 1;
         Application.LoadLevel("SurvivalMode");
     }
 
@@ -38,7 +39,7 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
-        GeneralAttrib.nivel = 3;
+        GeneralAttrib.nivel = 2;
         Application.LoadLevel("SurvivalMode");
         //Application.LoadLevel("Juvenil");
     }

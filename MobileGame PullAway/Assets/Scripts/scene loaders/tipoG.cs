@@ -5,6 +5,28 @@ public class tipoG : MonoBehaviour {
 
     public void Survival()
     {
+        if (!PlayerPrefs.HasKey("Score1") || !PlayerPrefs.HasKey("MScore1") || !PlayerPrefs.HasKey("HScore1") )
+        {
+            PlayerPrefs.SetString("Name1", "Name");
+            PlayerPrefs.SetInt("Score1", 000);
+            PlayerPrefs.SetString("Name2", "Name");
+            PlayerPrefs.SetInt("Score2", 000);
+            PlayerPrefs.SetString("Name3", "Name");
+            PlayerPrefs.SetInt("Score3", 000);
+            PlayerPrefs.SetString("MName1", "Name");
+            PlayerPrefs.SetInt("MScore1", 000);
+            PlayerPrefs.SetString("MName2", "Name");
+            PlayerPrefs.SetInt("MScore2", 000);
+            PlayerPrefs.SetString("MName3", "Name");
+            PlayerPrefs.SetInt("MScore3", 000);
+            PlayerPrefs.SetString("HName1", "Name");
+            PlayerPrefs.SetInt("HScore1", 000);
+            PlayerPrefs.SetString("HName2", "Name");
+            PlayerPrefs.SetInt("HScore2", 000);
+            PlayerPrefs.SetString("HName3", "Name");
+            PlayerPrefs.SetInt("HScore3", 000);
+            PlayerPrefs.Save();
+        }
         Time.timeScale = 1;
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.3f;
