@@ -5,6 +5,7 @@ public class tipoG : MonoBehaviour {
 
     public void Survival()
     {
+        GeneralAttrib.arcade = false;
         if (!PlayerPrefs.HasKey("Score1") || !PlayerPrefs.HasKey("MScore1") || !PlayerPrefs.HasKey("HScore1") )
         {
             PlayerPrefs.SetString("Name1", "Name");
