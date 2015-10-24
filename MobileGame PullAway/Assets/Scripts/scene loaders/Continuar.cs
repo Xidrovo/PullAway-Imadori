@@ -5,6 +5,19 @@ using System.Collections;
 
 public class Continuar : MonoBehaviour {
 
+    public void Start()
+    {
+        if (PlayerPrefs.HasKey("Noob"))
+        {
+            ///XIDROVO DEBE PONER ALGO AQUI
+            //PlayerPrefs.GetInt("Noob");
+        }
+        else 
+        {
+            PlayerPrefs.SetInt("Noob",0);
+        }
+    }
+
     public void LoadLogros()
     {
         Application.LoadLevel("Tuto");

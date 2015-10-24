@@ -15,6 +15,7 @@ public class GeneralAttrib : MonoBehaviour {
     public static bool destroyer = false, arcade=false;
     public static int malcriadito=0;
 	
+
 	// Use this for initialization
 	void Start () {
 		Score = 0;
