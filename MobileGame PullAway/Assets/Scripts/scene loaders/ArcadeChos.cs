@@ -1,51 +1,53 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ArcadeChos : MonoBehaviour {
 
-    public GameObject b1, b2, b3, b4, b5, b6;
+    public Button b1, b2, b3, b4, b5, b6;
+    public Sprite bb2On, bb3On, bb4On, bb5On, bb6On, bb2Off, bb3Off, bb4Off,bb5Off, bb6Off;
     void Start()
     {
         GeneralAttrib.Damage = 1.3f;
         if (GeneralAttrib.lvlM >= 2)
         {
-            b2.SetActive(true);
+            b2.GetComponent<Image>().sprite=bb2On;
         }
         else 
         {
-            b2.SetActive(false);
+            b2.GetComponent<Image>().sprite = bb2Off;
         }
         if (GeneralAttrib.lvlM >= 3)
         {
-            b3.SetActive(true);
+            b3.GetComponent<Image>().sprite = bb3On;
         }
         else
         {
-            b3.SetActive(false);
+            b3.GetComponent<Image>().sprite = bb3Off;
         }
         if (GeneralAttrib.lvlM >= 4)
         {
-            b4.SetActive(true);
+            b4.GetComponent<Image>().sprite = bb4On;
         }
         else
         {
-            b4.SetActive(false);
+            b4.GetComponent<Image>().sprite = bb4Off;
         }
         if (GeneralAttrib.lvlM >= 5)
         {
-            b5.SetActive(true);
+            b5.GetComponent<Image>().sprite = bb5On;
         }
         else
         {
-            b5.SetActive(false);
+            b5.GetComponent<Image>().sprite = bb5Off;
         }
         if (GeneralAttrib.lvlM >=6)
         {
-            b6.SetActive(true);
+            b6.GetComponent<Image>().sprite = bb6On;
         }
         else
         {
-            b6.SetActive(false);
+            b6.GetComponent<Image>().sprite = bb6Off;
         }
     }
 

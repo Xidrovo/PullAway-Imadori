@@ -19,7 +19,14 @@ public class Eliminar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (!GeneralAttrib.sounds)
+        {
+            Camera.main.GetComponent<AudioSource>().mute = true;
+        }
+        else 
+        {
+            Camera.main.GetComponent<AudioSource>().mute = false;
+        }
 		try
 		{
 			if((this.transform.position.y>=5f)||(this.transform.position.y<=-5f))

@@ -8,14 +8,30 @@ public class music : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        // Audio Source responsavel por emitir os sons
         fxSound = GetComponent<AudioSource>();
         fxSound.Play();
+        if (!GeneralAttrib.music)
+        {
+            fxSound.mute = true;
+        }
+        else 
+        {
+            fxSound.mute = false;
+        }
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+        if (!GeneralAttrib.music)
+        {
+            fxSound.mute = true;
+        }
+        else
+        {
+            fxSound.mute = false;
+        }
         if(!fxSound.isPlaying)
         {
             fxSound.Play();

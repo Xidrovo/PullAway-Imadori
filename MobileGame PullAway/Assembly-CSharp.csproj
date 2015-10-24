@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
      <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
+     <Compile Include="Assets\Scripts\Main Character\TrophiesAtt.cs" />
      <Compile Include="Assets\Scripts\PowerUp\powerups.cs" />
      <Compile Include="Assets\Scripts\PowerUp\powerupsAtt.cs" />
      <Compile Include="Assets\Scripts\Rocks\AtribRocks.cs" />
@@ -66,7 +67,9 @@
      <Compile Include="Assets\Scripts\por eliminar\Tributes.cs" />
      <Compile Include="Assets\Scripts\scene loaders\ArcadeChos.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Continuar.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\Extras.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Levels.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\Options.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Pause.cs" />
      <Compile Include="Assets\Scripts\scene loaders\tipoG.cs" />
      <Compile Include="Assets\Scripts\scores\score.cs" />

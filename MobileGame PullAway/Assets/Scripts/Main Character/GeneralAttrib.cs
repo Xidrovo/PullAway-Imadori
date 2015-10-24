@@ -14,7 +14,7 @@ public class GeneralAttrib : MonoBehaviour {
 	public static int maxi=0;
     public static bool destroyer = false, arcade=false;
     public static int malcriadito=0;
-	
+    public static bool music = true, sounds = true;
 
 	// Use this for initialization
 	void Start () {

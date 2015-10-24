@@ -17,6 +17,7 @@ public class DraggAndInput : MonoBehaviour {
     private powerupsAtt powA;
 	private Vector3 Temp;
     private TrapsAtt att;
+    private TrophiesAtt troph;
 	private static int contV=0;
 
 	// Use this for initialization
@@ -78,6 +79,12 @@ public class DraggAndInput : MonoBehaviour {
                         powA = player.GetComponent<powerupsAtt>();
                         contV++;
                         perderVidas(contV,powA);
+                    }
+                    else if (player.tag.CompareTo("Trophie") == 0)
+                    {
+                        troph = player.GetComponent<TrophiesAtt>();
+                        contV++;
+                        perderVidas(contV, troph);
                     }
                     else 
                     {
@@ -142,6 +149,14 @@ public class DraggAndInput : MonoBehaviour {
         if (at.life <= 0)
         {
             Destroy(player);
+        }
+    }
+    public void perderVidas(int cont, TrophiesAtt at)
+    {
+        if (cont == 1)
+        {
+            at.trophieVida -= 1;
+            cont = 5;
         }
     }
     public void perderVidas(int cont, powerupsAtt at)

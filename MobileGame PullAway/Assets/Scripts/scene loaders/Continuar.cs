@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Continuar : MonoBehaviour {
 
-    public void Start()
+    void Start()
     {
         if (PlayerPrefs.HasKey("Noob"))
         {
@@ -28,7 +28,16 @@ public class Continuar : MonoBehaviour {
 		Application.LoadLevel ("Modes");
 
 	}
-	
+
+    public void Extras()
+    {
+        Application.LoadLevel("Extras");
+    }
+
+    public void Options()
+    {
+        Application.LoadLevel("Options");
+    }
 	// Update is called once per frame
 	public void ExitApplication () 
 	{
