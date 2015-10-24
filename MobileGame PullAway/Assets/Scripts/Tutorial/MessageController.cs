@@ -92,8 +92,8 @@ public class MessageController : MonoBehaviour {
             case 14:
                 rock1.SetActive(true);
                 Anim.SetBool("Activate", true);
-                Dodes.GetComponent<Animator>().SetInteger("State", 1);
                 Dodes.SetActive(true);
+                Dodes.GetComponent<Animator>().SetInteger("State", 1);
                 whiteArrow.SetActive(true);
                 texto.text = "like this!";
                 //finger animation
@@ -103,11 +103,11 @@ public class MessageController : MonoBehaviour {
                 {
                     texto.text = "Now try it!";
                     rock1.SetActive(false);
-                    Dodes.SetActive(false);
                     Dodes.GetComponent<Animator>().SetInteger("State", 0);
+                    Dodes.SetActive(false);
                     whiteArrow.SetActive(false);
                     MobileRock.SetActive(true);
-                    MobileRock.GetComponent<AtribRocks>().layer = 30;
+                    MobileRock.GetComponent<AtribRocks>().layer = 0;
                     Time.timeScale = 1;
                     GeneralAttrib.Life = 100;
                 }
