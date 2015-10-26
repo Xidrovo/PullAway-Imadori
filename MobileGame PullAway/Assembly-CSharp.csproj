@@ -50,7 +50,8 @@
      <Compile Include="Assets\Scripts\HighScore.cs" />
      <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
      <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
-     <Compile Include="Assets\Scripts\Main Character\TrophiesAtt.cs" />
+     <Compile Include="Assets\Scripts\PowerUp\TrophiesAtt.cs" />
+     <Compile Include="Assets\Scripts\PowerUp\TrophiesRecord.cs" />
      <Compile Include="Assets\Scripts\PowerUp\powerups.cs" />
      <Compile Include="Assets\Scripts\PowerUp\powerupsAtt.cs" />
      <Compile Include="Assets\Scripts\Rocks\AtribRocks.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\Rocks\Eliminar.cs" />
      <Compile Include="Assets\Scripts\Static.cs" />
      <Compile Include="Assets\Scripts\Tutorial\MessageController.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\MessagesController2.cs" />
      <Compile Include="Assets\Scripts\logros\achivements.cs" />
      <Compile Include="Assets\Scripts\logros\moveTowards.cs" />
      <Compile Include="Assets\Scripts\music.cs" />
@@ -71,6 +73,7 @@
      <Compile Include="Assets\Scripts\scene loaders\Levels.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Options.cs" />
      <Compile Include="Assets\Scripts\scene loaders\Pause.cs" />
+     <Compile Include="Assets\Scripts\scene loaders\TrophieMenu.cs" />
      <Compile Include="Assets\Scripts\scene loaders\tipoG.cs" />
      <Compile Include="Assets\Scripts\scores\score.cs" />
      <Compile Include="Assets\Scripts\scores\scoreGO.cs" />

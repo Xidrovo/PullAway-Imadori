@@ -10,6 +10,26 @@ public class Options : MonoBehaviour {
     public Button buttonS, buttonM;
     public Sprite MuteS, MuteM, MusicOn,SoundOn;
 
+    void Start()
+    {
+        if (!GeneralAttrib.music)
+        {
+            buttonM.GetComponent<Image>().sprite = MuteM;
+        }
+        else
+        {
+            buttonM.GetComponent<Image>().sprite = MusicOn;
+        }
+        if (!GeneralAttrib.sounds)
+        {
+            buttonS.GetComponent<Image>().sprite = MuteS;
+        }
+        else
+        {
+            buttonS.GetComponent<Image>().sprite = SoundOn;
+        }
+    }
+
     public void EraseData()
     {
         PlayerPrefs.DeleteAll();

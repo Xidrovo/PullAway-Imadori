@@ -82,9 +82,9 @@ public class DraggAndInput : MonoBehaviour {
                     }
                     else if (player.tag.CompareTo("Trophie") == 0)
                     {
-                        troph = player.GetComponent<TrophiesAtt>();
-                        contV++;
-                        perderVidas(contV, troph);
+                        PlayerPrefs.SetInt("trop"+ player.GetComponent<TrophiesAtt>().tipo, 1);
+                        
+                        Destroy(player);
                     }
                     else 
                     {
@@ -149,14 +149,6 @@ public class DraggAndInput : MonoBehaviour {
         if (at.life <= 0)
         {
             Destroy(player);
-        }
-    }
-    public void perderVidas(int cont, TrophiesAtt at)
-    {
-        if (cont == 1)
-        {
-            at.trophieVida -= 1;
-            cont = 5;
         }
     }
     public void perderVidas(int cont, powerupsAtt at)

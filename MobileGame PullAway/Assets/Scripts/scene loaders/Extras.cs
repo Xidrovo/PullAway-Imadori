@@ -5,7 +5,7 @@ public class Extras : MonoBehaviour {
 
     public void Market()
     {
-        Application.LoadLevel("Market");
+        Application.LoadLevel("Trophies");
     }
     public void Trophies()
     {
@@ -19,7 +19,7 @@ public class Extras : MonoBehaviour {
 
     public void Credit() 
     {
-        Application.LoadLevel("Credit");
+        Application.LoadLevel("Trophies");
     }
 
     public void MainMenu()
