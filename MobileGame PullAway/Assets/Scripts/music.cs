@@ -32,10 +32,6 @@ public class music : MonoBehaviour {
         {
             fxSound.mute = false;
         }
-        if(!fxSound.isPlaying)
-        {
-            fxSound.Play();
-        }
 	
 	}
 }
