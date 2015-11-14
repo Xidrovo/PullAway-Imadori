@@ -22,13 +22,8 @@ public class Extras : MonoBehaviour {
         Application.LoadLevel("Trophies");
     }
 
-    public void MainMenu()
+    public void Back()
     {
         Application.LoadLevel("Start");
-    }
-
-    public void Salir()
-    {
-        Application.Quit();
     }
 }

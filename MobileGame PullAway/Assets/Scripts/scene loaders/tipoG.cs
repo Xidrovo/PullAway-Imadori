@@ -40,6 +40,11 @@ public class tipoG : MonoBehaviour {
         
     }
 
+    public void Back()
+    {
+        Application.LoadLevel("Start");
+    }
+
     public void Arcade()
     {
         if (PlayerPrefs.HasKey("Nivel"))

@@ -107,8 +107,8 @@ public class TrophieMenu : MonoBehaviour {
         Application.LoadLevel("Start");
     }
 
-    public void Quit()
+    public void Back()
     {
-        Application.Quit();
+        Application.LoadLevel("Extras");
     }
 }
