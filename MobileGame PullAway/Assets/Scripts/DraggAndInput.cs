@@ -107,7 +107,6 @@ public class DraggAndInput : MonoBehaviour {
                     BorrarLuego();
                     if (bdT)
                     {
-
                         Velocidad.AddForce(new Vector2(DistanceX * 1f, DistanceY * 1f));
 
                     }
