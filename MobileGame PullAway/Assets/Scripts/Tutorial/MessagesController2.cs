@@ -8,6 +8,7 @@ public class MessagesController2 : MonoBehaviour {
     private bool finich = false;
     private Text texto;
     private Animator Anim;
+    private Vector3 Pos;
     public GameObject Arrow1, Arrow2, Vida, Rock1, Rock2, Dodes;
 
 	// Use this for initialization
@@ -89,6 +90,7 @@ public class MessagesController2 : MonoBehaviour {
                 texto.text = "how?";
                 break;
             case 14:
+                Pos = Rock1.transform.position;
                 Rock1.SetActive(true);
                 Anim.SetBool("Activate", true);
                 Dodes.SetActive(true);
@@ -97,9 +99,28 @@ public class MessagesController2 : MonoBehaviour {
                 texto.text = "like this!";
                 //finger animation
                 break;
-
-
-            default:
+            case 15:
+                texto.text = "go ahead, DESTROY IT!!";
+                Anim.SetBool("Activate", false);
+                Dodes.SetActive(false);                    
+                break;
+            case 16:
+                try
+                {
+                    Pos = Rock1.transform.position;
+                    Cont = 16;
+                }catch (System.Exception e)
+                {
+                    Cont = 18;
+                }
+                break;
+            case 17:
+                Cont = 16;
+                break;
+            case 18:
+                texto.text = "Good job!!";
+                break;
+        default:
                 break;
         }
     }
