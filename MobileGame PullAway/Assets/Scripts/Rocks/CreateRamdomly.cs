@@ -26,7 +26,7 @@ public class CreateRamdomly : MonoBehaviour  {
 		Aprefabs.Add(PreFab6);
 		Aprefabs.Add(PreFab7);
 		Aprefabs.Add(PreFab8);
-		Eliminar.ReloadLayout = GeneralAttrib.maxi - 1;
+		Eliminar.ReloadLayout =GeneralAttrib.maxi - 1;
 	}
 	
 	// Update is called once per frame
