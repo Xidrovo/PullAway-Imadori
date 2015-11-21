@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Balsas\AttribBalsa.cs" />
      <Compile Include="Assets\Scripts\Camera\Camareta.cs" />
      <Compile Include="Assets\Scripts\DraggAndInput.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />

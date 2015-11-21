@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Eliminar : MonoBehaviour {
 
-	public CreateRamdomly  random;
 	private AtribRocks atb;
     private AudioSource fxSound;
 	private int Tipo;

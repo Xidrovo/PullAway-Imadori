@@ -35,7 +35,7 @@ public class tipoG : MonoBehaviour {
         Traps.death = 0;
         GeneralAttrib.nivel = 0;
         GeneralAttrib.Life = 100;
-        GeneralAttrib.level = "SurvivalMode";
+        //GeneralAttrib.level = "SurvivalMode";
         Application.LoadLevel("Levels");
         
     }
