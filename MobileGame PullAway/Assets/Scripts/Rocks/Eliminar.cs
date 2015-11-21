@@ -51,8 +51,7 @@ public class Eliminar : MonoBehaviour {
                     }
                 }
                 GeneralAttrib.rapidez++;
-                Destroy(this.gameObject);
-                
+                Destroy(this.gameObject);                
 			}
 			if((this.transform.position.x<=-5f)||(this.transform.position.x>=5f))
 			{

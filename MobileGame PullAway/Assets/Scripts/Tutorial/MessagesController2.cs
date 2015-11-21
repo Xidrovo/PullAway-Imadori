@@ -22,7 +22,8 @@ public class MessagesController2 : MonoBehaviour {
         Vida.GetComponent<Animator>().enabled = false;
         texto = this.GetComponent<Text>();
         Anim = Rock1.GetComponent<Animator>();
-	}
+        GeneralAttrib.maxi = 1;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,6 +34,12 @@ public class MessagesController2 : MonoBehaviour {
                 if (Input.GetTouch(0).phase == TouchPhase.Began)
                     Cont++;
             }
+
+			if (Input.GetMouseButtonDown(0) )
+			{
+				//Cont++;
+			}
+			//Input.GetMouseButtonDown(0)
         }
         catch
         {
@@ -42,6 +49,7 @@ public class MessagesController2 : MonoBehaviour {
         {
             case 1:
                 texto.text = "hey!";
+                Rock1.GetComponent<AtribRocks>().top = GeneralAttrib.maxi;
                 break;
             case 2:
                 texto.text = "How are you?";
@@ -102,7 +110,9 @@ public class MessagesController2 : MonoBehaviour {
             case 15:
                 texto.text = "go ahead, DESTROY IT!!";
                 Anim.SetBool("Activate", false);
-                Dodes.SetActive(false);                    
+                Rock1.GetComponent<Animator>().enabled = false;
+                Dodes.SetActive(false);
+                Cont = 16;                   
                 break;
             case 16:
                 try
@@ -119,6 +129,10 @@ public class MessagesController2 : MonoBehaviour {
                 break;
             case 18:
                 texto.text = "Good job!!";
+                break;
+            case 19:
+                Application.LoadLevel("Modes");
+                PlayerPrefs.SetInt("FirstTime", 0);
                 break;
         default:
                 break;

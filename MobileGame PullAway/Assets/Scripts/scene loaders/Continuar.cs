@@ -11,6 +11,7 @@ public class Continuar : MonoBehaviour {
         {
             ///XIDROVO DEBE PONER ALGO AQUI
             //PlayerPrefs.GetInt("Noob");
+            //Xidrovo: Algo :3
         }
         else 
         {
@@ -25,8 +26,17 @@ public class Continuar : MonoBehaviour {
     }
 	public void LoadLevel()
 	{
-		Application.LoadLevel ("Modes");
+        if (PlayerPrefs.HasKey("FirstTime"))
+        {
+            Debug.Log("I'm here!");
+            if (PlayerPrefs.GetInt("FirstTime") == 1)
+            {
+                Application.LoadLevel("tutorial");
+            }
+        }
 
+        if(PlayerPrefs.GetInt("FirstTime") == 0)
+            Application.LoadLevel("Modes");
 	}
 
     public void Extras()
