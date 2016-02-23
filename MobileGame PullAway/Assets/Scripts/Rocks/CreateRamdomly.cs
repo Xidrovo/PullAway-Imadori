@@ -82,8 +82,19 @@ public class CreateRamdomly : MonoBehaviour  {
 		Rotation = RotAleatoria ();
 		ZRotation = Rotation.eulerAngles.z;
 
-		//With this we initiate the object as a game object.
-		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
+        //With this we initiate the object as a game object.
+        if (GeneralAttrib.type == 1)
+        {
+            ((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            ((GameObject)(Aprefabs[tipo])).name = "Balsa" + "" + (Cont + 1);
+        }
+        else
+        {
+            ((GameObject)(Aprefabs[tipo])).name = "Hoja" + "" + (Cont + 1);
+        }
 		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
 		spriteRenderer.sortingOrder = Cont + 1;

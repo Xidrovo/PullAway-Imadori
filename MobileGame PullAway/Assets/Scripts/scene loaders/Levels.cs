@@ -29,8 +29,21 @@ public class Levels : MonoBehaviour {
         Traps.death = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.nivel = 1;
-        GeneralAttrib.level = "SurvivalMode";
-        Application.LoadLevel("SurvivalMode");
+        if (GeneralAttrib.type == 1)
+        {
+            Application.LoadLevel("SurvivalMode");
+            GeneralAttrib.level = "SurvivalMode";
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            Application.LoadLevel("Balsas");
+            GeneralAttrib.level = "Balsas";
+        }
+        else
+        {
+            Debug.Log("HOjas");
+        }
+        
     }
 
     public void Juvenil()
@@ -43,8 +56,20 @@ public class Levels : MonoBehaviour {
         Traps.death = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.nivel = 2;
-        GeneralAttrib.level = "Balsas";
-        Application.LoadLevel("Balsas");
+        if (GeneralAttrib.type == 1)
+        {
+            Application.LoadLevel("SurvivalMode");
+            GeneralAttrib.level = "SurvivalMode";
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            Application.LoadLevel("Balsas");
+            GeneralAttrib.level = "Balsas";
+        }
+        else
+        {
+            Debug.Log("HOjas");
+        }
         //Application.LoadLevel("Juvenil");
     }
 
@@ -59,8 +84,20 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.Life = 100;
         //Application.LoadLevel("Hardcore");
         GeneralAttrib.nivel = 3;
-        GeneralAttrib.level = "SurvivalMode";
-        Application.LoadLevel("SurvivalMode");
-        
+        if (GeneralAttrib.type == 1)
+        {
+            Application.LoadLevel("SurvivalMode");
+            GeneralAttrib.level = "SurvivalMode";
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            Application.LoadLevel("Balsas");
+            GeneralAttrib.level = "Balsas";
+        }
+        else
+        {
+            Debug.Log("HOjas");
+        }
+
     }
 }

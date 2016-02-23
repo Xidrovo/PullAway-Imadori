@@ -88,9 +88,13 @@ public class DraggAndInput : MonoBehaviour {
                     }
                     else 
                     {
-                        atb = player.GetComponent<AtribRocks>();
-                        contV++;
-                        perderVidas(contV);
+                        if (GeneralAttrib.type == 1)
+                        {
+                            atb = player.GetComponent<AtribRocks>();
+                            contV++;
+                            perderVidas(contV);
+                        }
+                        
                     }
 					
 				}
@@ -101,24 +105,50 @@ public class DraggAndInput : MonoBehaviour {
 			}
             if (player.tag.CompareTo("roca") == 0)
             {
-                if ((player.gameObject.name != "Temporito") && (atb.life <= 0))
+                Debug.Log(player.name+"12");
+                if (GeneralAttrib.type == 1)
                 {
-                    Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                    BorrarLuego();
-                    if (bdT)
+                    if ((player.gameObject.name != "Temporito") && (atb.life <= 0))
                     {
-                        Velocidad.AddForce(new Vector2(DistanceX * 1f, DistanceY * 1f));
+                        Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                        BorrarLuego();
+                        if (bdT)
+                        {
+                            Velocidad.AddForce(new Vector2(DistanceX * 1f, DistanceY * 1f));
+
+                        }
+                        else
+                        {
+
+                            player.transform.position = new Vector2(Pos.x, Pos.y);
+
+                        }
 
                     }
-                    else
-                    {
-
-                        player.transform.position = new Vector2(Pos.x, Pos.y);
-
-                    }
-
-
                 }
+                else
+                {
+                    if (player.gameObject.name != "Temporito")
+                    {
+                        Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                        BorrarLuego();
+                        Debug.Log("hi");
+                        if (bdT)
+                        {
+                            Debug.Log("hello");
+                            Velocidad.AddForce(new Vector2(DistanceX * 1f, DistanceY * 1f));
+
+                        }
+                        //else
+                        //{
+
+                        //    player.transform.position = new Vector2(Pos.x, Pos.y);
+
+                        //}
+
+                    }
+                }
+                
             }
 			
 			if (Input.GetTouch (0).phase == TouchPhase.Ended) 

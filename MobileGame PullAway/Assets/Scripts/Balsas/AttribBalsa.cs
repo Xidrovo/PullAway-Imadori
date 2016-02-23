@@ -7,7 +7,7 @@ public class AttribBalsa : MonoBehaviour
     // Use this for initialization
     public int layer, score, top;
     private SpriteRenderer Sr;
-
+    public GameObject box;
     void Start()
     {
         this.GetComponent<Collider2D>().enabled = false;
@@ -23,20 +23,30 @@ public class AttribBalsa : MonoBehaviour
         {
             Sr.sortingOrder++;
             this.layer++;
-            this.gameObject.name = "Roquita" + "" + Sr.sortingOrder;
+            this.gameObject.name = "Balsa" + "" + Sr.sortingOrder;
         }
         if (this.layer == top && Static.Estatico == false)
         {
-            //Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, Sr.color.a + 0.05f);
-            Sr.color = new Color(0, 0, 0, 0);
-            this.GetComponent<Collider2D>().enabled = true;
+            //Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, 255);//Sr.color.a + 0.05f);
+            Sr.color = new Color(0, 197, 75, 255);
             GeneralAttrib.Debo = false;
+            this.SetAllCollidersStatus(true,box);
+            this.GetComponent<Collider2D>().enabled = true;
         }
         else
         {
             this.GetComponent<Collider2D>().enabled = false;
+            this.SetAllCollidersStatus(false,box);
         }
 
+    }
+
+    public void SetAllCollidersStatus(bool active, GameObject box)
+    {
+        foreach (Collider2D c in box.GetComponents<Collider2D>())
+        {
+            c.enabled = active;
+        }
     }
 
     /*public void SortingUp()
