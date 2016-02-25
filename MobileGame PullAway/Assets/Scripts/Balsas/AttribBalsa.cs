@@ -7,7 +7,7 @@ public class AttribBalsa : MonoBehaviour
     // Use this for initialization
     public int layer, score, top;
     private SpriteRenderer Sr;
-    public GameObject box;
+    //public GameObject box;
     void Start()
     {
         this.GetComponent<Collider2D>().enabled = false;
@@ -30,13 +30,11 @@ public class AttribBalsa : MonoBehaviour
             //Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, 255);//Sr.color.a + 0.05f);
             Sr.color = new Color(0, 197, 75, 255);
             GeneralAttrib.Debo = false;
-            this.SetAllCollidersStatus(true,box);
             this.GetComponent<Collider2D>().enabled = true;
         }
         else
         {
             this.GetComponent<Collider2D>().enabled = false;
-            this.SetAllCollidersStatus(false,box);
         }
 
     }

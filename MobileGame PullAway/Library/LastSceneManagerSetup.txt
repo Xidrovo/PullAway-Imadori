@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SurvivalMode.unity
+- path: Assets/Scenes/Types.unity
   isLoaded: 1
   isActive: 1
