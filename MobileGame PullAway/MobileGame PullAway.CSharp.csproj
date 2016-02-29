@@ -81,8 +81,10 @@
     <Compile Include="Assets\Scripts\Static.cs" />
     <Compile Include="Assets\Scripts\Tutorial\MessageController.cs" />
     <Compile Include="Assets\Scripts\Tutorial\MessagesController2.cs" />
+    <Compile Include="Assets\Scripts\eliminarMuros.cs" />
     <Compile Include="Assets\Scripts\logros\achivements.cs" />
     <Compile Include="Assets\Scripts\logros\moveTowards.cs" />
+    <Compile Include="Assets\Scripts\murosScript.cs" />
     <Compile Include="Assets\Scripts\music.cs" />
     <Compile Include="Assets\Scripts\por eliminar\NameToucher.cs" />
     <Compile Include="Assets\Scripts\por eliminar\ReScaling.cs" />

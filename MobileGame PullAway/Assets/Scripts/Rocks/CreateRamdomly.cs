@@ -3,9 +3,10 @@ using System.Collections;
 
 public class CreateRamdomly : MonoBehaviour  {
 	public GameObject PreFab,PreFab1,PreFab2,PreFab3,PreFab4,PreFab5,PreFab6,PreFab7,PreFab8 ;
+    public GameObject muros;
 	private float Radio =2f;
 	//	public Canvas canva;
-	private GameObject NormalTable;
+	private GameObject NormalTable, NT;
 	public ArrayList Aprefabs = new ArrayList();
 
 	public static ArrayList AllRocks = new ArrayList();
@@ -14,8 +15,9 @@ public class CreateRamdomly : MonoBehaviour  {
 	private float ZRotation, angle;
 	private Quaternion Rotation;
 	private SpriteRenderer spriteRenderer;
-	// Use this for initialization
-	void Start () {
+    private SpriteRenderer SP;
+    // Use this for initialization
+    void Start () {
 		Cont = 0;
 		Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
@@ -54,10 +56,25 @@ public class CreateRamdomly : MonoBehaviour  {
 		//rotate the object as we want to rotate.
 		Rotation = RotAleatoria ();
 		ZRotation = Rotation.eulerAngles.z;
-		
-		//With this we initiate the object as a game object.
-		((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (1);
-		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(0) , Rotation );
+        Vector3 pos = PosEnElOrigen(0);
+        //With this we initiate the object as a game object.
+        if (GeneralAttrib.type == 1)
+        {
+            ((GameObject)(Aprefabs[tipo])).name = "Roquita" + "" + (Cont + 1);
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            muros.name = "Muro" + "" + (Cont + 1);
+            ((GameObject)(Aprefabs[tipo])).name = "Balsa" + "" + (Cont + 1);
+            NT = (GameObject)Instantiate(muros, pos, Rotation);
+            SP = NT.GetComponent<SpriteRenderer>();
+            SP.sortingOrder = 1;
+        }
+        else
+        {
+            ((GameObject)(Aprefabs[tipo])).name = "Hoja" + "" + (Cont + 1);
+        }
+		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), pos , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
 		spriteRenderer.sortingOrder = 1;
 		AllRocks.Insert (0,NormalTable);
@@ -81,7 +98,7 @@ public class CreateRamdomly : MonoBehaviour  {
 		//rotate the object as we want to rotate.
 		Rotation = RotAleatoria ();
 		ZRotation = Rotation.eulerAngles.z;
-
+        Vector3 pos = PosEnElOrigen(Cont);
         //With this we initiate the object as a game object.
         if (GeneralAttrib.type == 1)
         {
@@ -89,13 +106,18 @@ public class CreateRamdomly : MonoBehaviour  {
         }
         else if (GeneralAttrib.type == 2)
         {
+            muros.name = "Muro" + "" + (Cont + 1);
             ((GameObject)(Aprefabs[tipo])).name = "Balsa" + "" + (Cont + 1);
+            NT = (GameObject)Instantiate((GameObject)muros, pos, Rotation);
+            SP = NT.GetComponent<SpriteRenderer>();
+            SP.sortingOrder = Cont + 1;
         }
         else
         {
             ((GameObject)(Aprefabs[tipo])).name = "Hoja" + "" + (Cont + 1);
         }
-		NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), PosEnElOrigen(Cont) , Rotation );
+        
+        NormalTable = (GameObject) Instantiate ((GameObject)(Aprefabs[tipo]), pos  , Rotation );
 		spriteRenderer = NormalTable.GetComponent<SpriteRenderer>();
 		spriteRenderer.sortingOrder = Cont + 1;
 		AllRocks.Add (NormalTable);

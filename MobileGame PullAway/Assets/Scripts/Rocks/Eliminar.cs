@@ -36,6 +36,10 @@ public class Eliminar : MonoBehaviour {
 				CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
                 GeneralAttrib.metros++;
+                if (GeneralAttrib.type == 2)
+                {
+                    GeneralAttrib.DeboMuros = true;
+                }
                 GeneralAttrib.Damage += 0.005f;
                 Traps.death++;
                 if (GeneralAttrib.metros != 0 && GeneralAttrib.metros % 100 == 0)
@@ -59,6 +63,10 @@ public class Eliminar : MonoBehaviour {
                 GeneralAttrib.Debo = true;
                 CreateRamdomly.AllRocks.Remove(this.gameObject);
 				Bida.LifeUp();
+                if (GeneralAttrib.type == 2)
+                {
+                    GeneralAttrib.DeboMuros = true;
+                }
                 GeneralAttrib.metros++;
                 GeneralAttrib.Damage += 0.0005f;
                 Traps.death++;
