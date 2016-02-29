@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -74,6 +68,7 @@
     <Compile Include="Assets\Scripts\Camera\Camareta.cs" />
     <Compile Include="Assets\Scripts\DraggAndInput.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
+    <Compile Include="Assets\Scripts\LoadingScript\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
     <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
     <Compile Include="Assets\Scripts\PowerUp\TrophiesAtt.cs" />

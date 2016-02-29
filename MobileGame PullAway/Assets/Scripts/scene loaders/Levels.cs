@@ -31,7 +31,8 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.nivel = 1;
         if (GeneralAttrib.type == 1)
         {
-            Application.LoadLevel("SurvivalMode");
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
             GeneralAttrib.level = "SurvivalMode";
         }
         else if (GeneralAttrib.type == 2)
@@ -58,7 +59,8 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.nivel = 2;
         if (GeneralAttrib.type == 1)
         {
-            Application.LoadLevel("SurvivalMode");
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
             GeneralAttrib.level = "SurvivalMode";
         }
         else if (GeneralAttrib.type == 2)
@@ -86,7 +88,8 @@ public class Levels : MonoBehaviour {
         GeneralAttrib.nivel = 3;
         if (GeneralAttrib.type == 1)
         {
-            Application.LoadLevel("SurvivalMode");
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
             GeneralAttrib.level = "SurvivalMode";
         }
         else if (GeneralAttrib.type == 2)

@@ -22,7 +22,8 @@ public class Continuar : MonoBehaviour {
 
     public void LoadLogros()
     {
-        Application.LoadLevel("Tuto");
+        SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Tutorial;
+        Application.LoadLevel("LoadScene");
 
     }
 	public void LoadLevel()
