@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: 6c139a47cff569545bb9bcfbd93ae033
+timeCreated: 1456776242
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dinamita_0
+    21300002: dinamita_1
+    21300004: dinamita_2
+    21300006: dinamita_3
+    21300008: dinamita_4
+    21300010: dinamita_5
+    21300012: dinamita_6
+    21300014: dinamita_7
+    21300016: dinamita_8
+    21300018: dinamita_9
+    21300020: dinamita_10
+    21300022: dinamita_11
+    21300024: dinamita_12
+    21300026: dinamita_13
+    21300028: dinamita_14
+    21300030: dinamita_15
+    21300032: dinamita_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: dinamita_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 8581
+        width: 872
+        height: 405
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.094444, y: 47.061157}
+        - {x: -50.094444, y: 24.061157}
+        - {x: -61.094444, y: -19.938843}
+        - {x: -61.094444, y: -45.938843}
+        - {x: 80.905556, y: -45.938843}
+        - {x: 81.905556, y: -40.938843}
+        - {x: 78.905556, y: -37.938843}
+        - {x: 52.905556, y: 47.061157}
+    - name: dinamita_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 5946
+        width: 735
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62.711113, y: 48.3667}
+        - {x: -77.71111, y: 25.3667}
+        - {x: -77.71111, y: -28.6333}
+        - {x: -11.711113, y: -47.6333}
+        - {x: 60.288887, y: -47.6333}
+        - {x: 60.288887, y: 48.3667}
+    - name: dinamita_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1321
+        width: 509
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.427776, y: 68.39444}
+        - {x: -58.427776, y: 68.39444}
+        - {x: -58.427776, y: -39.60556}
+        - {x: -17.427776, y: -66.60556}
+        - {x: 52.572224, y: -66.60556}
+        - {x: 58.572224, y: -56.60556}
+        - {x: 58.572224, y: 50.39444}
+        - {x: 21.572224, y: 52.39444}
+      - - {x: -4.4277763, y: 68.39444}
+        - {x: -3.4277763, y: 58.39444}
+        - {x: -1.4277763, y: 56.39444}
+        - {x: 6.5722237, y: 56.39444}
+        - {x: 13.572224, y: 65.39444}
+        - {x: 13.572224, y: 68.39444}
+    - name: dinamita_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 204
+        width: 684
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.027778625, y: 58.466667}
+        - {x: 1.0277786, y: 55.466667}
+        - {x: 3.0277786, y: 55.466667}
+        - {x: -2.9722214, y: 56.466667}
+        - {x: -1.9722214, y: 58.466667}
+        - {x: -44.97222, y: 58.466667}
+        - {x: -77.97222, y: 6.466667}
+        - {x: -77.97222, y: -18.533333}
+        - {x: -45.97222, y: -36.533333}
+        - {x: 12.027779, y: -57.533333}
+        - {x: 52.02778, y: -57.533333}
+        - {x: 60.02778, y: -39.533333}
+        - {x: 60.02778, y: 26.466667}
+        - {x: 30.027779, y: 58.466667}
+    - name: dinamita_4
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 5500
+        width: 702
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.016663, y: 46.277832}
+        - {x: -57.016663, y: -10.722168}
+        - {x: -57.016663, y: -44.722168}
+        - {x: 80.98334, y: -44.722168}
+        - {x: 80.98334, y: 30.277832}
+        - {x: 56.983337, y: 46.277832}
+    - name: dinamita_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 4946
+        width: 706
+        height: 523
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66.37222, y: 60.588867}
+        - {x: -80.37222, y: 43.588867}
+        - {x: -80.37222, y: -56.411133}
+        - {x: -73.37222, y: -59.411133}
+        - {x: 80.62778, y: -59.411133}
+        - {x: 80.62778, y: 60.588867}
+    - name: dinamita_6
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 4477
+        width: 710
+        height: 433
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.68889, y: 50.76111}
+        - {x: -60.68889, y: -12.238892}
+        - {x: -59.68889, y: -24.238892}
+        - {x: -24.688889, y: -49.23889}
+        - {x: 54.31111, y: -49.23889}
+        - {x: 58.31111, y: -25.238892}
+        - {x: 58.31111, y: 49.76111}
+        - {x: 57.31111, y: 50.76111}
+    - name: dinamita_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3920
+        width: 760
+        height: 501
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.216667, y: 58.888916}
+        - {x: -50.783333, y: 58.888916}
+        - {x: -50.783333, y: -57.111084}
+        - {x: 26.216667, y: -57.111084}
+        - {x: 30.216667, y: -55.111084}
+        - {x: 78.21667, y: 11.888916}
+        - {x: 78.21667, y: 41.888916}
+        - {x: 70.21667, y: 52.888916}
+    - name: dinamita_8
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 3484
+        width: 800
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54.38333, y: 47.07776}
+        - {x: -90.38333, y: 8.077759}
+        - {x: -90.38333, y: -15.922241}
+        - {x: -37.38333, y: -45.92224}
+        - {x: 49.61667, y: -45.92224}
+        - {x: 49.61667, y: 11.077759}
+        - {x: 48.61667, y: 15.077759}
+        - {x: 39.61667, y: 47.07776}
+    - name: dinamita_9
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 3037
+        width: 724
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.477776, y: 45.76111}
+        - {x: -79.477776, y: 29.761108}
+        - {x: -79.477776, y: -19.238892}
+        - {x: -76.477776, y: -33.23889}
+        - {x: -23.477776, y: -44.23889}
+        - {x: 58.522224, y: -44.23889}
+        - {x: 58.522224, y: 45.76111}
+    - name: dinamita_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 2543
+        width: 652
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.622223, y: 50.73889}
+        - {x: -6.377777, y: 50.73889}
+        - {x: -41.377777, y: 23.738892}
+        - {x: -52.377777, y: -19.261108}
+        - {x: -52.377777, y: -50.26111}
+        - {x: 44.622223, y: -50.26111}
+        - {x: 68.62222, y: -22.261108}
+        - {x: 68.62222, y: 6.7388916}
+      - - {x: 49.622223, y: -49.26111}
+        - {x: 49.622223, y: -50.26111}
+        - {x: 75.62222, y: -50.26111}
+        - {x: 75.62222, y: -47.26111}
+        - {x: 72.62222, y: -46.26111}
+        - {x: 50.622223, y: -46.26111}
+    - name: dinamita_11
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1934
+        width: 713
+        height: 577
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.472221, y: 66.52222}
+        - {x: -73.47222, y: 60.522217}
+        - {x: -81.47222, y: 45.522217}
+        - {x: -81.47222, y: -1.4777832}
+        - {x: -28.472221, y: -65.47778}
+        - {x: 50.52778, y: -65.47778}
+        - {x: 55.52778, y: -64.47778}
+        - {x: 54.52778, y: -31.477783}
+        - {x: 81.52778, y: 5.522217}
+        - {x: 81.52778, y: 66.52222}
+    - name: dinamita_12
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 762
+        width: 584
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.805557, y: 52.566666}
+        - {x: -34.194443, y: 52.566666}
+        - {x: -56.194443, y: 48.566666}
+        - {x: -56.194443, y: -43.433334}
+        - {x: -28.194443, y: -51.433334}
+        - {x: 37.805557, y: -51.433334}
+        - {x: 65.80556, y: -3.4333344}
+        - {x: 67.80556, y: 1.5666656}
+        - {x: 67.80556, y: 36.566666}
+    - name: dinamita_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 7984
+        width: 867
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.67778, y: 66.07776}
+        - {x: -98.67778, y: 42.07776}
+        - {x: -98.67778, y: 9.077759}
+        - {x: -92.67778, y: -2.9222412}
+        - {x: -55.67778, y: -64.92224}
+        - {x: 34.32222, y: -64.92224}
+        - {x: 70.32222, y: -26.922241}
+        - {x: 79.32222, y: 0.07775879}
+        - {x: 79.32222, y: 66.07776}
+      - - {x: -49.67778, y: 66.07776}
+        - {x: -48.67778, y: 63.07776}
+        - {x: -31.67778, y: 63.07776}
+        - {x: -29.67778, y: 65.07776}
+        - {x: -29.67778, y: 66.07776}
+    - name: dinamita_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 7467
+        width: 857
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62.538887, y: 54.31665}
+        - {x: -63.538887, y: 52.31665}
+        - {x: -63.538887, y: -41.68335}
+        - {x: -34.538887, y: -52.68335}
+        - {x: 55.461113, y: -52.68335}
+        - {x: 55.461113, y: 54.31665}
+    - name: dinamita_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 6926
+        width: 890
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60.63333, y: 55.588867}
+        - {x: -38.36667, y: 55.588867}
+        - {x: -55.36667, y: 38.588867}
+        - {x: -55.36667, y: -40.411133}
+        - {x: -38.36667, y: -54.411133}
+        - {x: 22.633331, y: -54.411133}
+        - {x: 66.63333, y: 7.588867}
+        - {x: 73.63333, y: 27.588867}
+        - {x: 73.63333, y: 38.588867}
+    - name: dinamita_16
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 6465
+        width: 904
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.633331, y: 50.583374}
+        - {x: 14.633331, y: 51.583374}
+        - {x: -43.36667, y: 51.583374}
+        - {x: -73.36667, y: 18.583374}
+        - {x: -89.36667, y: -0.41662598}
+        - {x: -89.36667, y: -9.416626}
+        - {x: -76.36667, y: -32.416626}
+        - {x: -4.3666687, y: -50.416626}
+        - {x: 50.63333, y: -50.416626}
+        - {x: 50.63333, y: 14.583374}
+        - {x: 43.63333, y: 48.583374}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

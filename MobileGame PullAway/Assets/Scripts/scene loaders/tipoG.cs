@@ -6,6 +6,7 @@ public class tipoG : MonoBehaviour {
     public void Survival()
     {
         GeneralAttrib.arcade = false;
+        #region Carga de highScore
         if (!PlayerPrefs.HasKey("Score1") || !PlayerPrefs.HasKey("MScore1") || !PlayerPrefs.HasKey("HScore1") )
         {
             PlayerPrefs.SetString("Name1", "Name");
@@ -28,6 +29,8 @@ public class tipoG : MonoBehaviour {
             PlayerPrefs.SetInt("HScore3", 000);
             PlayerPrefs.Save();
         }
+        #endregion
+
         Time.timeScale = 1;
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.3f;
