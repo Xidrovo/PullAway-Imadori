@@ -27,6 +27,7 @@ public class powerupsAtt : MonoBehaviour {
                 this.GetComponent<Collider2D>().enabled = false;
                 dam = GeneralAttrib.Damage;
                 GeneralAttrib.Damage = 0;
+                GeneralAttrib.rapidez = 0;
                 bd=1;
             }
             else if(tipo==2 && bd ==0)

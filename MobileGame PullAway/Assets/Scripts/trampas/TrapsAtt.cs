@@ -5,6 +5,7 @@ public class TrapsAtt : MonoBehaviour {
 
     public int life;
     public float timeofD;
+    public Animator expl;
 	// Use this for initialization
 	void Start () {
 
@@ -15,10 +16,20 @@ public class TrapsAtt : MonoBehaviour {
 	void Update () {
         if (timeofD <= 0)
         {
-            Application.LoadLevel("GameOver");
+            expl.SetBool("Explote", true);
+            StartCoroutine(gameOver());
         }
 	
 	}
+
+    IEnumerator gameOver()
+    {
+        GeneralAttrib.Damage = 0;
+        GeneralAttrib.rapidez = 0;
+        yield return new WaitForSeconds(2.1f);
+        Application.LoadLevel("GameOver");
+
+    }
 
     public void Mourir()
     {
