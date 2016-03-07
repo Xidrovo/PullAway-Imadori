@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class CreateRamdomly : MonoBehaviour  {
 	public GameObject PreFab,PreFab1,PreFab2,PreFab3,PreFab4,PreFab5,PreFab6,PreFab7,PreFab8 ;
+    public Sprite sp, sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12, sp13, sp14, sp15, sp16, sp17, sp18, sp19, sp20, sp21, sp22, sp23, sp24, sp25, sp26;
     public GameObject muros;
 	private float Radio =2f;
 	//	public Canvas canva;
@@ -18,8 +20,50 @@ public class CreateRamdomly : MonoBehaviour  {
     private SpriteRenderer SP;
     // Use this for initialization
     void Start () {
-		Cont = 0;
-		Aprefabs.Add(PreFab);
+       // Physics2D.IgnoreLayerCollision(31, 30, true);
+        Cont = 0;
+        if (GeneralAttrib.arcade)
+        {
+            if (GeneralAttrib.lvlArcade > 5 && GeneralAttrib.lvlArcade <= 10)
+            {
+                PreFab.GetComponent<SpriteRenderer>().sprite = sp;
+                PreFab1.GetComponent<SpriteRenderer>().sprite = sp1;
+                PreFab2.GetComponent<SpriteRenderer>().sprite = sp2;
+                PreFab3.GetComponent<SpriteRenderer>().sprite = sp3;
+                PreFab4.GetComponent<SpriteRenderer>().sprite = sp4;
+                PreFab5.GetComponent<SpriteRenderer>().sprite = sp5;
+                PreFab6.GetComponent<SpriteRenderer>().sprite = sp6;
+                PreFab7.GetComponent<SpriteRenderer>().sprite = sp7;
+                PreFab8.GetComponent<SpriteRenderer>().sprite = sp8;
+            }
+            else if (GeneralAttrib.lvlArcade > 10 && GeneralAttrib.lvlArcade <= 15)
+            {
+                PreFab.GetComponent<SpriteRenderer>().sprite = sp9;
+                PreFab1.GetComponent<SpriteRenderer>().sprite = sp10;
+                PreFab2.GetComponent<SpriteRenderer>().sprite = sp11;
+                PreFab3.GetComponent<SpriteRenderer>().sprite = sp12;
+                PreFab4.GetComponent<SpriteRenderer>().sprite = sp13;
+                PreFab5.GetComponent<SpriteRenderer>().sprite = sp14;
+                PreFab6.GetComponent<SpriteRenderer>().sprite = sp15;
+                PreFab7.GetComponent<SpriteRenderer>().sprite = sp16;
+                PreFab8.GetComponent<SpriteRenderer>().sprite = sp17;
+            }
+            else if (GeneralAttrib.lvlArcade > 15 && GeneralAttrib.lvlArcade <= 20)
+            {
+                PreFab.GetComponent<SpriteRenderer>().sprite = sp18;
+                PreFab1.GetComponent<SpriteRenderer>().sprite = sp19;
+                PreFab2.GetComponent<SpriteRenderer>().sprite = sp20;
+                PreFab3.GetComponent<SpriteRenderer>().sprite = sp21;
+                PreFab4.GetComponent<SpriteRenderer>().sprite = sp22;
+                PreFab5.GetComponent<SpriteRenderer>().sprite = sp23;
+                PreFab6.GetComponent<SpriteRenderer>().sprite = sp24;
+                PreFab7.GetComponent<SpriteRenderer>().sprite = sp25;
+                PreFab8.GetComponent<SpriteRenderer>().sprite = sp26;
+            }
+
+        }
+        
+        Aprefabs.Add(PreFab);
 		Aprefabs.Add(PreFab1);
 		Aprefabs.Add(PreFab2);
 		Aprefabs.Add(PreFab3);
