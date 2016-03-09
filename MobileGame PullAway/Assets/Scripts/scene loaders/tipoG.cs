@@ -38,9 +38,24 @@ public class tipoG : MonoBehaviour {
         Traps.death = 0;
         GeneralAttrib.nivel = 0;
         GeneralAttrib.Life = 100;
-        //GeneralAttrib.level = "SurvivalMode";
-        Application.LoadLevel("Levels");
-        
+        GeneralAttrib.maxi = 30;
+        if (GeneralAttrib.type == 1)
+        {
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
+            GeneralAttrib.level = "SurvivalMode";
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
+            GeneralAttrib.level = "Balsas";
+        }
+        else
+        {
+            Debug.Log("HOjas");
+        }
+
     }
 
     public void Back()

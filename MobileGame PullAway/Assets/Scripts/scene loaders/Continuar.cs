@@ -84,12 +84,14 @@ public class Continuar : MonoBehaviour {
 
     public void Rocas()
     {
+        GeneralAttrib.level = "SurvivalMode";
         Application.LoadLevel("Modes");
 
     }
 
     public void Balsas()
     {
+        GeneralAttrib.level = "Balsas";
         GeneralAttrib.type = 2;
         Application.LoadLevel("Modes");
 
