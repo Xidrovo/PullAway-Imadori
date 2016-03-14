@@ -33,7 +33,8 @@ public class tipoG : MonoBehaviour {
 
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.3f;
+        GeneralAttrib.Damage = 1.1f;
+        powerups.Ptrophie = 50;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.nivel = 0;
@@ -76,7 +77,7 @@ public class tipoG : MonoBehaviour {
         }
         Time.timeScale = 1;
         Static.Estatico = false;
-        GeneralAttrib.Damage = 1.3f;
+        GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
         Traps.death = 0;
         GeneralAttrib.Life = 100;
