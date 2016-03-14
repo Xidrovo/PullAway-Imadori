@@ -40,17 +40,9 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(load());
-    }
+        //In pro only
 
-    IEnumerator load()
-    {
-        AsyncOperation async = SceneManager.LoadSceneAsync(escenaACargar);
-        while (!async.isDone)
-        {
-            Debug.Log(async.progress);
-            yield return null;
-        }
+        Application.LoadLevel(escenaACargar);
     }
 
     private void textAnimation()
