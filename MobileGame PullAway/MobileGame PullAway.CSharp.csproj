@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\trampas\Lanzamiento.cs" />
     <Compile Include="Assets\Scripts\trampas\Traps.cs" />
     <Compile Include="Assets\Scripts\trampas\TrapsAtt.cs" />
+    <Compile Include="Assets\fondoexplosivo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
