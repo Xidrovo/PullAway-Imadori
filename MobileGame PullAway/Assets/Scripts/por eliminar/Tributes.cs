@@ -16,11 +16,11 @@ public class Tributes : MonoBehaviour {
 	 */
 
 	private GameObject Objeto;
-	private BoxCollider2D TempBoxCollider2D;
+	private PolygonCollider2D TempBoxCollider2D;
 
 	// Use this for initialization
 	void Start () {
-		TempBoxCollider2D = this.gameObject.GetComponent<BoxCollider2D> ();
+		TempBoxCollider2D = this.gameObject.GetComponent<PolygonCollider2D> ();
 	
 	}
 	

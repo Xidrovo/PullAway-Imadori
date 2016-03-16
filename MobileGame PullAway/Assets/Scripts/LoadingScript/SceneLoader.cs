@@ -15,7 +15,6 @@ public class SceneLoader : MonoBehaviour
     {
         Start,
         Modes,
-        Leves,
         Choossing,
         SurvivalMode,
         GameOver,
