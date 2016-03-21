@@ -110,6 +110,8 @@ public class DraggAndInput : MonoBehaviour {
                 {
                     if ((player.gameObject.name != "Temporito") && (atb.life <= 0))
                     {
+                        transform.FindChild("GameObject").GetComponent<Animator>().SetTrigger("life");
+                        Debug.Log("HEllo me animo");
                         Pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
                         BorrarLuego();
                         if (bdT)

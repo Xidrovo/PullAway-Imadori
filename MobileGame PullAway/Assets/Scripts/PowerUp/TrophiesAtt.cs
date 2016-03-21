@@ -10,6 +10,7 @@ public class TrophiesAtt : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("muerte", 0f, 1f);
+        Physics2D.IgnoreLayerCollision(0,9,true);
 	
 	}
 	

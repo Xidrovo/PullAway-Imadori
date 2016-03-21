@@ -28,6 +28,8 @@ public class powerupsAtt : MonoBehaviour {
                 dam = GeneralAttrib.Damage;
                 GeneralAttrib.Damage = 0;
                 GeneralAttrib.rapidez = 0;
+                fondoexplosivo.effecto = 2;
+                Sr.enabled = false;
                 bd=1;
             }
             else if(tipo==2 && bd ==0)
@@ -53,6 +55,7 @@ public class powerupsAtt : MonoBehaviour {
                 if (tiempo <= 0)
                 {
                     GeneralAttrib.Damage = dam;
+                    fondoexplosivo.effecto = 0;
                     Destroy(this.gameObject);
                 }
             

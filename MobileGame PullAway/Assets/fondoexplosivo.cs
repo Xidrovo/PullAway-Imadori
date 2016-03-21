@@ -16,6 +16,15 @@ public class fondoexplosivo : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (effecto == 0)
+        {
+            //Esto significa que no hay nada activado
+            expl2.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+            expl2.GetComponent<SpriteRenderer>().sortingOrder = 30;
+            expl.SetBool("Freeze", false);
+
+        }
+
         if (effecto == 1)
         {
             expl.SetBool("explotar", true);
@@ -23,6 +32,13 @@ public class fondoexplosivo : MonoBehaviour {
             expl2.GetComponent<SpriteRenderer>().sortingOrder = 30;
             expl2.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 90);
             expl2.GetComponent<Transform>().position = posicion;
+        }
+
+        if (effecto == 2)
+        {
+            expl.SetBool("Freeze", true);
+            expl2.GetComponent<SpriteRenderer>().sortingLayerName = "GUI";
+            expl2.GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
 	}
 }
