@@ -40,7 +40,7 @@ public class Continuar : MonoBehaviour {
         //if(PlayerPrefs.GetInt("FirstTime") == 0)
         //    Application.LoadLevel("Modes");
 
-        Application.LoadLevel("Types");
+        Application.LoadLevel("Modes");
 	}
 
     public void Extras()
@@ -84,23 +84,25 @@ public class Continuar : MonoBehaviour {
 
     public void Rocas()
     {
+        SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+        Application.LoadLevel("LoadScene");
         GeneralAttrib.level = "SurvivalMode";
-        Application.LoadLevel("Modes");
 
     }
 
     public void Balsas()
     {
+        SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Balsas;
+        Application.LoadLevel("LoadScene");
         GeneralAttrib.level = "Balsas";
         GeneralAttrib.type = 2;
-        Application.LoadLevel("Modes");
 
     }
 
     public void Hojas()
     {
         GeneralAttrib.type = 3;
-        Application.LoadLevel("Modes");
+        GeneralAttrib.level = "Hojas";
 
     }
 }

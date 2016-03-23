@@ -40,28 +40,25 @@ public class tipoG : MonoBehaviour {
         GeneralAttrib.nivel = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.maxi = 30;
-        if (GeneralAttrib.type == 1)
-        {
-            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
-            Application.LoadLevel("LoadScene");
-            GeneralAttrib.level = "SurvivalMode";
-        }
-        else if (GeneralAttrib.type == 2)
-        {
-            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
-            Application.LoadLevel("LoadScene");
-            GeneralAttrib.level = "Balsas";
-        }
-        else
-        {
-            Debug.Log("HOjas");
-        }
-
+        Application.LoadLevel("Types");
     }
 
     public void Back()
     {
-        Application.LoadLevel("Start");
+        Debug.Log(Application.loadedLevelName);
+        if (Application.loadedLevelName == "Types" || Application.loadedLevelName == "Choosing")
+        {
+            Application.LoadLevel("Modes");
+        }
+        else if (Application.loadedLevelName == "Trophies" || Application.loadedLevelName == "HighScore")
+        {
+            Application.LoadLevel("Extras");
+        }
+        else
+        {
+            Application.LoadLevel("Start");
+        }
+        
     }
 
     public void Arcade()

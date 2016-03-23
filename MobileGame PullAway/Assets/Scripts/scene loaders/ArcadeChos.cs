@@ -62,7 +62,7 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.lvlArcade = 1;
         GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 15;
-        GeneralAttrib.Damage = 1.5f;
+        GeneralAttrib.Damage = 1.6f;
         GeneralAttrib.nivel = 1;
 		Application.LoadLevel("SurvivalMode");
 	}
@@ -73,7 +73,7 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 30;
         GeneralAttrib.nivel = 1;
-        GeneralAttrib.Damage = 1.5f;
+        GeneralAttrib.Damage = 1.6f;
 		Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl3()
@@ -115,10 +115,166 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.lvlArcade = 6;
         GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 40;
-		GeneralAttrib.Damage = 1.9f;
+		GeneralAttrib.Damage = 1.7f;
 		Traps.death = 35;
 		powerups.PVentaja = 22;
         GeneralAttrib.nivel = 3;
-		Application.LoadLevel("SurvivalMode");
+		Application.LoadLevel("Hojas");
 	}
+    public void Nvl7()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 2;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.nivel = 1;
+        GeneralAttrib.Damage = 1.7f;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl8()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 3;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.7f;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl9()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.7f;
+        Traps.death = 25;
+        GeneralAttrib.nivel = 2;
+        GeneralAttrib.lvlArcade = 4;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl10()
+    {
+        GeneralAttrib.lvlArcade = 5;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 45;
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.Damage = 1.7f;
+        Traps.death = 25;
+        powerups.PVentaja = 18;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl11()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 6;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 40;
+        GeneralAttrib.Damage = 1.8f;
+        Traps.death = 35;
+        powerups.PVentaja = 22;
+        GeneralAttrib.nivel = 3;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl12()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 2;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.nivel = 1;
+        GeneralAttrib.Damage = 1.8f;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl13()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 3;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.8f;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl14()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.8f;
+        Traps.death = 25;
+        GeneralAttrib.nivel = 2;
+        GeneralAttrib.lvlArcade = 4;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl15()
+    {
+        GeneralAttrib.lvlArcade = 5;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 45;
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.Damage = 1.8f;
+        Traps.death = 25;
+        powerups.PVentaja = 18;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl16()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 6;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 40;
+        GeneralAttrib.Damage = 1.9f;
+        Traps.death = 35;
+        powerups.PVentaja = 22;
+        GeneralAttrib.nivel = 3;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl17()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 3;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.9f;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("Balsas");
+    }
+    public void Nvl18()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 30;
+        GeneralAttrib.Damage = 1.9f;
+        Traps.death = 25;
+        GeneralAttrib.nivel = 2;
+        GeneralAttrib.lvlArcade = 4;
+        Application.LoadLevel("Hojas");
+    }
+    public void Nvl19()
+    {
+        GeneralAttrib.lvlArcade = 5;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 45;
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.Damage = 1.9f;
+        Traps.death = 25;
+        powerups.PVentaja = 18;
+        GeneralAttrib.nivel = 2;
+        Application.LoadLevel("SurvivalMode");
+    }
+    public void Nvl20()
+    {
+        GeneralAttrib.metros = 0;
+        GeneralAttrib.lvlArcade = 6;
+        GeneralAttrib.malcriadito = 0;
+        GeneralAttrib.maxi = 40;
+        GeneralAttrib.Damage = 1.9f;
+        Traps.death = 35;
+        powerups.PVentaja = 22;
+        GeneralAttrib.nivel = 3;
+        Application.LoadLevel("Balsas");
+    }
+
 }
