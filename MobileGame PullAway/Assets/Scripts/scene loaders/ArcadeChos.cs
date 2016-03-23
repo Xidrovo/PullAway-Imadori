@@ -64,7 +64,10 @@ public class ArcadeChos : MonoBehaviour {
 		GeneralAttrib.maxi = 15;
         GeneralAttrib.Damage = 1.6f;
         GeneralAttrib.nivel = 1;
-		Application.LoadLevel("SurvivalMode");
+        Traps.maxAranas = 1;
+        Traps.maxTrampas = 1;
+
+        Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl2()
 	{
@@ -74,7 +77,10 @@ public class ArcadeChos : MonoBehaviour {
 		GeneralAttrib.maxi = 30;
         GeneralAttrib.nivel = 1;
         GeneralAttrib.Damage = 1.6f;
-		Application.LoadLevel("SurvivalMode");
+        Traps.maxAranas = 10;
+        Traps.maxTrampas = 10;
+
+        Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl3()
 	{
@@ -84,7 +90,14 @@ public class ArcadeChos : MonoBehaviour {
 		GeneralAttrib.maxi = 30;
 		GeneralAttrib.Damage = 1.6f;
         GeneralAttrib.nivel = 2;
-		Application.LoadLevel("SurvivalMode");
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 1;
+        Traps.maxBomba = 3;
+        Traps.maxTrampas = 4;
+
+        Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl4()
 	{
@@ -92,10 +105,16 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 30;
 		GeneralAttrib.Damage = 1.6f;
-		Traps.death = 25;
         GeneralAttrib.nivel = 2;
         GeneralAttrib.lvlArcade = 4;
-		Application.LoadLevel("SurvivalMode");
+        Traps.maxAranas = 1;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 2;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 2;
+        Traps.maxTrampas = 5;
+
+        Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl5()
 	{
@@ -104,10 +123,16 @@ public class ArcadeChos : MonoBehaviour {
 		GeneralAttrib.maxi = 45;
         GeneralAttrib.metros = 0;
 		GeneralAttrib.Damage = 1.6f;
-		Traps.death = 25;
 		powerups.PVentaja = 18;
         GeneralAttrib.nivel = 2;
-		Application.LoadLevel("SurvivalMode");
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
+        Application.LoadLevel("SurvivalMode");
 	}
 	public void Nvl6()
 	{
@@ -116,10 +141,16 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
 		GeneralAttrib.maxi = 40;
 		GeneralAttrib.Damage = 1.7f;
-		Traps.death = 35;
 		powerups.PVentaja = 22;
         GeneralAttrib.nivel = 3;
-		Application.LoadLevel("Hojas");
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
+        Application.LoadLevel("Hojas");
 	}
     public void Nvl7()
     {
@@ -129,6 +160,13 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 30;
         GeneralAttrib.nivel = 1;
         GeneralAttrib.Damage = 1.7f;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl8()
@@ -139,6 +177,13 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.7f;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl9()
@@ -147,9 +192,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.7f;
-        Traps.death = 25;
         GeneralAttrib.nivel = 2;
         GeneralAttrib.lvlArcade = 4;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl10()
@@ -159,9 +210,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 45;
         GeneralAttrib.metros = 0;
         GeneralAttrib.Damage = 1.7f;
-        Traps.death = 25;
         powerups.PVentaja = 18;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl11()
@@ -171,9 +228,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 40;
         GeneralAttrib.Damage = 1.8f;
-        Traps.death = 35;
         powerups.PVentaja = 22;
         GeneralAttrib.nivel = 3;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl12()
@@ -184,6 +247,13 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 30;
         GeneralAttrib.nivel = 1;
         GeneralAttrib.Damage = 1.8f;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl13()
@@ -194,6 +264,13 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.8f;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl14()
@@ -202,9 +279,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.8f;
-        Traps.death = 25;
         GeneralAttrib.nivel = 2;
         GeneralAttrib.lvlArcade = 4;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl15()
@@ -214,9 +297,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 45;
         GeneralAttrib.metros = 0;
         GeneralAttrib.Damage = 1.8f;
-        Traps.death = 25;
         powerups.PVentaja = 18;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl16()
@@ -226,9 +315,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 40;
         GeneralAttrib.Damage = 1.9f;
-        Traps.death = 35;
         powerups.PVentaja = 22;
         GeneralAttrib.nivel = 3;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl17()
@@ -239,6 +334,13 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.9f;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
     public void Nvl18()
@@ -247,9 +349,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 30;
         GeneralAttrib.Damage = 1.9f;
-        Traps.death = 25;
         GeneralAttrib.nivel = 2;
         GeneralAttrib.lvlArcade = 4;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Hojas");
     }
     public void Nvl19()
@@ -259,9 +367,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.maxi = 45;
         GeneralAttrib.metros = 0;
         GeneralAttrib.Damage = 1.9f;
-        Traps.death = 25;
         powerups.PVentaja = 18;
         GeneralAttrib.nivel = 2;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("SurvivalMode");
     }
     public void Nvl20()
@@ -271,9 +385,15 @@ public class ArcadeChos : MonoBehaviour {
         GeneralAttrib.malcriadito = 0;
         GeneralAttrib.maxi = 40;
         GeneralAttrib.Damage = 1.9f;
-        Traps.death = 35;
         powerups.PVentaja = 22;
         GeneralAttrib.nivel = 3;
+        Traps.maxAranas = 0;
+        Traps.maxFuego = 0;
+        Traps.maxMinas = 0;
+        Traps.maxDerrumbes = 0;
+        Traps.maxBomba = 0;
+        Traps.maxTrampas = 1;
+
         Application.LoadLevel("Balsas");
     }
 
