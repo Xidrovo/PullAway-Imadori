@@ -41,7 +41,6 @@ public class Eliminar : MonoBehaviour {
                     GeneralAttrib.DeboMuros = true;
                 }
                 GeneralAttrib.Damage += 0.005f;
-                Traps.death++;
                 if (GeneralAttrib.metros != 0 && GeneralAttrib.metros % 100 == 0)
                 {
                     GeneralAttrib.Damage *= 1.4f;
@@ -69,7 +68,6 @@ public class Eliminar : MonoBehaviour {
                 }
                 GeneralAttrib.metros++;
                 GeneralAttrib.Damage += 0.0005f;
-                Traps.death++;
                 if (GeneralAttrib.malcriadito != 0)
                 {
                     if ((GeneralAttrib.malcriadito == 1 && this.transform.position.x >= -5f) || (GeneralAttrib.malcriadito == 2 && this.transform.position.y <= 5f) || GeneralAttrib.malcriadito == 3 || GeneralAttrib.malcriadito == 4)
@@ -85,10 +83,6 @@ public class Eliminar : MonoBehaviour {
 				Destroy(this.gameObject);
                
 			}
-            if (GeneralAttrib.metros % 80==0)
-            {
-                Traps.death = 0;
-            }
 
 		}
 		catch (System.NullReferenceException e)

@@ -26,19 +26,19 @@ public class Levels : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.nivel = 1;
         if (GeneralAttrib.type == 1)
         {
             SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
             Application.LoadLevel("LoadScene");
-            GeneralAttrib.level = "SurvivalMode";
+            GeneralAttrib.level = "Rocas";
         }
         else if (GeneralAttrib.type == 2)
         {
-            Application.LoadLevel("Balsas");
-            GeneralAttrib.level = "Balsas";
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Balsas;
+            Application.LoadLevel("LoadScene");
+            GeneralAttrib.level = "Rocas";
         }
         else
         {
@@ -54,19 +54,19 @@ public class Levels : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.6f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.nivel = 2;
         if (GeneralAttrib.type == 1)
         {
             SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
             Application.LoadLevel("LoadScene");
-            GeneralAttrib.level = "SurvivalMode";
+            GeneralAttrib.level = "Rocas";
         }
         else if (GeneralAttrib.type == 2)
         {
-            Application.LoadLevel("Balsas");
-            GeneralAttrib.level = "Balsas";
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Balsas;
+            Application.LoadLevel("LoadScene");
+            GeneralAttrib.level = "Maderas";
         }
         else
         {
@@ -82,7 +82,6 @@ public class Levels : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.7f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.Life = 100;
         //Application.LoadLevel("Hardcore");
         GeneralAttrib.nivel = 3;
@@ -90,16 +89,17 @@ public class Levels : MonoBehaviour {
         {
             SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
             Application.LoadLevel("LoadScene");
-            GeneralAttrib.level = "SurvivalMode";
+            GeneralAttrib.level = "Rocas";
         }
         else if (GeneralAttrib.type == 2)
         {
-            Application.LoadLevel("Balsas");
-            GeneralAttrib.level = "Balsas";
+            SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
+            Application.LoadLevel("LoadScene");
+            GeneralAttrib.level = "Maderas";
         }
         else
         {
-            Debug.Log("HOjas");
+            Debug.Log("Hojas");
         }
 
     }

@@ -90,7 +90,7 @@ public class Pause : MonoBehaviour {
         }
         PlayerPrefs.SetInt("Nivel", GeneralAttrib.lvlM);
         PlayerPrefs.Save();
-        Application.LoadLevel("Choossing");
+        Application.LoadLevel("Level Stage");
     }
 
 	public void Pausar()
@@ -108,10 +108,20 @@ public class Pause : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
      //   CreateRamdomly.AllRocks.Clear();
         GeneralAttrib.Life = 100;
-        Application.LoadLevel("SurvivalMode");
+        if (GeneralAttrib.type == 1)
+        {
+            Application.LoadLevel("Rocas");
+        }
+        else if (GeneralAttrib.type == 2)
+        {
+            Application.LoadLevel("Maderas");
+        }
+        else
+        {
+            //Application.LoadLevel("Hojas");
+        }
     }
     public void Resumir()
     {
@@ -129,6 +139,6 @@ public class Pause : MonoBehaviour {
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
         GeneralAttrib.nivel = 0;
-        Application.LoadLevel("Start");
+        Application.LoadLevel("Start Menu");
     }
 }

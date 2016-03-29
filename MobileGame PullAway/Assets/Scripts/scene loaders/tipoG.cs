@@ -36,17 +36,16 @@ public class tipoG : MonoBehaviour {
         GeneralAttrib.Damage = 1.1f;
         powerups.Ptrophie = 50;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.nivel = 0;
         GeneralAttrib.Life = 100;
         GeneralAttrib.maxi = 30;
-        Application.LoadLevel("Types");
+        Application.LoadLevel("Stage");
     }
 
     public void Back()
     {
         Debug.Log(Application.loadedLevelName);
-        if (Application.loadedLevelName == "Types" || Application.loadedLevelName == "Choosing")
+        if (Application.loadedLevelName == "Stage" || Application.loadedLevelName == "Level Stage")
         {
             Application.LoadLevel("Modes");
         }
@@ -56,7 +55,7 @@ public class tipoG : MonoBehaviour {
         }
         else
         {
-            Application.LoadLevel("Start");
+            Application.LoadLevel("Start Menu");
         }
         
     }
@@ -76,10 +75,9 @@ public class tipoG : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.Life = 100;
 		GeneralAttrib.level = "Choossing";
         GeneralAttrib.arcade = true;
-        Application.LoadLevel("Choossing");
+        Application.LoadLevel("Level Stage");
     }
 }

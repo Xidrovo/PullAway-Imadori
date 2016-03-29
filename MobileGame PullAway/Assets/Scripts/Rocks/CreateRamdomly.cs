@@ -158,7 +158,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 Static.Estatico = false;
                 GeneralAttrib.Damage = 1.1f;
                 GeneralAttrib.metros = 0f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 1;
             }
@@ -169,7 +168,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 Static.Estatico = false;
                 GeneralAttrib.Damage = 1.4f;
                 GeneralAttrib.metros = 0f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 2;
             }
@@ -183,7 +181,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 powerups.Ptrophie = 5;
                 Static.Estatico = false;
                 GeneralAttrib.Damage = 1.4f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 2;
             }
@@ -193,7 +190,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 Time.timeScale = 1;
                 Static.Estatico = false;
                 GeneralAttrib.Damage = 1.7f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 3;
             }
@@ -206,8 +202,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 Time.timeScale = 1;
                 powerups.Ptrophie = 5;
                 Static.Estatico = false;
-                GeneralAttrib.Damage = 1.9f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 4;
             }
@@ -217,7 +211,6 @@ public class CreateRamdomly : MonoBehaviour  {
                 Time.timeScale = 1;
                 Static.Estatico = false;
                 GeneralAttrib.Damage = 1.7f;
-                Traps.death = 0;
                 GeneralAttrib.Life = 100;
                 GeneralAttrib.nivel = 3;
             }

@@ -24,6 +24,6 @@ public class Extras : MonoBehaviour {
 
     public void Back()
     {
-        Application.LoadLevel("Start");
+        Application.LoadLevel("Start Menu");
     }
 }

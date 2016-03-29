@@ -67,7 +67,7 @@ public class Continuar : MonoBehaviour {
         GeneralAttrib.nivel = 0;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
-        Application.LoadLevel("Start");
+        Application.LoadLevel("Start Menu");
     }
 
 	public void Retry()
@@ -76,7 +76,6 @@ public class Continuar : MonoBehaviour {
         Static.Estatico = false;
         GeneralAttrib.Damage = 1.1f;
         GeneralAttrib.metros = 0f;
-        Traps.death = 0;
         GeneralAttrib.Life = 100;
 
 		Application.LoadLevel (GeneralAttrib.level);
@@ -86,7 +85,7 @@ public class Continuar : MonoBehaviour {
     {
         SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
         Application.LoadLevel("LoadScene");
-        GeneralAttrib.level = "SurvivalMode";
+        GeneralAttrib.level = "Rocas";
 
     }
 
@@ -94,7 +93,7 @@ public class Continuar : MonoBehaviour {
     {
         SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Balsas;
         Application.LoadLevel("LoadScene");
-        GeneralAttrib.level = "Balsas";
+        GeneralAttrib.level = "Maderas";
         GeneralAttrib.type = 2;
 
     }

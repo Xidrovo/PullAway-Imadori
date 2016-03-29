@@ -65,11 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Acti.cs" />
     <Compile Include="Assets\DestroyerTutorial.cs" />
-    <Compile Include="Assets\Scripts\Balsas\AttribBalsa.cs" />
     <Compile Include="Assets\Scripts\Camera\Camareta.cs" />
     <Compile Include="Assets\Scripts\DraggAndInput.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\LoadingScript\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\Maderas\AttribBalsa.cs" />
     <Compile Include="Assets\Scripts\Main Character\Bida.cs" />
     <Compile Include="Assets\Scripts\Main Character\GeneralAttrib.cs" />
     <Compile Include="Assets\Scripts\PowerUp\TrophiesAtt.cs" />

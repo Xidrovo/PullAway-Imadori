@@ -42,7 +42,7 @@ public class Options : MonoBehaviour {
 
     public void MainMenu()
     {
-        Application.LoadLevel("Start");
+        Application.LoadLevel("Start Menu");
     }
 
     public void Salir()

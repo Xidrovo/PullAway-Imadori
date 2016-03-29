@@ -9,7 +9,7 @@ public class ArcadeChos : MonoBehaviour {
     void Start()
     {
         GeneralAttrib.Damage = 1.3f;
-        if (GeneralAttrib.lvlM >= 2)
+        /*if (GeneralAttrib.lvlM >= 2)
         {
             b2.GetComponent<Image>().sprite=bb2On;
         }
@@ -48,7 +48,7 @@ public class ArcadeChos : MonoBehaviour {
         else
         {
             b6.GetComponent<Image>().sprite = bb6Off;
-        }
+        }*/
     }
 
     public void ModesMenu()
@@ -67,7 +67,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxAranas = 1;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
 	}
 	public void Nvl2()
 	{
@@ -80,7 +80,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxAranas = 10;
         Traps.maxTrampas = 10;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
 	}
 	public void Nvl3()
 	{
@@ -97,7 +97,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 3;
         Traps.maxTrampas = 4;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
 	}
 	public void Nvl4()
 	{
@@ -114,7 +114,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 2;
         Traps.maxTrampas = 5;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
 	}
 	public void Nvl5()
 	{
@@ -132,7 +132,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
 	}
 	public void Nvl6()
 	{
@@ -237,7 +237,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl12()
     {
@@ -254,7 +254,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl13()
     {
@@ -271,7 +271,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl14()
     {
@@ -288,7 +288,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl15()
     {
@@ -306,7 +306,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl16()
     {
@@ -341,7 +341,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
     public void Nvl18()
     {
@@ -376,7 +376,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("SurvivalMode");
+        Application.LoadLevel("Rocas");
     }
     public void Nvl20()
     {
@@ -394,7 +394,7 @@ public class ArcadeChos : MonoBehaviour {
         Traps.maxBomba = 0;
         Traps.maxTrampas = 1;
 
-        Application.LoadLevel("Balsas");
+        Application.LoadLevel("Maderas");
     }
 
 }

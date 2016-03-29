@@ -104,7 +104,7 @@ public class TrophieMenu : MonoBehaviour {
 
     public void MainMenu()
     {
-        Application.LoadLevel("Start");
+        Application.LoadLevel("Start Menu");
     }
 
     public void Back()
