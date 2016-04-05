@@ -5,6 +5,9 @@ using System.Collections;
 
 public class Continuar : MonoBehaviour {
 
+    public Button buttonM;
+    public Sprite musicOn, musicOff;
+    public GameObject mundo;
 
     void Start()
     {
@@ -26,7 +29,35 @@ public class Continuar : MonoBehaviour {
         Application.LoadLevel("LoadScene");
 
     }
-	public void LoadLevel()
+
+    public void Mute()
+    {
+        if (GeneralAttrib.music)
+        {
+            GeneralAttrib.music = false;
+            GeneralAttrib.sounds = false;
+            buttonM.GetComponent<Image>().sprite = musicOff;
+        }
+        else
+        {
+            GeneralAttrib.music = true;
+            GeneralAttrib.sounds = false;
+            buttonM.GetComponent<Image>().sprite = musicOn;
+        }
+    }
+
+    public void stageRocks()
+    {
+        mundo.GetComponent<Animator>().SetTrigger("Left");
+    }
+
+    public void stageWoods()
+    {
+        mundo.GetComponent<Animator>().SetTrigger("Right");
+    }
+
+
+    public void LoadLevel()
 	{
         //if (PlayerPrefs.HasKey("FirstTime"))
         //{

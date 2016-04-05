@@ -29,8 +29,11 @@ public class Acti : StateMachineBehaviour {
     //}
     void Update()
     {
-        
+
+    
+    
     }
+
 
 }
 

@@ -109,6 +109,7 @@ public class TrophieMenu : MonoBehaviour {
 
     public void Back()
     {
+        Debug.Log("e");
         Application.LoadLevel("Extras");
     }
 }

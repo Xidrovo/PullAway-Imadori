@@ -80,13 +80,18 @@ public class DraggAndInput : MonoBehaviour {
                     }
                     if (bdT)
                     {
-                        Debug.Log("1FuerzaX: " + Input.GetTouch(0).deltaPosition.x + " " + Input.GetTouch(0).deltaTime);
-                        Debug.Log("1FuerzaY: " + Input.GetTouch(0).deltaPosition.y + " " + Input.GetTouch(0).deltaTime);
+                        //PONGA SU CODIGO AQUI
+                        //AQUI
+                        //AQUI
+                        //AQUIIII
+                        Debug.Log((Vector2.Scale(Input.GetTouch(0).position, Input.GetTouch(0).deltaPosition) * Input.GetTouch(0).deltaTime).x);
+                        Debug.Log((Vector2.Scale(Input.GetTouch(0).position, Input.GetTouch(0).deltaPosition) * Input.GetTouch(0).deltaTime).y);
                         RigidB.AddForce(Vector2.Scale(Input.GetTouch(0).position, Input.GetTouch(0).deltaPosition) * Input.GetTouch(0).deltaTime);
 
                     }
                     else
                     {
+                        Debug.Log(Pos.x + " " + Pos.y);
                         player.transform.position = new Vector2(Pos.x, Pos.y);
                     }
 
