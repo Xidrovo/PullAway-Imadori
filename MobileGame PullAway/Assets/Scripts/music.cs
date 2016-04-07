@@ -6,10 +6,22 @@ public class music : MonoBehaviour {
 	// Use this for initialization
     AudioSource fxSound; // Emitir sons
     // Use this for initialization
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+        fxSound = GetComponent<AudioSource>();
+        if (GameObject.FindGameObjectsWithTag("Audio").Length == 1 && !fxSound.isPlaying)
+        {
+            fxSound.Play();
+        }
+        else if (GameObject.FindGameObjectsWithTag("Audio").Length>1 && !fxSound.isPlaying)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     void Start()
     {
-        fxSound = GetComponent<AudioSource>();
-        fxSound.Play();
         if (!GeneralAttrib.music)
         {
             fxSound.mute = true;
@@ -28,9 +40,14 @@ public class music : MonoBehaviour {
         {
             fxSound.mute = true;
         }
-        else
+        else if(fxSound.mute)
         {
             fxSound.mute = false;
+        }
+
+        if (Application.loadedLevelName == ("Rocas") || Application.loadedLevelName==("Maderas"))
+        {
+            Destroy(this.gameObject);
         }
 	
 	}

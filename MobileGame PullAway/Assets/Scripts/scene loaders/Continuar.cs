@@ -57,6 +57,11 @@ public class Continuar : MonoBehaviour {
     }
 
 
+    public void BackButtonStage()
+    {
+        Application.LoadLevel("Modes");
+    }
+
     public void LoadLevel()
 	{
         //if (PlayerPrefs.HasKey("FirstTime"))
@@ -131,6 +136,11 @@ public class Continuar : MonoBehaviour {
 
     public void Hojas()
     {
+        GameObject[] array = GameObject.FindGameObjectsWithTag("Audio");
+        for (int i = 0; i < array.Length; i++)
+        {
+            Destroy(array[i]);
+        }
         GeneralAttrib.type = 3;
         GeneralAttrib.level = "Hojas";
 

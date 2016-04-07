@@ -1,0 +1,334 @@
+fileFormatVersion: 2
+guid: 22e3a894bdeae154ba3d52b129c58d96
+timeCreated: 1458148495
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hojas fragmentos_0
+    21300002: hojas fragmentos_1
+    21300004: hojas fragmentos_2
+    21300006: hojas fragmentos_3
+    21300008: hojas fragmentos_4
+    21300010: hojas fragmentos_5
+    21300012: hojas fragmentos_7
+    21300014: hojas fragmentos_8
+    21300016: hojas fragmentos_9
+    21300018: hojas fragmentos_10
+    21300020: hojas fragmentos_11
+    21300022: hojas fragmentos_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: hojas fragmentos_0
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 491
+        width: 210
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: 42.5}
+        - {x: 60, y: 40.5}
+        - {x: 26, y: 44.5}
+        - {x: -77, y: 44.5}
+        - {x: -105, y: 40.5}
+        - {x: -105, y: 14.5}
+        - {x: -96, y: -22.5}
+        - {x: -87, y: -27.5}
+        - {x: -20, y: -44.5}
+        - {x: 22, y: -44.5}
+        - {x: 87, y: -0.5}
+        - {x: 105, y: 15.5}
+        - {x: 105, y: 32.5}
+      - - {x: 75, y: -24.5}
+        - {x: 70, y: -24.5}
+        - {x: 57, y: -35.5}
+        - {x: 57, y: -40.5}
+        - {x: 66, y: -40.5}
+        - {x: 73, y: -33.5}
+        - {x: 77, y: -28.5}
+        - {x: 77, y: -25.5}
+    - name: hojas fragmentos_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 480
+        width: 232
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -113, y: 58.5}
+        - {x: -116, y: 41.5}
+        - {x: -116, y: -58.5}
+        - {x: 9, y: -58.5}
+        - {x: 112, y: -45.5}
+        - {x: 116, y: -27.5}
+        - {x: 116, y: 34.5}
+        - {x: 80, y: 58.5}
+    - name: hojas fragmentos_2
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 569
+        width: 228
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -114, y: 24.5}
+        - {x: -108, y: 18.5}
+        - {x: -88, y: 0.5}
+        - {x: 15, y: -49.5}
+        - {x: 114, y: -49.5}
+        - {x: 114, y: -0.5}
+        - {x: 110, y: 14.5}
+        - {x: -7, y: 49.5}
+        - {x: -72, y: 49.5}
+        - {x: -114, y: 35.5}
+    - name: hojas fragmentos_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 245
+        width: 380
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79, y: 66.5}
+        - {x: -83, y: 66.5}
+        - {x: -141, y: 34.5}
+        - {x: -169, y: 0.5}
+        - {x: -180, y: -21.5}
+        - {x: -190, y: -54.5}
+        - {x: -190, y: -64.5}
+        - {x: -117, y: -64.5}
+        - {x: 81, y: -2.5}
+        - {x: 103, y: 32.5}
+        - {x: 103, y: 47.5}
+      - - {x: 188, y: 25.5}
+        - {x: 171, y: 34.5}
+        - {x: 126, y: 34.5}
+        - {x: 61, y: -9.5}
+        - {x: 61, y: -20.5}
+        - {x: 65, y: -28.5}
+        - {x: 72, y: -32.5}
+        - {x: 98, y: -32.5}
+        - {x: 152, y: -17.5}
+        - {x: 185, y: 0.5}
+        - {x: 188, y: 8.5}
+      - - {x: 52, y: -27.5}
+        - {x: 54, y: -29.5}
+        - {x: 57, y: -28.5}
+        - {x: 57, y: -23.5}
+        - {x: 55, y: -21.5}
+        - {x: 52, y: -22.5}
+    - name: hojas fragmentos_4
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 385
+        width: 160
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 35.5}
+        - {x: -56, y: 21.5}
+        - {x: -78, y: -2.5}
+        - {x: -78, y: -14.5}
+        - {x: -30, y: -34.5}
+        - {x: -23, y: -35.5}
+        - {x: 34, y: -35.5}
+        - {x: 70, y: -27.5}
+        - {x: 80, y: -0.5}
+        - {x: 80, y: 35.5}
+      - - {x: -80, y: 19.5}
+        - {x: -80, y: 13.5}
+        - {x: -76, y: 13.5}
+        - {x: -72, y: 17.5}
+        - {x: -73, y: 20.5}
+        - {x: -78, y: 20.5}
+    - name: hojas fragmentos_5
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 397
+        width: 119
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56.5, y: 33}
+        - {x: -59.5, y: 31}
+        - {x: -59.5, y: -19}
+        - {x: -46.5, y: -33}
+        - {x: 59.5, y: -33}
+        - {x: 59.5, y: 2}
+        - {x: 34.5, y: 33}
+    - name: hojas fragmentos_7
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 302
+        width: 189
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: 41}
+        - {x: -42.5, y: 41}
+        - {x: -82.5, y: 22}
+        - {x: -94.5, y: -3}
+        - {x: -94.5, y: -25}
+        - {x: -43.5, y: -41}
+        - {x: 69.5, y: -41}
+        - {x: 94.5, y: -24}
+        - {x: 94.5, y: 26}
+    - name: hojas fragmentos_8
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 262
+        width: 178
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 38}
+        - {x: -75, y: -2}
+        - {x: -82, y: -10}
+        - {x: -89, y: -23}
+        - {x: -89, y: -38}
+        - {x: 16, y: -38}
+        - {x: 87, y: 11}
+        - {x: 89, y: 15}
+        - {x: 89, y: 38}
+      - - {x: -34, y: 38}
+        - {x: -34, y: 35}
+        - {x: -33, y: 33}
+        - {x: -27, y: 33}
+        - {x: -19, y: 35}
+        - {x: -17, y: 37}
+        - {x: -17, y: 38}
+    - name: hojas fragmentos_9
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 336
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: hojas fragmentos_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 79
+        width: 218
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: 48}
+        - {x: -109, y: 2}
+        - {x: -109, y: -48}
+        - {x: 61, y: -48}
+        - {x: 109, y: -35}
+        - {x: 109, y: 48}
+    - name: hojas fragmentos_11
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 165
+        width: 142
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71, y: 32}
+        - {x: -71, y: -32}
+        - {x: 54, y: -32}
+        - {x: 71, y: -23}
+        - {x: 71, y: 25}
+        - {x: 46, y: 32}
+    - name: hojas fragmentos_12
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 49
+        width: 214
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 37}
+        - {x: -107, y: 10}
+        - {x: -107, y: -37}
+        - {x: 107, y: -37}
+        - {x: 107, y: 7}
+        - {x: 52, y: 37}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

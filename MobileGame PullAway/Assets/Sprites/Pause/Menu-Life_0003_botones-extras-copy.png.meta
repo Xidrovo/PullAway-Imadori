@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: dc376dc8b90c6624db97bacf91263aad
+timeCreated: 1459959171
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Menu-Life_0003_botones-extras-copy_0
+    21300002: Menu-Life_0003_botones-extras-copy_1
+    21300004: Menu-Life_0003_botones-extras-copy_2
+    21300006: Menu-Life_0003_botones-extras-copy_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Menu-Life_0003_botones-extras-copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 47}
+        - {x: -47, y: -36}
+        - {x: -28, y: -47}
+        - {x: 35, y: -47}
+        - {x: 47, y: -30}
+        - {x: 47, y: 34}
+        - {x: 29, y: 47}
+    - name: Menu-Life_0003_botones-extras-copy_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -45}
+        - {x: 25, y: -48}
+        - {x: 31, y: -48}
+        - {x: 33, y: -46}
+        - {x: 32, y: -43}
+        - {x: 27, y: -43}
+      - - {x: -36, y: 48}
+        - {x: -47, y: 46}
+        - {x: -47, y: -31}
+        - {x: -44, y: -38}
+        - {x: -17, y: -48}
+        - {x: 40, y: -48}
+        - {x: 47, y: -46}
+        - {x: 47, y: 46}
+        - {x: 42, y: 48}
+    - name: Menu-Life_0003_botones-extras-copy_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 2
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 47}
+        - {x: -27, y: 47}
+        - {x: -47, y: 29}
+        - {x: -47, y: -41}
+        - {x: -25, y: -47}
+        - {x: 28, y: -47}
+        - {x: 43, y: -38}
+        - {x: 47, y: -26}
+        - {x: 47, y: 26}
+    - name: Menu-Life_0003_botones-extras-copy_3
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 2
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 47}
+        - {x: -27, y: 47}
+        - {x: -47, y: 29}
+        - {x: -47, y: -41}
+        - {x: -25, y: -47}
+        - {x: 28, y: -47}
+        - {x: 43, y: -38}
+        - {x: 47, y: -26}
+        - {x: 47, y: 26}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

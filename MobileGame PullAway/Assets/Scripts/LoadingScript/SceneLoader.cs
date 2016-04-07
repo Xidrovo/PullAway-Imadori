@@ -18,7 +18,6 @@ public class SceneLoader : MonoBehaviour
         Choossing,
         SurvivalMode,
         GameOver,
-        HighScore,
         Extras,
         Optiones,
         Trophies,
