@@ -120,17 +120,19 @@ public class Continuar : MonoBehaviour {
     public void Rocas()
     {
         SceneLoader.escenaACargar = (int)SceneLoader.Scenes.SurvivalMode;
-        Application.LoadLevel("LoadScene");
         GeneralAttrib.level = "Rocas";
+        Application.LoadLevel("LoadScene");
+        
 
     }
 
     public void Balsas()
     {
         SceneLoader.escenaACargar = (int)SceneLoader.Scenes.Balsas;
-        Application.LoadLevel("LoadScene");
         GeneralAttrib.level = "Maderas";
         GeneralAttrib.type = 2;
+        Application.LoadLevel("LoadScene");
+        
 
     }
 
