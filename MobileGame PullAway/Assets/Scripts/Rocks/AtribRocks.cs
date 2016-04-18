@@ -51,6 +51,7 @@ public class AtribRocks : MonoBehaviour {
         }
         if (this.layer == top && Static.Estatico == false)
         {
+            this.GetComponent<Animator>().enabled = true;
             Sr.color = new Color(Sr.color.r + 0.07f, Sr.color.g + 0.05f, Sr.color.b + 0.05f, Sr.color.a + 0.05f);
             this.GetComponent<Collider2D>().enabled = true;
             GeneralAttrib.Debo = false;

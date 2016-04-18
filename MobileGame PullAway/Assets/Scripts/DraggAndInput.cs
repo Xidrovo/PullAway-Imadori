@@ -69,7 +69,7 @@ public class DraggAndInput : MonoBehaviour {
                 if (atb.life <= 0)
                 {
                     //Animacion
-                    transform.FindChild("GameObject").GetComponent<Animator>().SetBool("life", true);
+                    transform.FindChild("GameObject").GetComponent<Animator>().SetTrigger("life");
                     if (Input.GetTouch(0).phase == TouchPhase.Began)
                     {
                         bdT = false;
@@ -91,10 +91,13 @@ public class DraggAndInput : MonoBehaviour {
                     }
                     else
                     {
-                        Debug.Log(Pos.x + " " + Pos.y);
                         player.transform.position = new Vector2(Pos.x, Pos.y);
                     }
 
+                }
+                else
+                {
+                    transform.FindChild("GameObject").GetComponent<Animator>().SetTrigger("Activate");
                 }
 
             }
